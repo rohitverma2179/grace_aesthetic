@@ -94,6 +94,9 @@ const Navbar = () => {
         )}
       </AnimatePresence>
     </nav>
+
+
+
   );
 };
 // sonu
