@@ -233,7 +233,7 @@ const GallerySection = () => {
 const InteriorsSection = () => {
   const interiors = [
     {
-      title: "Zen Minimalist",
+      title: "Zen Minimalist",   
       image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=2000",
       desc: "Clean lines and natural wood textures create a calming atmosphere."
     },
