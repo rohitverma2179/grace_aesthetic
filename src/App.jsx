@@ -96,7 +96,7 @@ const Navbar = () => {
     </nav>
   );
 };
-
+// sonu
 const Hero = () => {
   return (
     <section className="relative h-screen min-h-[600px] overflow-hidden">
