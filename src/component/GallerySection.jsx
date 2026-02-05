@@ -46,7 +46,7 @@ const GallerySection = () => {
 
         {/* Header */}
         <div className="text-center mb-24">
-          <h2 className="tracking-[0.4em] text-[37px] text-gray-500">
+          <h2 className="tracking-[2.25rem] text-[37px] text-gray-500">
             ELEVATED EVERYDAY
           </h2>
           <p className="mt-4 text-xs tracking-[0.3em] text-gray-400">
