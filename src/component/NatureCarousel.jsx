@@ -23,10 +23,10 @@ const NatureCarousel = () => {
   const [isEnd, setIsEnd] = useState(false);
 
   return (
-    <section className="bg-[#f8f8f5] py-12 h-screen">
+    <section className="bg-[#f8f8f5] py-12">
 
       {/* HEADER */}
-      <div className="w-[90%] max-w-[1400px] mx-auto flex items-center justify-between mb-6">
+      <div className="w-[90%] max-w-[1400px] mx-auto flex items-center justify-between mb-8">
         <h2 className="text-[#E0A82E] text-2xl md:text-3xl font-medium">
           Closer to Nature
         </h2>
@@ -60,7 +60,7 @@ const NatureCarousel = () => {
         modules={[Navigation]}
         slidesPerView={1}
         spaceBetween={0}
-        className="w-screen"
+        className="w-screen h-full"
 
         // 🔹 Correct navigation binding
         onBeforeInit={(swiper) => {
@@ -87,7 +87,7 @@ const NatureCarousel = () => {
       >
         {images.map((img, index) => (
           <SwiperSlide key={index}>
-            <div className="w-screen h-[220px] sm:h-[320px] md:h-[420px] lg:h-[520px]">
+            <div className="w-screen h-full">
               <img
                 src={img}
                 alt={`slide-${index}`}

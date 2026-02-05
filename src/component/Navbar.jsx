@@ -8,39 +8,61 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
+  const [showNav, setShowNav] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [scrollUpAmount, setScrollUpAmount] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const currentScrollY = window.scrollY;
+
+      setIsScrolled(currentScrollY > 50);
+
+      if (currentScrollY > lastScrollY) {
+        // scrolling DOWN → hide immediately
+        setShowNav(false);
+        setScrollUpAmount(0);
+      } else {
+        // scrolling UP → accumulate distance
+        const diff = lastScrollY - currentScrollY;
+        setScrollUpAmount(prev => prev + diff);
+
+        // show navbar only after ~3 steps (~120px)
+        if (scrollUpAmount + diff > 120) {
+          setShowNav(true);
+          setScrollUpAmount(0);
+        }
+      }
+
+      setLastScrollY(currentScrollY);
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [lastScrollY, scrollUpAmount]);
 
   const navLinks = [
     { name: 'Home' },
-    { name: 'Our Story' },
-    { name: 'Aesthetics' },
-    { name: 'Destinations' },
+    { name: 'About us' },
+    { name: 'Projects' },
+    { name: 'Blogs' },
     { name: 'Contact', action: 'popup' },
   ];
 
   return (
     <>
       <nav
-        className={`fixed w-full z-50 transition-all duration-500 ${
+        className={`fixed w-full z-50 transition-transform duration-600 ${
+          showNav ? 'translate-y-0' : '-translate-y-full'
+        } ${
           isScrolled
-            ? 'bg-white/80 backdrop-blur-md py-4 shadow-sm' 
-            : 'bg-transparent py-6'
+            ? 'bg-black py-4'
+            : 'bg-[#0F3D33] backdrop-blur-md py-6'
         }`}
       >
         <div className="container-custom flex justify-between items-center">
-          <div
-            className={`text-2xl font-serif font-bold tracking-tighter ${
-              isScrolled ? 'text-luxury-dark' : 'text-white'
-            }`}
-          >
-            GRACE <span className="text-primary italic font-light">Aesthetic</span>
+          <div className="text-2xl font-serif font-bold tracking-tighter">
+            <img src={logo} className="w-24 h-full object-contain" alt="Logo" />
           </div>
 
           {/* Desktop Menu */}
@@ -53,9 +75,7 @@ const Navbar = () => {
                     setContactOpen(true);
                   }
                 }}
-                className={`text-sm uppercase tracking-widest font-medium transition-colors hover:text-primary ${
-                  isScrolled ? 'text-luxury-dark' : 'text-white'
-                }`}
+                className="text-sm uppercase tracking-widest font-medium transition-colors hover:text-primary text-white"
               >
                 {link.name}
               </button>
@@ -68,9 +88,9 @@ const Navbar = () => {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? (
-              <X className={isScrolled ? 'text-luxury-dark' : 'text-white'} />
+              <X className="text-white" />
             ) : (
-              <Menu className={isScrolled ? 'text-luxury-dark' : 'text-white'} />
+              <Menu className="text-white" />
             )}
           </button>
         </div>
@@ -82,7 +102,7 @@ const Navbar = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden bg-white border-t border-luxury-light overflow-hidden"
+              className="md:hidden bg-white border-t overflow-hidden"
             >
               <div className="container-custom py-6 flex flex-col space-y-4">
                 {navLinks.map((link) => (
@@ -94,7 +114,7 @@ const Navbar = () => {
                         setContactOpen(true);
                       }
                     }}
-                    className="text-luxury-dark text-lg font-serif tracking-wide hover:text-primary text-left"
+                    className="text-black text-lg font-serif tracking-wide text-left"
                   >
                     {link.name}
                   </button>
@@ -105,7 +125,6 @@ const Navbar = () => {
         </AnimatePresence>
       </nav>
 
-      {/* Contact Popup */}
       <ContactPopup
         isOpen={contactOpen}
         onClose={() => setContactOpen(false)}
