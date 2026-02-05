@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import ContactPopup from './ContactPopup';
+import logo from "../assets/isaadri.webp"
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);

@@ -34,7 +34,7 @@ const GallerySection = () => {
           <div className="flex flex-col gap-12 xl:gap-0 w-full xl:w-1/2 items-center xl:items-start">
 
             {/* Top Image */}
-            <div className='xl:ml-[204px] flex flex-col items-center xl:items-start w-full px-4 xl:px-0'>
+            <div className='xl:ml-101 flex flex-col items-center xl:items-start w-full px-4 xl:px-0'>
               <p className="text-xs tracking-[0.3em] mb-4 text-gray-500">
                 EXCLUSIVITY
               </p>

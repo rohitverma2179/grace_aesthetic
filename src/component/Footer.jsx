@@ -8,15 +8,15 @@ import logo from '../assets/swastixa_logo.jpeg'
 
 const Footer = () => {
   return (
-    <footer className="bg-[#EBE9E0] text-[#1A1A1A] pt-24 pb-10 font-sans">
-      <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+    <footer className="bg-[#EBE9E0] text-luxury-dark pt-24 pb-10 font-sans">
+      <div className="max-w-350 mx-auto px-6 md:px-10">
 
         {/* Top Section */}
         <div className="flex flex-col lg:flex-row justify-between items-start mb-20 gap-14">
 
           {/* Brand */}
           <div className="max-w-xl">
-            <img src={logo} className="text-[clamp(2.6rem,7vw,5.5rem)] font-serif text-[#C5A059] leading-[0.95] mb-8 tracking-tight"
+            <img src={logo} className="text-[clamp(2.6rem,7vw,5.5rem)] font-serif text-primary leading-[0.95] mb-8 tracking-tight"
               alt="Grace Aesthetic Logo" />
             {/* <p className="text-[#6B6B6B] text-[13px] max-w-[300px] leading-relaxed font-medium">
               Guiding you from city chaos to serene living in Dehradun.
@@ -65,7 +65,7 @@ const Footer = () => {
           {/* Navigation */}
           <div className="flex flex-wrap gap-x-8 gap-y-4 text-[13px] font-bold">
             {["Home", "About", "Projects", "Contact Us", "Blogs"].map(link => (
-              <a key={link} href="#" className="hover:text-[#C5A059] transition">
+              <a key={link} href="#" className="hover:text-primary transition">
                 {link}
               </a>
             ))}
