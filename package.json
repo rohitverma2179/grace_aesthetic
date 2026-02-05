@@ -10,7 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< Updated upstream
     "@emailjs/browser": "^4.4.1",
+=======
+    "emailjs": "^5.0.0",
+>>>>>>> Stashed changes
     "framer-motion": "^12.31.0",
     "lucide-react": "^0.563.0",
     "react": "^19.2.0",
