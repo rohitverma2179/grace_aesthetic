@@ -20,7 +20,7 @@ const WhyChooseSection = () => {
   ];
 
   return (
-    <section id="destinations" className="py-24 bg-white">
+    <section id="destinations" className="py-24">
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-serif text-primary mb-4">Why Choose Grace Aesthetic</h2>
