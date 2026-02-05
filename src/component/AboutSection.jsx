@@ -15,13 +15,13 @@ const AboutSection = () => {
           </h3>
 
           <p className="text-gray-500 leading-relaxed text-sm  md:text-base mb-10">
-            At Grace Aesthetic, we believe real estate is about people before
-            properties. We value honesty, transparency, and long term trust in
-            every interaction. Rooted in Dehradun, we respect nature, local
-            surroundings, and thoughtful development guiding our clients toward
-            homes that offer peace, balance, and lasting value. Every decision
-            we make is driven by care, clarity, and a genuine commitment to
-            helping people begin a better life closer to nature.
+            At Grace Aesthetic, we believe real estate is about people before properties.
+            We value honesty, transparency, and long-term trust in every interaction.
+            Rooted in Dehradun, we respect nature, local surroundings, and thoughtful
+            development that shapes calm and well-planned living environments.
+            Our work is guided by a belief in creating homes that offer peace, balance,
+            and lasting value. Every decision we make reflects care, clarity, and a
+            genuine commitment to helping people begin a better life closer to nature.
           </p>
 
           <button

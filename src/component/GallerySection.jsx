@@ -1,5 +1,7 @@
 
 import { motion } from 'framer-motion';
+
+
 const GallerySection = () => {
   const images = [
     { src: 'https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&q=80&w=800', size: 'col-span-1 row-span-2' },
@@ -36,7 +38,7 @@ const GallerySection = () => {
             {/* Top Image */}
             <div className='xl:ml-[204px] flex flex-col items-center xl:items-start w-full px-4 xl:px-0'>
               <p className="text-xs tracking-[0.3em] mb-4 text-gray-500">
-                EXCLUSIVITY
+                Harmony
               </p>
               <img
                 src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=800"
@@ -49,7 +51,7 @@ const GallerySection = () => {
               <div className='flex flex-col md:flex-row xl:h-[200px] items-center gap-4 xl:gap-0'>
 
                 <p className="text-xs xl:mr-3 tracking-[0.3em] xl:mb-4 text-gray-500">
-                  PRESTIGE
+                  Wellbeing
                 </p>
                 <img
                   src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=800"
@@ -64,7 +66,7 @@ const GallerySection = () => {
             {/* Bottom Small */}
             <div className="w-full xl:w-1/2 xl:ml-[309px] flex flex-col xl:flex-row xl:h-[185px] items-center gap-4 xl:gap-0 px-4 xl:px-0">
               <p className="text-xs xl:mr-4 tracking-[0.3em] xl:mb-4 text-gray-500">
-                CURATED
+                Thoughtful
               </p>
               <img
                 src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&q=80&w=800"
@@ -74,6 +76,10 @@ const GallerySection = () => {
           </div>
 
 
+
+
+Rooted
+Enduring
 
 
 

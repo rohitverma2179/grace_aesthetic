@@ -18,7 +18,7 @@ function App() {
       <Navbar />
       <Hero />
       <AboutSection />
-      {/* <GallerySection /> */}
+      <GallerySection />
 
       {/* Mid-page Text Break */}
       <section className="py-24 bg-white text-center">
