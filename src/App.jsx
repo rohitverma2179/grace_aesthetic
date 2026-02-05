@@ -7,7 +7,7 @@ import InteriorsSection from './component/InteriorsSection.jsx';
 import WhyChooseSection from './component/WhyChooseSection.jsx';
 import Footer from './component/Footer.jsx';
 import { motion } from 'framer-motion';
-
+import NatureCarousel from './component/NatureCarousel.jsx';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       <Navbar />
       <Hero />
       <AboutSection />
-      <GallerySection />
+      {/* <GallerySection /> */}
 
       {/* Mid-page Text Break */}
       <section className="py-24 bg-white text-center">
@@ -45,6 +45,8 @@ function App() {
         />
         <div className="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
       </section>
+       
+      <NatureCarousel />
 
       <WhyChooseSection />
       <Footer />

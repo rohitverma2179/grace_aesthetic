@@ -27,7 +27,7 @@ const Hero = () => {
       </div>
 
       {/* Floating House (Visual Reference from Design) */}
-      <motion.div
+      {/* <motion.div
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}
@@ -39,7 +39,7 @@ const Hero = () => {
             Experience the pinnacle of alpine luxury with panoramic views and bespoke interiors.
           </p>
         </div>
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 };
