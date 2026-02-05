@@ -8,6 +8,8 @@ import WhyChooseSection from './component/WhyChooseSection.jsx';
 import Footer from './component/Footer.jsx';
 import { motion } from 'framer-motion';
 import NatureCarousel from './component/NatureCarousel.jsx';
+import LuxuryHighlights from './component/LuxuryHighlights.jsx';
+
 
 function App() {
 
@@ -36,16 +38,9 @@ function App() {
       </section>
 
       <InteriorsSection />
+      <LuxuryHighlights />
 
-      {/* Scenic Road Section */}
-      <section className="h-[60vh] relative">
-        <img
-          src="https://images.unsplash.com/photo-1506905967146-e1f1a58d9299?auto=format&fit=crop&q=80&w=2000"
-          alt="Winding mountain road"
-          className="w-full h-full object-cover grayscale"
-        />
-        <div className="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
-      </section>
+    
        
       <NatureCarousel />
 
