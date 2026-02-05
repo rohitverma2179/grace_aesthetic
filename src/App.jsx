@@ -31,7 +31,7 @@ function App() {
           >
             <p className="text-sm uppercase tracking-[0.5em] text-primary mb-8">Our Core Values</p>
             <p className="text-2xl md:text-3xl font-serif text-luxury-dark/80 italic leading-relaxed">
-              "We believe in the power of simplicity and the harmony of nature. Our goal is to create spaces that transcend time and offer a truly unique aesthetic experience."
+              At Grace Aesthetic, we believe real estate should be built on trust, clarity, and genuine care. Rooted in Dehradun, we respect nature, local surroundings, and responsible development in every decision we make. Honesty, transparency, and long-term relationships guide our work, ensuring clients feel confident and supported at every step. Above all, we are committed to helping people choose homes that offer peace, balance, and enduring value, closely connected to nature.
             </p>
           </motion.div>
         </div>
