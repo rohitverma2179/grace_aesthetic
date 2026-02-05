@@ -10,6 +10,7 @@ import { motion } from 'framer-motion';
 import NatureCarousel from './component/NatureCarousel.jsx';
 
 function App() {
+
   return (
     <div className="antialiased text-luxury-dark">
       <Navbar />
