@@ -2,10 +2,15 @@ import { Diamond } from "lucide-react";
 
 const LuxuryHighlights = () => {
   const items = [
-    "Luxury Reimagined",
-    "Your Costal Legacy",
-    "Beyond The Shory",
+    "Designed for Life",
+    "Built with Care",
+    "Your Second Home",
   ];
+
+
+  
+
+
 
   return (
     <section className="w-full bg-[#f8f8f5] py-24">

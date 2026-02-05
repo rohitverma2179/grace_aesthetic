@@ -18,7 +18,7 @@ const GallerySection = () => {
 
         {/* Header */}
         <div className="text-center mb-24">
-          <h2 className="tracking-[0.4em] text-sm text-gray-500">
+          <h2 className="tracking-[0.4em] text-[37px] text-gray-500">
             ELEVATED EVERYDAY
           </h2>
           <p className="mt-4 text-xs tracking-[0.3em] text-gray-400">
@@ -82,7 +82,7 @@ const GallerySection = () => {
             {/* Big Hero Image */}
             <div className="flex flex-col items-center xl:items-start w-full px-4 xl:px-0">
               <p className="text-xs tracking-[0.3em] mb-4 text-gray-500">
-                BESPOKE
+                Rooted
               </p>
               <img
                 src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80&w=1200"
@@ -109,7 +109,8 @@ const GallerySection = () => {
                 className="w-full max-w-[220px] xl:w-[220px] h-auto xl:h-[202.24px] object-cover"
               />
               <p className="text-xs xl:ml-5 tracking-[0.3em] xl:mb-4 text-gray-500">
-                EXCLUSIVITY
+
+                Enduring
               </p>
             </div>
 

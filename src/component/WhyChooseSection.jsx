@@ -25,7 +25,7 @@ const WhyChooseSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-serif text-primary mb-4">Why Choose Grace Aesthetic</h2>
           <p className="text-luxury-dark/60 max-w-2xl mx-auto italic">
-            "Design is not just what it looks like and feels like. Design is how it works."
+            Dehradun offers a rare harmony between natural beauty and contemporary living. Surrounded by hills, forests, and clean air, it supports a slower, healthier lifestyle while still providing essential urban connectivity. It is a place where people can settle with confidence, find balance, and feel genuinely at home."
           </p>
         </div>
 
