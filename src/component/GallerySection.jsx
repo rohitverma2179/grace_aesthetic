@@ -55,7 +55,7 @@ const GallerySection = () => {
         </div>
 
         {/* Layout */}
-        <div className="flex flex-col xl:flex-row gap-12 xl:gap-4 items-center xl:items-start">
+        <div className="flex uppercase flex-col xl:flex-row gap-12 xl:gap-4 items-center xl:items-start">
 
           {/* LEFT COLUMN */}
           <div className="flex flex-col gap-12 xl:gap-0 w-full xl:w-1/2 items-center xl:items-start">
@@ -101,7 +101,7 @@ const GallerySection = () => {
 
             {/* Bottom Small */}
             <div className="w-full xl:w-1/2 xl:ml-[309px] flex flex-col xl:flex-row xl:h-[185px] items-center gap-4 xl:gap-0 px-4 xl:px-0">
-              <p className="text-xs xl:mr-4 tracking-[0.3em] xl:mb-4 text-gray-500">
+              <p className="text-xs uppercase xl:mr-4 tracking-[0.3em] xl:mb-4 text-gray-500">
                 Thoughtful
               </p>
 
