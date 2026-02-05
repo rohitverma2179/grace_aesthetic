@@ -76,13 +76,6 @@ const GallerySection = () => {
           </div>
 
 
-
-
-Rooted
-Enduring
-
-
-
           {/* RIGHT COLUMN */}
           <div className="w-full xl:w-1/2 flex flex-col xl:mt-56 gap-12 xl:gap-4 items-center xl:items-start">
 
