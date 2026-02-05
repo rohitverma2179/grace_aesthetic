@@ -57,7 +57,7 @@ const Navbar = () => {
         } ${
           isScrolled
             ? 'bg-black py-4'
-            : 'bg-[#0F3D33] backdrop-blur-md py-6'
+            : 'bg-transparent backdrop-blur-md py-6'
         }`}
       >
         <div className="container-custom flex justify-between items-center">
