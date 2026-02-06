@@ -1,166 +1,135 @@
-import {
-  Instagram,
-  Facebook,
-  Youtube,
-  Linkedin,
-} from "lucide-react";
-import { Link } from "react-router-dom";
-import logo from "../assets/swastixa_logo.jpeg";
-
+import logo from '../assets/graceLogoGolden.webp'
 const Footer = () => {
-  const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/#story" },
-    { name: "Projects", path: "/projects" },
-    { name: "Contact Us", path: "/#contact" },
-    { name: "Blogs", path: "#" }
-  ];
-
   return (
-    <footer className="bg-[#EBE9E0] text-[#0D2B24] pt-24 pb-10 font-sans">
-      <div className="max-w-7xl mx-auto px-6 md:px-10">
+    <footer className="bg-[#f3f1eb] text-luxury-dark">
+      
+      {/* TOP SECTION */}
+     <div className="max-w-[1280px] mx-auto px-6 lg:px-0 flex pb-14 pt-14  flex-col lg:flex-row items-center  justify-between
+">
 
-        {/* TOP SECTION : LOGO + FORM */}
-        <div className="flex flex-col lg:flex-row justify-between gap-20 mb-24">
-
-          {/* LOGO */}
-          <div className="max-w-md">
-            <img src={logo} alt="Logo" />
-          </div>
-          {/* CONTACT FORM */}
-          <div className="w-full max-w-sm">
-            <h2 className="text-[clamp(1.4rem,3vw,2rem)] font-serif text-[#333] mb-5">
-              Contact
-            </h2>
-
-            <form className="space-y-5">
-
-              <div className="border-b border-black/20 pb-2">
-                <label className="block text-[9px] uppercase font-bold tracking-widest text-black/50 mb-1">
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  className="w-full bg-transparent outline-none text-base font-serif italic"
-                />
-              </div>
-
-              {/* EMAIL */}
-              <div className="border-b border-black/20 pb-2">
-                <label className="block text-[9px] uppercase font-bold tracking-widest text-black/50 mb-1">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  className="w-full bg-transparent outline-none text-base font-serif italic"
-                />
-              </div>
-
-              {/* PHONE – NEXT LINE */}
-              <div className="border-b border-black/20 pb-2">
-                <label className="block text-[9px] uppercase font-bold tracking-widest text-black/50 mb-1">
-                  Phone
-                </label>
-                <input
-                  type="tel"
-                  placeholder="+91 00000 00000"
-                  className="w-full bg-transparent outline-none text-base font-serif italic"
-                />
-              </div>
-
-              <div className="border-b border-black/20 pb-2">
-                <label className="block text-[9px] uppercase font-bold tracking-widest text-black/50 mb-1">
-                  Message
-                </label>
-                <textarea
-                  placeholder="Tell us about your requirements..."
-                  className="w-full bg-transparent outline-none text-base font-serif italic resize-none h-24"
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="mt-3 bg-[#0D2B24] text-white px-6 py-2 rounded-full text-[9px] font-bold tracking-[0.18em] hover:bg-[#153a31] transition"
-              >
-                SEND MESSAGE
-              </button>
-
-            </form>
-          </div>
+  {/* LEFT – LOGO */}
+  <div className="flex items-center  gap-4 justify-center flex-col w-full lg:w-1/2">
+    <img 
+      src={logo} 
+      alt="Logo" 
+      className="max-w-[280px] md:max-w-[360px]"
+    />
+  <p>Guiding you from city chaos to serene living in Dehradun.</p>
+  </div>
 
 
+  {/* RIGHT – FORM */}
+  <form className="
+    w-full 
+    lg:w-1/2 
+    max-w-md 
+    flex 
+    flex-col 
+    justify-center 
+    space-y-8
+  ">
+    {["FULL NAME", "PHONE NUMBER", "EMAIL", "MESSAGE"].map((label, i) => (
+      <div key={i}>
+        <label className="block text-[10px] tracking-[0.3em] mb-2 text-luxury-dark/60">
+          {label}
+        </label>
+        <input
+          type="text"
+          className="
+            w-full 
+            bg-transparent 
+            border-b 
+            border-luxury-dark/30 
+            focus:outline-none 
+            focus:border-luxury-dark 
+            py-1
+          "
+        />
+      </div>
+    ))}
 
+    <button
+      type="submit"
+      className="
+        self-start
+        bg-[#2f5d50] 
+        text-white 
+        text-[10px] 
+        tracking-[0.3em] 
+        px-8 py-3 
+        uppercase 
+        shadow-md
+      "
+    >
+      Submit
+    </button>
+  </form>
+
+</div>
+
+
+      {/* DIVIDER */}
+      <div className="flex justify-center items-center">
+  <div className="w-full max-w-[1280px] border-t border-[#2f5d50]/40" />
+</div>
+
+      {/* MIDDLE NAV */}
+      <div className="max-w-[1280px] mx-auto px-6 lg:px-0 py-16 grid grid-cols-1 lg:grid-cols-4 gap-12">
+
+        {/* CONTACT */}
+        <div>
+          <h4 className="text-sm mb-3">Contact</h4>
+          <p className="text-sm text-luxury-dark/70">
+            Grace@official.com<br />
+            +91-95823 90987
+          </p>
         </div>
 
-        {/* DIVIDER */}
-        <div className="border-t border-[#0D2B24]/80 mb-14"></div>
+        {/* ADDRESS */}
+        <div>
+          <h4 className="text-sm mb-3">Grace address</h4>
+          <p className="text-sm text-luxury-dark/70">
+            0-100 random place<br />
+            New Delhi - 110084
+          </p>
+        </div>
 
-        {/* BOTTOM LINKS */}
-        <div className="flex flex-col lg:flex-row justify-between gap-12 mb-20">
-
-          {/* CONTACT INFO */}
-          <div className="flex flex-col sm:flex-row gap-14">
-            <div>
-              <h4 className="text-[15px] font-serif font-bold mb-3">
-                Contact
-              </h4>
-              <div className="text-[#6B6B6B] text-[13px] space-y-1">
-                <p>Grace@official.com</p>
-                <p>+91 95823 90987</p>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="text-[15px] font-serif font-bold mb-3">
-                Grace Address
-              </h4>
-              <div className="text-[#6B6B6B] text-[13px] leading-snug">
-                <p>O-100 Random Place</p>
-                <p>New Delhi – 110084</p>
-              </div>
-            </div>
-          </div>
-
-          {/* NAV LINKS */}
-          <div className="flex flex-wrap gap-x-8 gap-y-4 text-[13px] font-bold">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.path}
-                className="hover:text-black transition"
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-
-          {/* SOCIAL ICONS */}
-          <div className="flex gap-3">
-            {[Linkedin, Facebook, Instagram, Youtube].map((Icon, i) => (
+        {/* LINKS */}
+        <div className="lg:col-span-2 flex flex-wrap gap-x-12 gap-y-6 text-sm">
+          {["Home", "About", "Projects", "Contact Us", "Blogs", "Insights"].map(
+            (item) => (
               <a
-                key={i}
+                key={item}
                 href="#"
-                className="w-8 h-8 border border-black/30 rounded-full flex items-center justify-center hover:bg-black hover:text-white transition"
+                className="hover:text-luxury-dark"
               >
-                <Icon size={16} />
+                {item}
               </a>
-            ))}
-          </div>
+            )
+          )}
+        </div>
+      </div>
+
+      {/* BOTTOM BAR */}
+      <div className="max-w-[1280px] mx-auto px-6 lg:px-0 pb-8 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-luxury-dark/60">
+
+        <p>© 2026 Grace Aesthetic</p>
+
+        <div className="flex gap-6">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms and Conditions</a>
         </div>
 
-        {/* COPYRIGHT */}
-        <div className="flex flex-col md:flex-row justify-between items-center text-[11px] font-semibold text-[#6B6B6B] pt-6 border-t border-black/5">
-          <p>© 2026 Grace Aesthetic</p>
-          <div className="flex gap-8 mt-4 md:mt-0">
-            <Link to="#" className="hover:text-black transition">
-              Privacy Policy
-            </Link>
-            <Link to="#" className="hover:text-black transition">
-              Terms & Conditions
-            </Link>
-          </div>
+        {/* SOCIAL ICONS */}
+        <div className="flex gap-4">
+          {["in", "f", "ig", "yt"].map((icon) => (
+            <div
+              key={icon}
+              className="w-8 h-8 border border-luxury-dark/40 rounded-full flex items-center justify-center text-xs"
+            >
+              {icon}
+            </div>
+          ))}
         </div>
 
       </div>
