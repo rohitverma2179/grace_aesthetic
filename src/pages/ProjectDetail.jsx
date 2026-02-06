@@ -9,6 +9,8 @@ import img1 from '../assets/gsapScrolling/img1.jpg'
 import img2 from '../assets/gsapScrolling/img2.jpg'
 import img3 from '../assets/gsapScrolling/img3.jpg'
 import img4 from '../assets/gsapScrolling/img4.jpg'
+import img5 from '../assets/gsapScrolling/img5.jpg'
+import img6 from '../assets/gsapScrolling/img6.jpg'
 import {
   Dribbble,
   Wifi,
