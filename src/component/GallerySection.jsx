@@ -44,15 +44,32 @@ const GallerySection = () => {
     <section className="py-32 bg-[#f8f7f3]">
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* Header */}
-        <div className="text-center mb-24">
-          <h2 className="tracking-[2.25rem] text-[37px] text-gray-500">
-            ELEVATED EVERYDAY
-          </h2>
-          <p className="mt-4 text-xs tracking-[0.3em] text-gray-400">
-            LEGACY FOR TOMORROW
-          </p>
-        </div>
+      {/* Header */}
+<div className="text-center mb-24 px-4">
+  <h2
+    className="
+      text-gray-500
+      text-[20px] sm:text-[24px] md:text-[37px]
+      tracking-[0.4rem] sm:tracking-[1rem] md:tracking-[2.25rem]
+      break-words
+    "
+  >
+    ELEVATED EVERYDAY
+  </h2>
+
+  <p
+    className="
+      mt-4
+      text-gray-400
+      text-xs sm:text-sm
+      tracking-[0.2em] sm:tracking-[0.3em]
+      break-words
+    "
+  >
+    LEGACY FOR TOMORROW
+  </p>
+</div>
+
 
         {/* Layout */}
         <div className="flex uppercase flex-col xl:flex-row gap-12 xl:gap-4 items-center xl:items-start">
