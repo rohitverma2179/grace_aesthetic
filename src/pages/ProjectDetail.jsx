@@ -5,10 +5,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Section, Container, Grid, Button } from "../component/ui";
 import video2 from '../assets/video2.mp4'
 import img from '../assets/3dImg.jpg'
-import img1 from '../assets/gsapScrolling/img1.jpg'
-import img2 from '../assets/gsapScrolling/img2.jpg'
-import img3 from '../assets/gsapScrolling/img3.jpg'
-import img4 from '../assets/gsapScrolling/img4.jpg'
+import img1 from '../assets/gsapScrolling/3d-inter-one.jpg'
+import img2 from '../assets/gsapScrolling/3d-inter-two.jpg'
+import img3 from '../assets/gsapScrolling/3d-inter-three.jpg'
+import img4 from '../assets/gsapScrolling/3d-inter-four.jpg'
 import {
     Dribbble,
     Wifi,
