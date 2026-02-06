@@ -21,8 +21,8 @@ function App() {
       <GallerySection />
 
       {/* Mid-page Text Break */}
-      <section className="py-24 bg-white text-center">
-        <div className="container-custom max-w-3xl">
+      <section className="py-24 bg-white flex justify-center items-center text-center">
+        <div className=" w-[1270px]">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
