@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Section, Container, Grid, Button } from "../component/ui";
+import video2 from '../assets/video2.mp4'
 import {
   Dribbble,
   Wifi,
@@ -63,16 +64,25 @@ const ProjectDetail = () => {
     <main className="bg-luxury-light">
       {/* 1. Project Hero (Using existing if available or new custom) */}
       <section className="relative h-screen overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&q=80&w=2000"
-          className="w-full h-full object-cover scale-105"
-          alt="Hero"
-        />
-        <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-          <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center cursor-pointer hover:bg-white/30 transition-all">
-            <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-white border-b-8 border-b-transparent translate-x-0.5"></div>
-          </div>
-        </div>
+        <div className="absolute inset-0">
+               {/* <img
+                 src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=2070"
+                 alt="Aerial view of mountains and lake"
+                 className="w-full h-full object-cover scale-105"
+               /> */}
+               <video
+                 src={video2}
+                 autoPlay
+                 muted
+                 loop
+                 playsInline
+                 className="w-full h-full object-cover"
+               >
+                 Your browser does not support the video tag.
+               </video>
+       
+               <div className="absolute inset-0 bg-black/30"></div>
+             </div>
       </section>
 
 
@@ -121,7 +131,7 @@ const ProjectDetail = () => {
                                 className={`
                                                w-[85vw] md:w-[45vw] lg:w-[40vw]
                                                h-[50vh]
-                                               ${i === 1 ? "md:h-[60vh]" : "md:h-[80vh]"}
+                                               ${i% 2 !== 0 ? "md:h-[60vh]" : "md:h-[80vh]"}
                                                shrink-0 relative group rounded-sm overflow-hidden 
                                              `}
                             >
