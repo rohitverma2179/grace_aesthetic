@@ -45,14 +45,38 @@ const GallerySection = () => {
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}
-        <div className="text-center mb-24">
-          <h2 className="tracking-[2.25rem] text-[37px] text-gray-500">
-            ELEVATED EVERYDAY
-          </h2>
-          <p className="mt-4 text-xs tracking-[0.3em] text-gray-400">
-            LEGACY FOR TOMORROW
-          </p>
+        <div className="text-center mb-12 md:mb-16 lg:mb-24">
+  <h2 className="
+    tracking-[0.6em] 
+    sm:tracking-[1rem] 
+    md:tracking-[1.6rem] 
+    lg:tracking-[2.25rem] 
+    text-xl 
+    sm:text-2xl 
+    md:text-3xl 
+    lg:text-[37px] 
+    text-gray-500
+  ">
+    ELEVATED EVERYDAY
+  </h2>
+
+  <p className="
+    mt-2 
+    sm:mt-3 
+    md:mt-4 
+    text-[10px] 
+    sm:text-[11px] 
+    md:text-xs 
+    tracking-[0.2em] 
+    sm:tracking-[0.25em] 
+    md:tracking-[0.3em] 
+    text-gray-400
+  ">
+    LEGACY FOR TOMORROW
+  </p>
         </div>
+
+
         {/* Gallery */}
         <div className='w-full flex gap-4 flex-col'>
 
@@ -68,7 +92,7 @@ const GallerySection = () => {
     </div>
 
     <div className='w-full h-full flex flex-col justify-between'>
-      <p className='w-full h-1/2 text-2xl md:text-3xl font-serif tracking-[14px]'>
+      <p className='w-full h-1/2 font-serif text-[clamp(1.1rem,2vw,1.9rem)] tracking-[clamp(4px,1vw,14px)]'>
         Harmony
       </p>
 
@@ -86,7 +110,7 @@ const GallerySection = () => {
   <div className='w-full h-auto md:h-152 grid grid-cols-1 md:grid-cols-2 gap-4 top_second_section'>
 
     <div className='w-full grid grid-cols-1 md:grid-cols-2 h-full left_second_images'>
-      <p className='text-2xl md:text-3xl font-serif tracking-[14px]'>
+      <p className='font-serif text-[clamp(1.1rem,2vw,1.9rem)] tracking-[clamp(4px,1vw,14px)]'>
         Wellbeing
       </p>
 
@@ -96,7 +120,7 @@ const GallerySection = () => {
           alt="img" 
           className='w-full aspect-square lg:h-full md:h-1/2 object-cover'
         />
-        <p className='w-full text-2xl md:text-3xl font-serif tracking-[14px]'>
+        <p className='w-full font-serif text-[clamp(1.1rem,2vw,1.9rem)] tracking-[clamp(4px,1vw,14px)]'>
           Thoughtful
         </p>
       </div>
@@ -115,7 +139,7 @@ const GallerySection = () => {
   <div className='w-full h-auto md:h-76 grid grid-cols-1 md:grid-cols-2 gap-4 top_third_section'>
 
     <div className='w-full grid grid-cols-1 md:grid-cols-2 h-full'>
-      <p className='text-2xl md:text-3xl font-serif tracking-[14px] w-full flex justify-end'>
+      <p className='font-serif text-[clamp(1.1rem,2vw,1.9rem)] tracking-[clamp(4px,1vw,14px)] w-full flex justify-end'>
         Rooted
       </p>
       <img 
@@ -131,14 +155,14 @@ const GallerySection = () => {
         alt="img" 
         className='w-full aspect-square md:h-full object-cover'
       />
-      <p className='text-2xl md:text-3xl font-serif tracking-[14px]'>
+      <p className='font-serif text-[clamp(1.1rem,2vw,1.9rem)] tracking-[clamp(4px,1vw,14px)]'>
         Enduring
       </p>
     </div>
 
   </div>
 
-</div>
+        </div>
 
 
       </div>
