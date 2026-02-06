@@ -12,6 +12,8 @@ const Navbar = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [scrollUpAmount, setScrollUpAmount] = useState(0);
 
+  const [showProjects, setShowProjects] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -19,15 +21,12 @@ const Navbar = () => {
       setIsScrolled(currentScrollY > 50);
 
       if (currentScrollY > lastScrollY) {
-        // scrolling DOWN → hide immediately
         setShowNav(false);
         setScrollUpAmount(0);
       } else {
-        // scrolling UP → accumulate distance
         const diff = lastScrollY - currentScrollY;
         setScrollUpAmount(prev => prev + diff);
 
-        // show navbar only after ~3 steps (~120px)
         if (scrollUpAmount + diff > 120) {
           setShowNav(true);
           setScrollUpAmount(0);
@@ -61,28 +60,64 @@ const Navbar = () => {
         }`}
       >
         <div className="container-custom flex justify-between items-center">
-          <div className="text-2xl font-serif font-bold tracking-tighter">
-            <img src={logo} className="w-24 h-full object-contain" alt="Logo" />
-          </div>
+          <img src={logo} className="w-24 h-full object-contain" alt="Logo" />
 
-          {/* Desktop Menu */}
+          {/* ================= DESKTOP MENU ================= */}
           <div className="hidden md:flex space-x-8">
-            {navLinks.map((link) => (
-              <button
-                key={link.name}
-                onClick={() => {
-                  if (link.action === 'popup') {
-                    setContactOpen(true);
-                  }
-                }}
-                className="text-sm uppercase tracking-widest font-medium transition-colors hover:text-primary text-white"
-              >
-                {link.name}
-              </button>
-            ))}
+
+            {navLinks.map((link) => {
+
+              // ✅ ONLY Projects has dropdown
+              if (link.name === "Projects") {
+                return (
+                  <div
+                    key={link.name}
+                    className="relative"
+                    onMouseEnter={() => setShowProjects(true)}   // hover in
+                    onMouseLeave={() => setShowProjects(false)}  // hover out
+                  >
+                    <button
+                      className="text-sm uppercase tracking-widest font-medium transition-colors hover:text-primary text-white"
+                    >
+                      Projects
+                    </button>
+
+                    {/* Dropdown list */}
+                    {showProjects && (
+                      <div className="absolute top-full left-0 mt-6 w-40  border border-white/10 shadow-lg">
+                        <button className="block w-full text-left px-4 py-2 text-white hover:bg-primary">
+                         Ishaadrii Project 
+                        </button>
+                        <button className="block w-full text-left px-4 py-2 text-white hover:bg-primary">
+                          Project 2
+                        </button>
+                        <button className="block w-full text-left px-4 py-2 text-white hover:bg-primary">
+                          Project 3
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
+              // ✅ All other links stay SAME
+              return (
+                <button
+                  key={link.name}
+                  onClick={() => {
+                    if (link.action === 'popup') {
+                      setContactOpen(true);
+                    }
+                  }}
+                  className="text-sm uppercase tracking-widest font-medium transition-colors hover:text-primary text-white"
+                >
+                  {link.name}
+                </button>
+              );
+            })}
           </div>
 
-          {/* Mobile Toggle */}
+          {/* ================= MOBILE TOGGLE ================= */}
           <button
             className="md:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -95,7 +130,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* ================= MOBILE MENU (UNCHANGED) ================= */}
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div
