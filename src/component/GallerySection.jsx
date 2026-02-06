@@ -105,7 +105,7 @@ const addToRight = (el) => {
 
 
         {/* Gallery */}
-        <div className='w-full flex gap-4 flex-col'>
+        <div className='w-full flex gap-4 flex-col overflow-hidden'>
 
   {/* FIRST SECTION */}
   <div className='w-full h-auto md:h-152 grid grid-cols-1 md:grid-cols-2 gap-4 top_section'>
