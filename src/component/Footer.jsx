@@ -27,95 +27,70 @@ const Footer = () => {
           <div className="max-w-md">
             <img src={logo} alt="Logo" />
           </div>
-
           {/* CONTACT FORM */}
-          {/* CONTACT FORM */}
-          <div className="w-full max-w-xl bg-white/30 backdrop-blur-sm p-8 md:p-12 rounded-3xl border border-white/20 shadow-xl">
-            <div className="mb-10">
-              <h3 className="text-primary text-[10px] font-bold uppercase tracking-[0.4em] mb-4">
-                Inquire
-              </h3>
-              <h2 className="text-4xl font-serif text-[#0D2B24] leading-tight">
-                Tell us about your <br />
-                <span className="italic">dream home</span>.
-              </h2>
-            </div>
+          <div className="w-full max-w-sm">
+            <h2 className="text-[clamp(1.4rem,3vw,2rem)] font-serif text-[#333] mb-5">
+              Contact
+            </h2>
 
-            <form className="space-y-8">
-              <div className="group relative">
-                <input
-                  type="text"
-                  required
-                  className="peer w-full bg-transparent border-b border-[#0D2B24]/20 py-2 outline-none focus:border-primary transition-all duration-300 text-lg font-serif italic text-[#0D2B24] placeholder:opacity-0"
-                  placeholder="Full Name"
-                  id="footer-name"
-                />
-                <label
-                  htmlFor="footer-name"
-                  className="absolute left-0 -top-3.5 text-[10px] uppercase font-bold tracking-widest text-[#0D2B24]/40 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:font-serif peer-placeholder-shown:italic peer-placeholder-shown:tracking-normal peer-focus:-top-3.5 peer-focus:text-[10px] peer-focus:uppercase peer-focus:font-bold peer-focus:tracking-widest peer-focus:text-primary"
-                >
+            <form className="space-y-5">
+
+              <div className="border-b border-black/20 pb-2">
+                <label className="block text-[9px] uppercase font-bold tracking-widest text-black/50 mb-1">
                   Full Name
                 </label>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="group relative">
-                  <input
-                    type="email"
-                    required
-                    className="peer w-full bg-transparent border-b border-[#0D2B24]/20 py-2 outline-none focus:border-primary transition-all duration-300 text-lg font-serif italic text-[#0D2B24] placeholder:opacity-0"
-                    placeholder="Email Address"
-                    id="footer-email"
-                  />
-                  <label
-                    htmlFor="footer-email"
-                    className="absolute left-0 -top-3.5 text-[10px] uppercase font-bold tracking-widest text-[#0D2B24]/40 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:font-serif peer-placeholder-shown:italic peer-placeholder-shown:tracking-normal peer-focus:-top-3.5 peer-focus:text-[10px] peer-focus:uppercase peer-focus:font-bold peer-focus:tracking-widest peer-focus:text-primary"
-                  >
-                    Email Address
-                  </label>
-                </div>
-
-                <div className="group relative">
-                  <input
-                    type="tel"
-                    required
-                    className="peer w-full bg-transparent border-b border-[#0D2B24]/20 py-2 outline-none focus:border-primary transition-all duration-300 text-lg font-serif italic text-[#0D2B24] placeholder:opacity-0"
-                    placeholder="Phone"
-                    id="footer-phone"
-                  />
-                  <label
-                    htmlFor="footer-phone"
-                    className="absolute left-0 -top-3.5 text-[10px] uppercase font-bold tracking-widest text-[#0D2B24]/40 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:font-serif peer-placeholder-shown:italic peer-placeholder-shown:tracking-normal peer-focus:-top-3.5 peer-focus:text-[10px] peer-focus:uppercase peer-focus:font-bold peer-focus:tracking-widest peer-focus:text-primary"
-                  >
-                    Phone
-                  </label>
-                </div>
-              </div>
-
-              <div className="group relative">
-                <textarea
-                  required
-                  className="peer w-full bg-transparent border-b border-[#0D2B24]/20 py-2 outline-none focus:border-primary transition-all duration-300 text-lg font-serif italic text-[#0D2B24] placeholder:opacity-0 min-h-[100px] resize-none"
-                  placeholder="Message"
-                  id="footer-message"
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  className="w-full bg-transparent outline-none text-base font-serif italic"
                 />
-                <label
-                  htmlFor="footer-message"
-                  className="absolute left-0 -top-3.5 text-[10px] uppercase font-bold tracking-widest text-[#0D2B24]/40 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:font-serif peer-placeholder-shown:italic peer-placeholder-shown:tracking-normal peer-focus:-top-3.5 peer-focus:text-[10px] peer-focus:uppercase peer-focus:font-bold peer-focus:tracking-widest peer-focus:text-primary"
-                >
+              </div>
+
+              {/* EMAIL */}
+              <div className="border-b border-black/20 pb-2">
+                <label className="block text-[9px] uppercase font-bold tracking-widest text-black/50 mb-1">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  className="w-full bg-transparent outline-none text-base font-serif italic"
+                />
+              </div>
+
+              {/* PHONE – NEXT LINE */}
+              <div className="border-b border-black/20 pb-2">
+                <label className="block text-[9px] uppercase font-bold tracking-widest text-black/50 mb-1">
+                  Phone
+                </label>
+                <input
+                  type="tel"
+                  placeholder="+91 00000 00000"
+                  className="w-full bg-transparent outline-none text-base font-serif italic"
+                />
+              </div>
+
+              <div className="border-b border-black/20 pb-2">
+                <label className="block text-[9px] uppercase font-bold tracking-widest text-black/50 mb-1">
                   Message
                 </label>
+                <textarea
+                  placeholder="Tell us about your requirements..."
+                  className="w-full bg-transparent outline-none text-base font-serif italic resize-none h-24"
+                />
               </div>
 
               <button
                 type="submit"
-                className="group w-full relative overflow-hidden bg-[#0D2B24] py-5 rounded-xl text-white text-[10px] font-bold tracking-[0.3em] uppercase transition-all duration-500 hover:shadow-2xl active:scale-[0.98]"
+                className="mt-3 bg-[#0D2B24] text-white px-6 py-2 rounded-full text-[9px] font-bold tracking-[0.18em] hover:bg-[#153a31] transition"
               >
-                <span className="relative z-10">Send Inquiry</span>
-                <div className="absolute inset-0 bg-primary translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
+                SEND MESSAGE
               </button>
+
             </form>
           </div>
+
+
 
         </div>
 
