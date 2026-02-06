@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom';
-import logograce from "../assets/graceLogoGolden.webp"
-import logoisd from '../assets/isaadri_second.webp'
+import logograce from "../assets/grace_A.webp"
+import logoisd from '../assets/ISHAADRII_A.webp'
 
 const Footer = () => {
   const location = useLocation();
@@ -21,7 +21,7 @@ const Footer = () => {
             alt="Logo"
             className="max-w-[280px] md:max-w-[360px] transition-all duration-500"
           />
-          <p>Homes designed for balance, comfort, and calm.</p>
+          {/* <p>Homes designed for balance, comfort, and calm.</p> */}
         </div>
 
 
