@@ -46,7 +46,7 @@ function App() {
       <NatureCarousel />
 
       <WhyChooseSection />
-      <GraceAestheticPage />
+      {/* <GraceAestheticPage /> */}
       <Footer />
     </div>
   );
