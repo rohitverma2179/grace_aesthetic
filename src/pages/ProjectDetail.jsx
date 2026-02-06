@@ -109,7 +109,7 @@ const ProjectDetail = () => {
                     <h2 className="text-center text-luxury-dark tracking-[0.8em] font-serif uppercase text-2xl md:text-3xl mb-16 px-4">
                         Visual Journey
                     </h2>
-                    <div ref={horizontalRef} className="flex gap-4 md:gap-8 px-[5vw] md:px-[10vw] relative w-max">
+                    <div ref={horizontalRef} className="flex items-end gap-4 md:gap-8 px-[5vw] md:px-[10vw] relative w-max">
                         {[
                             "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200",
                             "https://images.unsplash.com/photo-1600585154340-be60998ad50c?auto=format&fit=crop&w=1200",
@@ -117,7 +117,15 @@ const ProjectDetail = () => {
                             "https://images.unsplash.com/photo-1600607687940-c57fa8c950d8?auto=format&fit=crop&w=1200",
                             "https://images.unsplash.com/photo-1620332372374-910a5585293d?auto=format&fit=crop&w=1200",
                         ].map((img, i) => (
-                            <div key={i} className="w-[85vw] md:w-[45vw] lg:w-[40vw] h-[50vh] md:h-[60vh] shrink-0 relative group rounded-4xl overflow-hidden shadow-2xl">
+                            <div
+                                key={i}
+                                className={`
+                                               w-[85vw] md:w-[45vw] lg:w-[40vw]
+                                               h-[50vh]
+                                               ${i === 1 ? "md:h-[60vh]" : "md:h-[80vh]"}
+                                               shrink-0 relative group rounded-sm overflow-hidden 
+                                             `}
+                            >
                                 <img src={img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt={`Journey ${i}`} />
                                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-colors duration-500"></div>
                             </div>
@@ -125,6 +133,9 @@ const ProjectDetail = () => {
                     </div>
                 </div>
             </div>
+
+
+
 
             {/* 4. Project Amenities */}
             <Section variant="white" padding="lg">
@@ -171,54 +182,7 @@ const ProjectDetail = () => {
                 </div>
             </section>
 
-            {/* 6. Contact Section */}
-            <Section variant="form" padding="lg">
-                <Container className="max-w-4xl">
-                    <div className="text-center mb-16">
-                        <h2 className="text-[clamp(2rem,5vw,3rem)] font-serif text-luxury-dark uppercase tracking-tight mb-4">Contact</h2>
-                        <p className="text-xs uppercase tracking-[0.2em] text-luxury-dark/60 font-bold max-w-2xl mx-auto">
-                            WE INVITE YOU TO EXPERIENCE THE UNIQUE LIFESTYLE OF GRACE AESTHETIC FIRST-HAND.
-                            PLEASE FILL IN THE FORM BELOW AND WE WILL BE IN TOUCH.
-                        </p>
-                    </div>
 
-                    <form className="space-y-10">
-                        <div className="border-b border-luxury-dark/20 pb-4">
-                            <label className="block text-[10px] uppercase font-bold tracking-widest text-luxury-dark/40 mb-2">FULL NAME</label>
-                            <input type="text" className="w-full bg-transparent outline-none py-2 text-lg font-serif italic" placeholder="Your Name" />
-                        </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                            <div className="border-b border-luxury-dark/20 pb-4">
-                                <label className="block text-[10px] uppercase font-bold tracking-widest text-luxury-dark/40 mb-2">EMAIL</label>
-                                <input type="email" className="w-full bg-transparent outline-none py-2 text-lg font-serif italic" placeholder="Your Email" />
-                            </div>
-                            <div className="border-b border-luxury-dark/20 pb-4">
-                                <label className="block text-[10px] uppercase font-bold tracking-widest text-luxury-dark/40 mb-2">PHONE NUMBER</label>
-                                <input type="tel" className="w-full bg-transparent outline-none py-2 text-lg font-serif italic" placeholder="+91 00000 00000" />
-                            </div>
-                        </div>
-
-                        <div className="border-b border-luxury-dark/20 pb-4">
-                            <label className="block text-[10px] uppercase font-bold tracking-widest text-luxury-dark/40 mb-2">MESSAGE</label>
-                            <textarea className="w-full bg-transparent outline-none py-2 text-lg font-serif italic resize-none h-32" placeholder="Tell us about your requirements..."></textarea>
-                        </div>
-
-                        <div className="flex items-center gap-4">
-                            <div className="w-5 h-5 border border-luxury-dark/30 flex items-center justify-center cursor-pointer hover:border-primary transition-all">
-                                {/* Checked state if needed */}
-                            </div>
-                            <p className="text-[10px] uppercase font-bold tracking-widest text-luxury-dark/40">
-                                I AGREE TO THE PRIVACY POLICY AND PERMIT YOU TO CONTACT ME.
-                            </p>
-                        </div>
-
-                        <div className="pt-8 flex justify-center">
-                            <Button size="lg">Send Message</Button>
-                        </div>
-                    </form>
-                </Container>
-            </Section>
         </main>
     );
 };
