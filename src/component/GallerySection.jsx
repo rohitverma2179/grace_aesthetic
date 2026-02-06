@@ -1,4 +1,9 @@
 import { useEffect, useRef } from 'react';
+import HarmonyOne from "../assets/images/Harmony_one.JPG"
+import HarmonyTwo from "../assets/images/Harmony_second.jpg"
+import Wellbeing from "../assets/images/Wellbeing.jpg"
+import rooted from "../assets/images/rooted.jpg"
+import Enduring from "../assets/images/Enduring.jpg"
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AOS from 'aos';
@@ -106,7 +111,7 @@ const addToRight = (el) => {
 
     <div data-aos="fade-right" data-aos-duration="2000" className='w-full aspect-square md:h-full'>
       <img 
-        src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Altja_j%C3%B5gi_Lahemaal.jpg" 
+        src={HarmonyOne} 
         alt="" 
         className='w-full h-full object-cover'
       />
@@ -119,7 +124,7 @@ const addToRight = (el) => {
 
       <div className='w-full h-1/2 overflow-hidden' ref={addToRefs}>
         <img 
-          src="https://t4.ftcdn.net/jpg/02/70/35/97/360_F_270359790_oywvlHjQGnkT3pjdSAfqt4HZb6TTKOrz.jpg" 
+          src={HarmonyTwo} 
           alt="img" 
           className='w-full md:w-1/2 h-full object-cover'
         />
@@ -137,7 +142,7 @@ const addToRight = (el) => {
 
       <div className='grid grid-cols-1 md:grid-rows-2' ref={addToRefs}>
         <img 
-          src="https://t4.ftcdn.net/jpg/02/70/35/97/360_F_270359790_oywvlHjQGnkT3pjdSAfqt4HZb6TTKOrz.jpg" 
+          src={Wellbeing} 
           alt="img" 
           className='w-full aspect-square lg:h-full md:h-1/2 object-cover'
         />
@@ -164,7 +169,7 @@ const addToRight = (el) => {
         Rooted
       </p>
       <img 
-        src="https://t4.ftcdn.net/jpg/02/70/35/97/360_F_270359790_oywvlHjQGnkT3pjdSAfqt4HZb6TTKOrz.jpg" 
+        src={rooted}
         alt="img" 
         className='w-full aspect-square md:h-full object-cover'
       />
@@ -172,7 +177,7 @@ const addToRight = (el) => {
 
     <div data-aos="fade-left" data-aos-duration="2000" className='w-full grid grid-cols-1 md:grid-cols-2 flex gap-2'>
       <img 
-        src="https://t4.ftcdn.net/jpg/02/70/35/97/360_F_270359790_oywvlHjQGnkT3pjdSAfqt4HZb6TTKOrz.jpg" 
+        src={Enduring} 
         alt="img" 
         className='w-full aspect-square md:h-full object-cover'
       />
