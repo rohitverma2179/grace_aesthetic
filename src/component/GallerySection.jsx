@@ -162,7 +162,7 @@ const GallerySection = () => {
 
   </div>
 
-</div>
+        </div>
 
 
       </div>
