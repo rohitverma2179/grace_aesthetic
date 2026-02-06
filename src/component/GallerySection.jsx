@@ -1,6 +1,10 @@
 import { useEffect, useRef } from 'react';
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,6 +16,23 @@ const GallerySection = () => {
       wrappersRef.current.push(el);
     }
   };
+
+  const leftItems = useRef([]);
+const rightItems = useRef([]);
+
+const addToLeft = (el) => {
+  if (el && !leftItems.current.includes(el)) {
+    leftItems.current.push(el);
+  }
+};
+
+const addToRight = (el) => {
+  if (el && !rightItems.current.includes(el)) {
+    rightItems.current.push(el);
+  }
+};
+
+
 
   // useEffect(() => {
   //   wrappersRef.current.forEach((wrapper) => {
@@ -83,7 +104,7 @@ const GallerySection = () => {
   {/* FIRST SECTION */}
   <div className='w-full h-auto md:h-152 grid grid-cols-1 md:grid-cols-2 gap-4 top_section'>
 
-    <div className='w-full aspect-square md:h-full'>
+    <div data-aos="fade-right" data-aos-duration="2000" className='w-full aspect-square md:h-full'>
       <img 
         src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Altja_j%C3%B5gi_Lahemaal.jpg" 
         alt="" 
@@ -91,8 +112,8 @@ const GallerySection = () => {
       />
     </div>
 
-    <div className='w-full h-full flex flex-col justify-between'>
-      <p className='w-full h-1/2 font-serif text-[clamp(1.1rem,2vw,1.9rem)] tracking-[clamp(4px,1vw,14px)]'>
+    <div data-aos="fade-left" data-aos-duration="2000" className='w-full h-full flex flex-col justify-between'>
+      <p className='w-full font-serif text-[clamp(1.1rem,2vw,1.9rem)] tracking-[clamp(4px,1vw,14px)]'>
         Harmony
       </p>
 
@@ -109,7 +130,7 @@ const GallerySection = () => {
   {/* SECOND SECTION */}
   <div className='w-full h-auto md:h-152 grid grid-cols-1 md:grid-cols-2 gap-4 top_second_section'>
 
-    <div className='w-full grid grid-cols-1 md:grid-cols-2 h-full left_second_images'>
+    <div  data-aos="fade-right" data-aos-duration="2000" className='w-full grid grid-cols-1 md:grid-cols-2 h-full left_second_images'>
       <p className='font-serif text-[clamp(1.1rem,2vw,1.9rem)] tracking-[clamp(4px,1vw,14px)]'>
         Wellbeing
       </p>
@@ -126,7 +147,7 @@ const GallerySection = () => {
       </div>
     </div>
 
-    <div className='w-full aspect-square md:h-full'>
+    <div data-aos="fade-left" data-aos-duration="2000" className='w-full aspect-square md:h-full'>
       <img 
         src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Altja_j%C3%B5gi_Lahemaal.jpg" 
         alt="" 
@@ -138,7 +159,7 @@ const GallerySection = () => {
   {/* THIRD SECTION */}
   <div className='w-full h-auto md:h-76 grid grid-cols-1 md:grid-cols-2 gap-4 top_third_section'>
 
-    <div className='w-full grid grid-cols-1 md:grid-cols-2 h-full'>
+    <div data-aos="fade-right" data-aos-duration="2000" className='w-full grid grid-cols-1 md:grid-cols-2 h-full'>
       <p className='font-serif text-[clamp(1.1rem,2vw,1.9rem)] tracking-[clamp(4px,1vw,14px)] w-full flex justify-end'>
         Rooted
       </p>
@@ -149,7 +170,7 @@ const GallerySection = () => {
       />
     </div>
 
-    <div className='w-full grid grid-cols-1 md:grid-cols-2 flex gap-2'>
+    <div data-aos="fade-left" data-aos-duration="2000" className='w-full grid grid-cols-1 md:grid-cols-2 flex gap-2'>
       <img 
         src="https://t4.ftcdn.net/jpg/02/70/35/97/360_F_270359790_oywvlHjQGnkT3pjdSAfqt4HZb6TTKOrz.jpg" 
         alt="img" 
