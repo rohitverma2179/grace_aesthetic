@@ -1,26 +1,30 @@
 
 import { motion } from 'framer-motion';
+import Harmonyestatenature from "../assets/images/Harmony-estate-nature.jpg";
+import Ease from "../assets/images/Ease.jpeg";
+import Grounded from "../assets/images/Grounded.jpeg";
+import Warmth from "../assets/images/Warmth.jpg";
 const InteriorsSection = () => {
   const interiors = [
     {
-      title: "Zen Minimalist",   
-      image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=2000",
-      desc: "Clean lines and natural wood textures create a calming atmosphere."
+      title: "Harmony",   
+      image: Harmonyestatenature,
+      desc: "Balanced forms and natural materials come together to create calm, well-proportioned living spaces."
     },
     {
-      title: "Modern Lodge",
-      image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000",
-      desc: "Warm tones and luxurious materials for the ultimate escape."
+      title: "Warmth",
+      image: Warmth,
+      desc: "Soft textures and earthy tones shape welcoming interiors designed for comfort and connection."
     },
     {
-      title: "Earthy Elegance",
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=2000",
-      desc: "A perfect blend of contemporary pieces and organic forms."
+      title: "Grounded",
+      image: Grounded,
+      desc: "Organic elements and thoughtful detailing create homes that feel stable, natural, and timeless."
     },
     {
-      title: "Nordic Comfort",
-      image: "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&q=80&w=2000",
-      desc: "Light-filled spaces designed for relaxation and connection."
+      title: "Ease",
+      image: Ease,
+      desc: "Light-filled layouts and practical design choices support relaxed, effortless everyday living."
     }
   ];
 
