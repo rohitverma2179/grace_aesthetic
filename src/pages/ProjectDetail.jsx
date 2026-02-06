@@ -4,6 +4,11 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Section, Container, Grid, Button } from "../component/ui";
 import video2 from '../assets/video2.mp4'
+import img from '../assets/3dImg.jpg'
+import img1 from '../assets/gsapScrolling/img1.jpg'
+import img2 from '../assets/gsapScrolling/img2.jpg'
+import img3 from '../assets/gsapScrolling/img3.jpg'
+import img4 from '../assets/gsapScrolling/img4.jpg'
 import {
   Dribbble,
   Wifi,
@@ -120,11 +125,7 @@ const ProjectDetail = () => {
                     </h2>
                     <div ref={horizontalRef} className="flex items-end gap-4 md:gap-8 px-[5vw] md:px-[10vw] relative w-max">
                         {[
-                            "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200",
-                            "https://images.unsplash.com/photo-1600585154340-be60998ad50c?auto=format&fit=crop&w=1200",
-                            "https://images.unsplash.com/photo-1613490492523-232323232323?auto=format&fit=crop&w=1200",
-                            "https://images.unsplash.com/photo-1600607687940-c57fa8c950d8?auto=format&fit=crop&w=1200",
-                            "https://images.unsplash.com/photo-1620332372374-910a5585293d?auto=format&fit=crop&w=1200",
+                            img1, img2, img3, img4
                         ].map((img, i) => (
                             <div
                                 key={i}
@@ -181,11 +182,11 @@ const ProjectDetail = () => {
       {/* 5. Scenic House Section */}
       <section className="relative h-[80vh] overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1449156003053-c301a91316b2?auto=format&fit=crop&q=80&w=2000"
+          src={img}
           className="w-full h-full object-cover"
           alt="Scenic House"
         />
-        <div className="absolute inset-0 flex items-center justify-center">
+        {/* <div className="absolute inset-0 flex items-center justify-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -193,7 +194,7 @@ const ProjectDetail = () => {
           >
             <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-white border-b-8 border-b-transparent translate-x-0.5"></div>
           </motion.div>
-        </div>
+        </div> */}
       </section>
 
 
