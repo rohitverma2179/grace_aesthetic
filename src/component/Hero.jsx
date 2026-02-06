@@ -1,21 +1,33 @@
-import { motion } from 'framer-motion';
-import { Play} from 'lucide-react';
+import { motion } from "framer-motion";
+import { Play } from "lucide-react";
+import video from "../assets/video.mp4";
 
 const Hero = () => {
   return (
     <section className="relative h-screen min-h-[600px] overflow-hidden">
       {/* Hero Image */}
       <div className="absolute inset-0">
-        <img
+        {/* <img
           src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=2070"
           alt="Aerial view of mountains and lake"
           className="w-full h-full object-cover scale-105"
-        />
+        /> */}
+        <video
+          src={video}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          Your browser does not support the video tag.
+        </video>
+
         <div className="absolute inset-0 bg-black/30"></div>
       </div>
 
       {/* Content */}
-      <div className="relative h-full flex items-center justify-center">
+      {/* <div className="relative h-full flex items-center justify-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -24,7 +36,7 @@ const Hero = () => {
         >
           <Play className="text-white fill-white w-12 h-12 translate-x-1" />
         </motion.div>
-      </div>
+      </div> */}
 
       {/* Floating House (Visual Reference from Design) */}
       {/* <motion.div
