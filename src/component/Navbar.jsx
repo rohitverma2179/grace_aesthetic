@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import ContactPopup from './ContactPopup';
-import logo from "../assets/ishaadri_second.webp"
+import logo from "../assets/Grace_Aesthetic_logo.webp"
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -57,12 +57,12 @@ const Navbar = () => {
         } ${
           isScrolled
             ? 'bg-black py-4'
-            : 'bg-transparent backdrop-blur-md py-6'
+            : 'bg-transparent backdrop-blur-md py-4'
         }`}
       >
         <div className="container-custom flex justify-between items-center">
           <div className="text-2xl font-serif font-bold tracking-tighter">
-            <img src={logo} className="w-24 h-full object-contain" alt="Logo" />
+            <img src={logo} className="w-28 h-full object-contain" alt="Logo" />
           </div>
 
           {/* Desktop Menu */}
@@ -75,7 +75,7 @@ const Navbar = () => {
                     setContactOpen(true);
                   }
                 }}
-                className="text-sm uppercase tracking-widest font-medium transition-colors hover:text-primary text-white"
+                className="text-sm uppercase tracking-widest font-mono transition-colors hover:text-primary text-white"
               >
                 {link.name}
               </button>
