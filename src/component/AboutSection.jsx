@@ -24,7 +24,7 @@ const AboutSection = () => {
             genuine commitment to helping people begin a better life closer to nature.
           </p>
 
-          <button
+          {/* <button
             className="
               flex items-center gap-3
               bg-[#2F5D50]
@@ -37,7 +37,7 @@ const AboutSection = () => {
           >
             {<ArrowRight size={14} />}
             Discover More
-          </button>
+          </button> */}
         </div>
 
         {/* RIGHT LOGO */}
