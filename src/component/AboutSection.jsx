@@ -10,8 +10,16 @@ const AboutSection = () => {
       <div className="w-[90%] max-w-300 flex flex-col lg:flex-row items-center justify-between gap-16">
         {/* LEFT CONTENT */}
         <div className="flex flex-col max-w-xl">
-          <h3 className="text-[#666666] tracking-[0.6em] uppercase text-4xl md:text-[3rem] mb-6 font-normal">
-            Our Story
+          <h3 className="tracking-[0.6em] 
+    sm:tracking-[1rem] 
+    md:tracking-[1.6rem] 
+    lg:tracking-[2.25rem] 
+    text-xl 
+    sm:text-2xl 
+    md:text-3xl 
+    lg:text-[37px] 
+    text-gray-500 pb-6">
+            OUR STORY
           </h3>
 
           <p className="text-gray-500 leading-relaxed text-sm  md:text-base mb-10">

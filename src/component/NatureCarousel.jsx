@@ -16,7 +16,15 @@ const NatureCarousel = () => {
 
       {/* HEADER (unchanged) */}
       <div className="w-[90%] max-w-[1400px] mx-auto mb-8">
-        <h2 className="text-[#E0A82E] text-2xl md:text-3xl font-medium">
+        <h2 className="tracking-[0.6em] 
+    sm:tracking-[1rem] 
+    md:tracking-[1.6rem] 
+    lg:tracking-[2.25rem] 
+    text-xl 
+    sm:text-2xl 
+    md:text-3xl 
+    lg:text-[37px] 
+    text-gray-500 uppercase text-center xl:mb-12">
           Closer to Nature
         </h2>
       </div>

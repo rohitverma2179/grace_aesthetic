@@ -44,7 +44,7 @@ const InteriorsSection = () => {
             >
               <h3 className="text-3xl md:text-5xl font-serif mb-4 tracking-wide">{item.title}</h3>
               <p className="text-lg text-white/70 mb-8 font-light italic">{item.desc}</p>
-              <button className="btn-primary">View Project</button>
+              {/* <button className="btn-primary">View Project</button> */}
             </motion.div>
           </div>
         </div>

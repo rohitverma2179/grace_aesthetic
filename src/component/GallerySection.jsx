@@ -62,7 +62,7 @@ const addToRight = (el) => {
   // }, []);
 
   return (
-    <section className="py-32 bg-[#f8f7f3]">
+    <section className="pb-32 bg-[#f8f7f3]">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}

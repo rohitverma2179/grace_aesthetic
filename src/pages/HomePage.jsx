@@ -24,7 +24,15 @@ const HomePage = () => {
             viewport={{ once: true }}
             transition={{ duration: 1 }}
           >
-            <p className="text-xs md:text-sm uppercase tracking-[0.3em] text-primary mb-8">
+            <p className="tracking-[0.6em] 
+    sm:tracking-[1rem] 
+    md:tracking-[1.6rem] 
+    lg:tracking-[2.25rem] 
+    text-xl 
+    sm:text-2xl 
+    md:text-3xl 
+    lg:text-[37px] 
+    text-gray-500 mb-6 uppercase">
               Our Core Values
             </p>
 
