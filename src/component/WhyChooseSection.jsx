@@ -1,21 +1,24 @@
 
 import { motion } from 'framer-motion';
+import thoughtfulLocations from "../assets/images/thoughtful-Locations.jpg";
+import DesignedWithPurpose from "../assets/images/Designed-with-Purpose.jpg";
+import LivingResponsibly from "../assets/images/Living-Responsibly.jpg";
 const WhyChooseSection = () => {
   const points = [
     {
-      title: "Curated Selection",
-      image: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=800",
-      text: "Handpicked locations that offer unparalleled natural beauty."
+      title: "Thoughtful Locations",
+      image: thoughtfulLocations,
+      text: "Places chosen with care for their natural setting, accessibility, and quality of everyday living."
     },
     {
-      title: "Architectural Excellence",
-      image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=800",
-      text: "Designs that respect the terrain while providing modern luxury."
+      title: "Designed with Purpose",
+      image: DesignedWithPurpose,
+      text: "Homes shaped by clarity, proportion, and a deep respect for their surroundings."
     },
     {
-      title: "Sustainable Living",
-      image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=800",
-      text: "Committed to eco-friendly practices and local materials."
+      title: "Living Responsibly",
+      image: LivingResponsibly,
+      text: "A mindful approach that values environmental balance, local context, and lasting well-being."
     }
   ];
 
@@ -31,7 +34,7 @@ const WhyChooseSection = () => {
     sm:text-2xl 
     md:text-3xl 
     lg:text-[37px] 
-    text-gray-500 uppercase text-center xl:mb-12">Why Choose Grace <br /> <br /> Aesthetic</h2>
+    text-gray-500 uppercase text-center xl:mb-12">Why Grace Aesthetic</h2>
           <p className="text-luxury-dark/60 max-w-2xl mx-auto">
             Dehradun offers a rare harmony between natural beauty and contemporary living. Surrounded by hills, forests, and clean air, it supports a slower, healthier lifestyle while still providing essential urban connectivity. It is a place where people can settle with confidence, find balance, and feel genuinely at home.
           </p>
