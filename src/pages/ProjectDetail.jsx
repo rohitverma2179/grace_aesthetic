@@ -113,11 +113,11 @@ const ProjectDetail = () => {
                             Our Core Values
                         </p>
 
-                        <p className="text-base md:text-2xl lg:text-[18px] font-serif text-luxury-dark/80 italic leading-relaxed">
+                        <p className="text-base md:text-2xl lg:text-[18px] font-serif text-luxury-dark/80 ">
                             Created for those who appreciate openness, nature, and thoughtful living, ISHAADRI brings contemporary homes into harmony with Dehradun’s serene landscape. Carefully planned spaces, natural light, and an open setting come together to shape a lifestyle that feels calm, balanced, and grounded.
                         </p>
-                        <p className="text-base md:text-2xl  mt-4 lg:text-[18px] font-serif text-luxury-dark/80 italic leading-relaxed">
-                            From site selection and orientation to layout and long-term comfort, every element is considered with purpose. More than just a residence, ISHAADRI offers a way of life that is peaceful, connected, and enduring—rooted in simplicity and closeness to nature.
+                        <p className="text-base md:text-2xl   lg:text-[18px] font-serif text-luxury-dark/80  leading-relaxed">
+                            From site selection and orientation to layout and long-term comfort, every element is considered with purpose. More than just a residence, ISHAADRI offers a way of life that is peaceful, connected, and enduring—rooted in simplicity and closeness ..
                         </p>
                     </motion.div>
                 </div>

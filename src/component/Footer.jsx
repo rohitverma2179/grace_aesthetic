@@ -37,7 +37,7 @@ const Footer = () => {
   ">
           {["FULL NAME", "PHONE NUMBER", "EMAIL", "MESSAGE"].map((label, i) => (
             <div key={i}>
-              <label className="block text-[10px] tracking-[0.3em] mb-2 text-luxury-dark/60">
+              <label className="block text-[10px] tracking-[0.3em]  text-luxury-dark/60">
                 {label}
               </label>
               <input
@@ -49,7 +49,7 @@ const Footer = () => {
             border-luxury-dark/30 
             focus:outline-none 
             focus:border-luxury-dark 
-            py-1
+            
           "
               />
             </div>
