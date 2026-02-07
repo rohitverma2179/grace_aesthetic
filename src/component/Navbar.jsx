@@ -71,7 +71,7 @@ const Navbar = () => {
         className={`fixed w-full z-50 transition-all duration-500 ${showNav ? 'translate-y-0' : '-translate-y-full'
           } ${isScrolled
             ? 'bg-black/90 backdrop-blur-lg py-4 shadow-2xl'
-            : 'bg-transparent py-6'
+            : 'bg-black/60 py-6'
           }`}
       >
         <div className="container-custom flex justify-between items-center mx-auto px-4">
