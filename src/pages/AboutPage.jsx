@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Testimonials from './Testimonials';
 
 const AboutPage = () => {
     useEffect(() => {
@@ -120,7 +121,7 @@ const AboutPage = () => {
             </section>
 
             {/* Vision Section */}
-            <section className="bg-[#E9E8E2] py-16 md:py-20 lg:py-24 px-4 md:px-10 lg:px-20 flex flex-col gap-24 lg:gap-40 mb-32 lg:mb-52">
+            <section className="bg-[#EAE8E3] py-16 md:py-20 lg:py-24 px-4 md:px-10 lg:px-20 flex flex-col gap-24 lg:gap-40 mb-32 ">
 
                 {/* LEADER SECTION */}
                 <div className="max-w-7xl mx-auto w-full flex flex-col lg:flex-row gap-12 lg:gap-28 ">
@@ -202,6 +203,10 @@ const AboutPage = () => {
                 </div>
 
             </section>
+
+
+            {/* Testimonials */}
+            <Testimonials />
         </div>
     );
 };
