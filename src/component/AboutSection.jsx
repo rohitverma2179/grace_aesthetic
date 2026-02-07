@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import swastixaLogo from "../assets/swastixaLogo.png";
+import swastixaLogo from "../assets/grace_A.webp";
 
 const AboutSection = () => {
   return (
