@@ -112,53 +112,93 @@ const AboutPage = () => {
             </section>
 
             {/* Vision Section */}
-            <section className="bg-[#EAE8E3] py-24 px-4 md:px-12 lg:px-24">
-                <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    <motion.div
-                        initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                        className="order-2 lg:order-1"
-                    >
-                        <span className="text-primary tracking-[0.3em] text-xs font-bold uppercase mb-4 block">MEET THE LEADER</span>
-                        <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif tracking-wider text-luxury-dark mb-8 leading-tight">
-                            A VISION ROOTED IN TRUST & THOUGHTFUL LIVING
-                        </h3>
-                        <div className="space-y-6 text-gray-600 leading-relaxed text-sm md:text-base">
-                            <p>
-                                Grace Aesthetic was born out of a clear intention: to rethink what home can be and how we want to live in relationship with the earth. More than just a real estate brand, we focus on lifestyle, nature, and creating spaces where the soul can truly belong.
-                            </p>
-                            <p>
-                                Our work is not about just selling properties, but about creating better lives. We believe architecture and real estate should always be about quality, not just numbers. Every project we undertake is driven by our commitment to help people find peace and balance.
-                            </p>
-                            <p>
-                                Our work is dedicated to those who seek something more—homes that are an extension of their values. We are here to guide you to a path where nature and luxury coexist in perfect harmony.
-                            </p>
-                        </div>
-                    </motion.div>
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1 }}
-                        className="order-1 lg:order-2"
-                    >
-                        <div className="relative">
-                            <img
-                                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop"
-                                alt="Visionary Leader"
-                                className="w-full aspect-4/5 object-cover rounded-sm shadow-2xl"
-                            />
-                            <div className="absolute -bottom-6 -left-6 w-32 h-32 border border-primary/20 -z-10 hidden md:block"></div>
-                        </div>
-                    </motion.div>
+            <section className="bg-[#EAE8E3] py-16 md:py-20 lg:py-24 px-4 md:px-10 lg:px-20 flex flex-col gap-24 lg:gap-40 mb-32 lg:mb-52">
+
+  {/* LEADER SECTION */}
+            <div className="max-w-7xl mx-auto w-full flex flex-col lg:flex-row gap-12 lg:gap-28 ">
+            
+              {/* TEXT */}
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="order-2 lg:order-1 w-full lg:w-1/2"
+              >
+                <span className="text-[#F1A605] tracking-[4px] text-[10px] font-medium uppercase mb-3 block">
+                  MEET THE LEADER
+                </span>
+            
+                <h3 className="text-2xl md:text-3xl lg:text-[18px] font-sans tracking-[6px] md:tracking-[8px] text-luxury-dark mb-6 leading-snug">
+                  A VISION ROOTED IN TRUST & THOUGHTFUL LIVING
+                </h3>
+            
+                <div className="space-y-5 text-[#3D3D3D] font-light leading-relaxed text-sm md:text-base text-justify">
+                  <p>
+                    Grace Aesthetic was founded with a clear intention to create a more honest, human, and nature-driven approach to real estate in Dehradun. With deep local understanding and a people first mindset, the founder envisioned a platform that helps individuals and families move with confidence, clarity, and peace of mind.
+                  </p>
+                  <p>
+                    More than building a real estate brand, the focus has always been on building relationships guiding every client with transparency, care, and long-term perspective. This vision continues to shape how Grace Aesthetic works today, ensuring every recommendation reflects integrity, balance, and respect for both people and place.
+                  </p>
                 </div>
-            </section>
+              </motion.div>
+            
+              {/* IMAGE */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1 }}
+                className="order-1 lg:order-2 w-full lg:w-1/2"
+              >
+             <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] md:aspect-[3/4] lg:h-[600px]">
+                 <img
+                   src="https://img.freepik.com/free-photo/portrait-confident-young-businessman-with-his-arms-crossed_23-2148176206.jpg?semt=ais_hybrid&w=740&q=80"
+                   alt="Visionary Leader"
+                   className="w-full h-full object-cover"
+                 />
+             </div>
+
+
+              </motion.div>
+            </div>
+            
+            {/* TEAM GRID */}
+            <div className="max-w-7xl mx-auto w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-12">
+              {teamMembers.map((member, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  className="flex flex-col group"
+                >
+                  <div className="overflow-hidden mb-5 rounded-sm aspect-[94/115]">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+            
+                  <span className="w-full text-[10px] tracking-[4px] text-[#F1A605] font-bold uppercase mb-1">
+                    {member.role}
+                  </span>
+            
+                  <h4 className="w-full text-[18px] md:text-[16px] sm:text-[12px] font-sans lg:tracking-[8px] text-luxury-dark uppercase">
+                    {member.name}
+                  </h4>
+                </motion.div>
+              ))}
+            </div>
+            
+           </section>
+
 
             {/* Team Section */}
-            <section className="py-32 px-4 md:px-8 max-w-7xl mx-auto bg-[#FAF9F6]">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {/* <section className="py-32 px-4 md:px-8 max-w-7xl mx-auto bg-[#FAF9F6]"> */}
+                {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                     {teamMembers.map((member, index) => (
                         <motion.div
                             key={index}
@@ -183,8 +223,8 @@ const AboutPage = () => {
                             </h4>
                         </motion.div>
                     ))}
-                </div>
-            </section>
+                </div> */}
+            {/* </section> */}
         </div>
     );
 };
