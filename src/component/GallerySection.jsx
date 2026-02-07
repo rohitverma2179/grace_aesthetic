@@ -1,9 +1,10 @@
 import { useEffect, useRef } from 'react';
-import HarmonyOne from "../assets/images/Harmony_one.JPG"
-import HarmonyTwo from "../assets/images/Harmony_second.jpg"
-import Wellbeing from "../assets/images/Wellbeing.jpg"
-import rooted from "../assets/images/rooted.jpg"
-import Enduring from "../assets/images/Enduring.jpg"
+import HarmonyOne from "../assets/images/Harmony_one.JPG";
+import HarmonyTwo from "../assets/images/Harmony_second.jpg";
+import Wellbeing from "../assets/images/Wellbeing.jpg";
+import rooted from "../assets/images/rooted.jpg";
+import Enduring from "../assets/images/Enduring.jpg";
+import Thoughtful from "../assets/images/Thoughtful.jpeg";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AOS from 'aos';
@@ -104,7 +105,7 @@ const addToRight = (el) => {
 
 
         {/* Gallery */}
-        <div className='w-full flex gap-4 flex-col'>
+        <div className='w-full flex gap-4 flex-col overflow-hidden'>
 
   {/* FIRST SECTION */}
   <div className='w-full h-auto md:h-152 grid grid-cols-1 md:grid-cols-2 gap-4 top_section'>
@@ -154,7 +155,7 @@ const addToRight = (el) => {
 
     <div data-aos="fade-left" data-aos-duration="2000" className='w-full aspect-square md:h-full'>
       <img 
-        src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Altja_j%C3%B5gi_Lahemaal.jpg" 
+        src={Thoughtful}
         alt="" 
         className='w-full h-full object-cover'
       />
