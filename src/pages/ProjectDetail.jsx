@@ -131,15 +131,15 @@ const ProjectDetail = () => {
             <div ref={triggerRef}>
                 <div className="h-screen overflow-hidden flex flex-col justify-center">
                     <h2 className="tracking-[0.6em] 
-    sm:tracking-[1rem] 
-    md:tracking-[1.6rem] 
-    lg:tracking-[2.25rem] 
-    text-xl 
-    sm:text-2xl 
-    md:text-3xl 
-    lg:text-[37px] 
-    text-gray-500 uppercase text-center xl:mb-12">
-                        Visual Journey
+                      sm:tracking-[1rem] 
+                      md:tracking-[1.6rem] 
+                      lg:tracking-[2.25rem] 
+                      text-xl 
+                      sm:text-2xl 
+                      md:text-3xl 
+                      lg:text-[37px] 
+                    text-gray-500 uppercase text-center xl:mb-12">
+                      Visual Journey
                     </h2>
                     <div ref={horizontalRef} className="flex items-end gap-4 md:gap-8 px-[5vw] md:px-[10vw] relative w-max">
                         {[
