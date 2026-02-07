@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import logograce from "../assets/grace_A.webp"
 import logoisd from '../assets/ISHAADRII_A.webp'
 
@@ -102,17 +102,21 @@ const Footer = () => {
 
         {/* LINKS */}
         <div className="lg:col-span-2 flex flex-wrap gap-x-12 gap-y-6 text-sm">
-          {["Home", "About", "Projects", "Contact Us", "Blogs"].map(
-            (item) => (
-              <a
-                key={item}
-                href="#"
-                className="hover:text-luxury-dark"
-              >
-                {item}
-              </a>
-            )
-          )}
+          {[
+            { name: "Home", path: "/" },
+            { name: "About", path: "/about" },
+            { name: "Projects", path: "/projects" },
+            { name: "Contact Us", path: "#" },
+            { name: "Blogs", path: "#" }
+          ].map((item) => (
+            <Link
+              key={item.name}
+              to={item.path}
+              className="hover:text-luxury-dark"
+            >
+              {item.name}
+            </Link>
+          ))}
         </div>
       </div>
 
