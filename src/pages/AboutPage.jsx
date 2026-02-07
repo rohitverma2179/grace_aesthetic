@@ -32,12 +32,12 @@ const AboutPage = () => {
     ];
 
     return (
-        <div className="bg-[#FAF9F6] pt-24">
+        <div className="bg-[#FAF9F6] pt-22">
             {/* Hero Section */}
             <section className="py-20 px-4 md:px-8 max-w-7xl mx-auto text-center">
                 <motion.span
                     {...fadeIn}
-                    className="block text-primary tracking-[0.4em] text-xs md:text-sm font-medium uppercase mb-6"
+                    className="block text-[#F1A605] tracking-[0.4em] text-xs md:text-sm lg:text-[1rem] font-medium uppercase mb-6"
                 >
                     A THOUGHTFUL WAY OF LIVING
                 </motion.span>
@@ -45,7 +45,7 @@ const AboutPage = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.2 }}
-                    className="text-4xl md:text-6xl lg:text-7xl font-serif tracking-widest text-luxury-dark mb-12 uppercase"
+                    className="text-3xl md:text-[32px] lg:text-5xl font-serif tracking-widest text-luxury-dark mb-12 uppercase"
                 >
                     ABOUT GRACE AESTHETIC
                 </motion.h1>
@@ -53,14 +53,20 @@ const AboutPage = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 0.5 }}
-                    className="max-w-4xl mx-auto text-gray-500 leading-relaxed text-sm md:text-lg"
+                    className="max-w-4xl mx-auto text-gray-500 leading-relaxed text-sm text-justify lg:text-center md:text-lg"
                 >
                     Grace Aesthetic was created for those who believe a home should offer more than just walls and windows. Rooted in Dehradun, our philosophy revolves around a life enriched by nature, space, and authenticity. We are committed to helping families find more than just a property; we help them discover a sanctuary where the surroundings feel like home.
                 </motion.p>
             </section>
 
             {/* Main Image Banner */}
-            <section className="px-4 md:px-8 mb-32 relative group">
+
+            <section className="px-4 mx-auto w-full flex justify-center items-center lg:mb-32  group lg:pt-16">
+                <div className='w-[1270px]'>
+
+                <div className='mb-12'>
+                    <div class="w-full px-4 h-px bg-[#F1A605] my-6"></div>
+                </div>
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -91,6 +97,8 @@ const AboutPage = () => {
                     <div className="absolute bottom-8 right-8 w-12 h-px bg-white/50"></div>
                     <div className="absolute bottom-8 right-8 w-px h-12 bg-white/50"></div>
                 </motion.div>
+                </div>
+
             </section>
 
             {/* What We Do Section */}
@@ -98,13 +106,13 @@ const AboutPage = () => {
                 <div className="max-w-7xl mx-auto text-center">
                     <motion.h2
                         {...fadeIn}
-                        className="text-3xl md:text-5xl font-serif tracking-[0.2em] text-luxury-dark mb-10 uppercase"
+                        className="text-3xl md:text-4xl font-serif tracking-[0.2em] text-left text-luxury-dark mb-10 font-[500] uppercase"
                     >
                         WHAT WE DO
                     </motion.h2>
                     <motion.p
                         {...fadeIn}
-                        className="max-w-5xl mx-auto text-gray-500 leading-relaxed text-base md:text-xl"
+                        className="max-w-5xl font-light text-[#3D3D3D] text-justify md:text-left leading-normal tracking-[8%] text-base md:text-xl"
                     >
                         At Grace Aesthetic, we go beyond mere transactions of real estate. We are an architecture and lifestyle brand that focuses on the creation of premium and high-end living spaces. With quality craftsmanship and a thoughtful design process, we bring back the harmony that should exist between people and nature. We don't just build structures; we curate lifestyles.
                     </motion.p>
