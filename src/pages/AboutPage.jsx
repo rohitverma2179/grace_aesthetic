@@ -32,7 +32,7 @@ const AboutPage = () => {
     ];
 
     return (
-        <div className="bg-[#FAF9F6] pt-22">
+        <div className=" pt-22">
             {/* Hero Section */}
             <section className="py-20 px-4 md:px-8 max-w-7xl mx-auto text-center">
                 <motion.span
@@ -45,7 +45,7 @@ const AboutPage = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.2 }}
-                    className="text-3xl md:text-[32px] lg:text-5xl font-serif tracking-widest text-luxury-dark mb-12 uppercase"
+                    className="text-[16px] md:text-2xl lg:text-[36px] font-sans lg:tracking-[20px] md:tracking-[18px] sm:tracking-[12px] font-normal text-luxury-dark mb-4.5 uppercase"
                 >
                     ABOUT GRACE AESTHETIC
                 </motion.h1>
@@ -53,7 +53,7 @@ const AboutPage = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 0.5 }}
-                    className="max-w-4xl mx-auto text-gray-500 leading-relaxed text-sm text-justify lg:text-center md:text-lg"
+                    className="max-w-5xl mx-auto text-[#3D3D3D] font-light leading-relaxed text-sm text-justify lg:text-center md:text-lg"
                 >
                     Grace Aesthetic was created for those who believe a home should offer more than just walls and windows. Rooted in Dehradun, our philosophy revolves around a life enriched by nature, space, and authenticity. We are committed to helping families find more than just a property; we help them discover a sanctuary where the surroundings feel like home.
                 </motion.p>
@@ -102,17 +102,17 @@ const AboutPage = () => {
             </section>
 
             {/* What We Do Section */}
-            <section className="py-24 bg-white px-4 md:px-8">
+            <section className="py-24 px-4 md:px-8">
                 <div className="max-w-7xl mx-auto text-center">
                     <motion.h2
                         {...fadeIn}
-                        className="text-3xl md:text-4xl font-serif tracking-[0.2em] text-left text-luxury-dark mb-10 font-[500] uppercase"
+                        className=" text-3xl md:text-4xl font-serif tracking-[0.2em] text-left text-luxury-dark mb-10 font-[500] uppercase"
                     >
                         WHAT WE DO
                     </motion.h2>
                     <motion.p
                         {...fadeIn}
-                        className="max-w-5xl font-light text-[#3D3D3D] text-justify md:text-left leading-normal tracking-[8%] text-base md:text-xl"
+                        className="max-w-6xl font-light text-[#3D3D3D] text-justify md:text-left leading-normal tracking-[8%] text-base md:text-xl"
                     >
                         At Grace Aesthetic, we go beyond mere transactions of real estate. We are an architecture and lifestyle brand that focuses on the creation of premium and high-end living spaces. With quality craftsmanship and a thoughtful design process, we bring back the harmony that should exist between people and nature. We don't just build structures; we curate lifestyles.
                     </motion.p>
@@ -120,7 +120,7 @@ const AboutPage = () => {
             </section>
 
             {/* Vision Section */}
-            <section className="bg-[#EAE8E3] py-16 md:py-20 lg:py-24 px-4 md:px-10 lg:px-20 flex flex-col gap-24 lg:gap-40 mb-32 lg:mb-52">
+            <section className="bg-[#E9E8E2] py-16 md:py-20 lg:py-24 px-4 md:px-10 lg:px-20 flex flex-col gap-24 lg:gap-40 mb-32 lg:mb-52">
 
   {/* LEADER SECTION */}
             <div className="max-w-7xl mx-auto w-full flex flex-col lg:flex-row gap-12 lg:gap-28 ">
@@ -190,7 +190,7 @@ const AboutPage = () => {
                     />
                   </div>
             
-                  <span className="w-full text-[10px] tracking-[4px] text-[#F1A605] font-bold uppercase mb-1">
+                  <span className="w-full text-[10px] tracking-[4px] text-[#F1A605] font-medium uppercase mb-1">
                     {member.role}
                   </span>
             
