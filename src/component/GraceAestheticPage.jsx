@@ -45,7 +45,7 @@ const GraceAestheticPage = () => {
 
         <p className="mx-auto max-w-3xl text-sm leading-7 text-gray-600">
           Designed for those who value space, greenery, and balance, this project
-          seamlessly blends modern living with Dehradun’s natural surroundings.
+          seamlessly blends modern living with Uttrakhand’s natural surroundings.
           Thoughtfully planned layouts, open environments, and a peaceful setting
           come together to create a lifestyle rooted in comfort and calm.
         </p>
@@ -113,7 +113,7 @@ const GraceAestheticPage = () => {
         <h2 className="mb-4 text-center tracking-[0.4em]">CONTACT</h2>
 
         <p className="mx-auto mb-10 max-w-2xl text-center text-sm text-gray-600">
-          Reach out today to explore waterside residences in Dehradun. Our team
+          Reach out today to explore waterside residences in Uttrakhand. Our team
           is ready to guide you through luxury living surrounded by nature.
         </p>
 
@@ -160,13 +160,13 @@ const GraceAestheticPage = () => {
               Grace Aesthetic
             </h3>
             <p className="text-sm text-gray-600">
-              Guiding you from chaos to serene living in Dehradun.
+              Guiding you from chaos to serene living in Uttrakhand.
             </p>
           </div>
 
           <div>
             <p className="font-medium">Trade the Noise for Nature</p>
-            <p className="text-xl font-semibold">Move to Dehradun.</p>
+            <p className="text-xl font-semibold">Move to Uttrakhand.</p>
             <button className="mt-4 border border-[#2f5d50] px-6 py-2 text-sm">
               Start Your Property Journey
             </button>

@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage.jsx';
 import ProjectDetail from './pages/ProjectDetail.jsx';
 import AboutPage from './pages/AboutPage.jsx';
 import BlogPage from './pages/BlogPage.jsx';
+import BlogDetailPage from './pages/BlogDetailPage.jsx';
 import Lenis from "lenis";
 import ScrollToTop from './common/ScrollToTop.jsx';
 
@@ -48,6 +49,7 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/projects" element={<ProjectDetail />} />
             <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:slug" element={<BlogDetailPage />} />
           </Routes>
         </main>
         <Footer />

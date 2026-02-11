@@ -38,7 +38,7 @@ const HomePage = () => {
 
             <p className="text-base md:text-2xl lg:text-[18px] font-serif text-luxury-dark/80 text-base/8">
               At Grace Aesthetic, we believe real estate should be built on
-              trust, clarity, and genuine care. Rooted in Dehradun, we respect
+              trust, clarity, and genuine care. Rooted in Uttrakhand, we respect
               nature, local surroundings, and responsible development in every
               decision we make. Honesty, transparency, and long term
               relationships guide our work, ensuring clients feel confident and

@@ -36,7 +36,7 @@ const WhyChooseSection = () => {
     lg:text-[37px] 
     text-gray-500 uppercase text-center xl:mb-12">Why Grace Aesthetic</h2>
           <p className="text-luxury-dark/60 max-w-4xl mx-auto">
-            Dehradun offers a rare harmony between natural beauty and contemporary living. Surrounded by hills, forests, and clean air, it supports a slower, healthier lifestyle while still providing essential urban connectivity. It is a place where people can settle with confidence, find balance, and feel genuinely at home.
+            Uttrakhand offers a rare harmony between natural beauty and contemporary living. Surrounded by hills, forests, and clean air, it supports a slower, healthier lifestyle while still providing essential urban connectivity. It is a place where people can settle with confidence, find balance, and feel genuinely at home.
           </p>
         </div>
 
@@ -45,7 +45,7 @@ const WhyChooseSection = () => {
             <motion.div
               key={idx}
 
-              
+
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
