@@ -5,7 +5,7 @@ const testimonials = [
     name: "COCO",
     text: `AT WATERSIDE RESIDENCES, STRIKING EXTERIORS MEET
     ELEGANT, THOUGHTFULLY DESIGNED INTERIORS.
-    NESTLED IN DEHRADUN'S MOUNTAINS AND NATURAL
+    NESTLED IN UTTRAKHAND'S MOUNTAINS AND NATURAL
     BEAUTY, EVERY HOME BLENDS LUXURY, COMFORT, AND
     SERENITY.`,
   },
@@ -13,7 +13,7 @@ const testimonials = [
     name: "ROCK",
     text: `AT WATERSIDE RESIDENCES, STRIKING EXTERIORS MEET
     ELEGANT, THOUGHTFULLY DESIGNED INTERIORS.
-    NESTLED IN DEHRADUN'S MOUNTAINS AND NATURAL
+    NESTLED IN UTTRAKHAND'S MOUNTAINS AND NATURAL
     BEAUTY, EVERY HOME BLENDS LUXURY, COMFORT, AND
     SERENITY.`,
   },
@@ -50,9 +50,8 @@ export default function Testimonials() {
           return (
             <div
               key={card}
-              className={`bg-[#EEECE4] p-8 transition-opacity duration-500 ${
-                fade ? "opacity-100" : "opacity-0"
-              }`}
+              className={`bg-[#EEECE4] p-8 transition-opacity duration-500 ${fade ? "opacity-100" : "opacity-0"
+                }`}
             >
               <p className="text-xs tracking-widest text-gray-600 mb-4">
                 {data.name}

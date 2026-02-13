@@ -1,0 +1,219 @@
+import React, { useRef, useState, useEffect } from 'react';
+import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
+import ceoHead from "../assets/ownerimg/1.jpg"
+import ceoHead2 from "../assets/ownerimg/2.png"
+import ceoHead3 from "../assets/ownerimg/3.0.png"
+
+const leaderSections = [
+    {
+        tag: "Founder & CEO, Team RKI",
+        title: "Mr. Devender Tomar",
+        description: [
+            "With 22+ years of experience across leading organizations like MRG, Signature Global, Unicon, Airtel, and Godrej Securities, Mr. Devender Tomar brings strategic expertise to real estate consulting. At Team RKI, he delivers transparent, client-focused guidance, driven by his core philosophy  “Service Above All.”"
+        ],
+        image: ceoHead,
+        reverse: false
+    },
+    {
+        tag: "Co-Founder & CFO, Team RKI",
+        title: "Ms. Neeru Tomar",
+        description: [
+            "With 19 years of experience in Sales, E-Commerce, and Operations, Mrs. Neeru Tomar has worked with global brands like American Express, Citi Group, Aon Hewitt, and Koziva UK. She drives operational efficiency, revenue growth, and customer excellence by combining strategic insight with proven best practices to build sustainable, high-performing businesses."
+        ],
+        image: ceoHead2,
+        reverse: true
+    },
+    {
+        tag: "Executive Director (Sales), Team RKI",
+        title: "Mr. Saurabh Siddhartha Jha",
+        description: [
+            "With over 13 years of diversified experience across Sales, Marketing, SaaS, and Logistics, Mr. Saurabh Siddhartha Jha brings a wealth of knowledge and expertise to the real estate industry. Having worked with leading organizations such as Zomato, Loconav, Signature Global, and Bata, he has successfully built a career defined by strategic growth, client-centric solutions, and operational excellence. ",
+        ],
+        image: ceoHead3,
+        reverse: false
+    },
+    {
+        tag: "DESIGN INTEGRITY",
+        title: "THOUGHTFUL LIVING BY DESIGN",
+        description: [
+            "Placing environmental respect and human comfort at the center of every project. We create spaces that are as functional as they are beautiful.",
+        ],
+        image: "https://img.freepik.com/free-photo/portrait-confident-young-businessman-with-his-arms-crossed_23-2148176206.jpg?semt=ais_hybrid&w=740&q=80",
+        reverse: true
+    }
+];
+
+const Section = ({ section, index, total }) => {
+    const sectionRef = useRef(null);
+    const [isDesktop, setIsDesktop] = useState(typeof window !== 'undefined' ? window.innerWidth >= 1024 : true);
+
+    const { scrollYProgress } = useScroll({
+        target: sectionRef,
+        offset: ["start start", "end end"]
+    });
+
+    // Create a smooth version of scrollYProgress
+    const smoothProgress = useSpring(scrollYProgress, {
+        stiffness: 100,
+        damping: 30,
+        restDelta: 0.001
+    });
+
+    useEffect(() => {
+        const handleResize = () => setIsDesktop(window.innerWidth >= 1024);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    // Animation ranges for different effects
+    const textWidth = useTransform(smoothProgress, [0, 0.4], ["100%", isDesktop ? "60%" : "100%"]);
+    const imageWidth = useTransform(smoothProgress, [0, 0.4], ["0%", isDesktop ? "40%" : "0%"]);
+    const imageOpacity = useTransform(smoothProgress, [0, 0.4], [0, 1]); // Image starts invisible
+    const imageScale = useTransform(smoothProgress, [0, 0.4], [1.2, 1]);
+    const columnGap = useTransform(smoothProgress, [0.1, 0.4], ["0px", isDesktop ? "96px" : "0px"]);
+    const textOpacity = useTransform(smoothProgress, [1, 1, 1], [1, 1, 1]); // Text visible from start
+    const sectionScale = useTransform(smoothProgress, [0.8, 1], [1, 0.95]);
+    const sectionOpacity = useTransform(smoothProgress, [0.8, 0], [1, 0]);
+
+    // Floating number in background
+    const numOpacity = useTransform(smoothProgress, [1, 1, 1], [1, 1, 1]);
+    const numY = useTransform(smoothProgress, [0, 1], [50, -50]);
+    const textPadding = useTransform(smoothProgress, [0, 0.4], ["0px", "48px"]);
+
+    return (
+        <div
+            ref={sectionRef}
+            className="relative h-[200vh] w-full"
+            style={{ zIndex: index + 1 }}
+        >
+            <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden bg-[#FBFBF9]">
+                <motion.div
+                    style={{
+                        scale: sectionScale,
+                        opacity: sectionOpacity,
+                    }}
+                    className="w-full h-full relative flex items-center"
+                >
+                    {/* Background Number */}
+                    <motion.div
+                        style={{ opacity: numOpacity, y: numY }}
+                        className={`absolute ${section.reverse ? 'left-20' : 'right-20'} top-1/2 -translate-y-1/2 text-[20vw] font-serif text-primary/20 select-none leading-none z-0 pointer-events-none`}
+                    >
+                        {/* 0{index + 1} */}
+                    </motion.div>
+
+                    <div className="container-custom relative z-10 w-full px-6 md:px-12">
+                        <motion.div
+                            style={{
+                                columnGap: columnGap
+                            }}
+                            className={`flex flex-col ${section.reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-0`}
+                        >
+
+                            {/* IMAGE SECTION */}
+                            <motion.div
+                                style={{
+                                    width: imageWidth,
+                                    opacity: imageOpacity,
+                                }}
+                                className="hidden lg:block relative overflow-hidden h-[70vh] rounded-sm luxury-shadow"
+                            >
+                                <motion.img
+                                    style={{ scale: imageScale }}
+                                    src={section.image}
+                                    alt={section.title}
+                                    className="w-full h-full object-cover transition-all duration-1000"
+                                />
+                                <div className={`absolute bottom-6 ${section.reverse ? 'left-6' : 'right-6'} w-12 h-12 border-b-2 border-primary/30 z-30`} />
+                            </motion.div>
+
+                            {/* MOBILE IMAGE (Static/Simple Fade) */}
+                            <div className="lg:hidden w-full mb-8 relative overflow-hidden rounded-sm aspect-4/5 luxury-shadow">
+                                <img
+                                    src={section.image}
+                                    alt={section.title}
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+
+                            {/* TEXT CONTENT */}
+                            <motion.div
+                                style={{
+                                    width: textWidth,
+                                    opacity: textOpacity
+                                }}
+                                className="space-y-8 flex flex-col justify-center"
+                            >
+                                <motion.div
+                                    style={{
+                                        paddingLeft: section.reverse ? textPadding : "0px",
+                                        paddingRight: !section.reverse ? textPadding : "0px"
+                                    }}
+                                    className="space-y-6"
+                                >
+                                    <div className="space-y-4">
+                                        <motion.span
+                                            initial={{ opacity: 0, x: -20 }}
+                                            whileInView={{ opacity: 1, x: 0 }}
+                                            className="text-primary tracking-[8px] text-[10px] sm:text-xs font-bold uppercase block"
+                                        >
+                                            {section.tag}
+                                        </motion.span>
+                                        <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif text-luxury-dark leading-[1.1]">
+                                            {section.title}
+                                        </h3>
+                                    </div>
+
+                                    <div className="space-y-6 text-luxury-dark/80 font-light leading-relaxed text-base md:text-lg border-l-2 border-primary/20 pl-8">
+                                        {section.description.map((para, pIndex) => (
+                                            <p key={pIndex} className="text-justify lg:text-left max-w-2xl">
+                                                {para}
+                                            </p>
+                                        ))}
+                                    </div>
+
+                                    <div className="pt-4 flex gap-6 items-center">
+                                        <div className="h-px w-12 bg-primary/40" />
+                                        <span className="text-[10px] tracking-[4px] uppercase text-primary font-medium">
+                                            Grace Aesthetic Leadership
+                                        </span>
+                                    </div>
+                                </motion.div>
+                            </motion.div>
+                        </motion.div>
+                    </div>
+                </motion.div>
+            </div>
+        </div>
+    );
+};
+
+const Ceo = () => {
+    return (
+        <section className="relative overflow-visible">
+            {/* Background Zigzag remains throughout the scroll */}
+            <div className="fixed inset-0 opacity-[0.02] pointer-events-none z-0"
+                style={{
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10 L10 0 L30 20 L50 0 L70 20 L90 0 L100 10' fill='none' stroke='%23C5A059' stroke-width='2'/%3E%3C/svg%3E")`,
+                    backgroundSize: '100px 20px'
+                }}
+            />
+
+            <div className="relative">
+                {leaderSections.map((section, index) => (
+                    <Section
+                        key={index}
+                        section={section}
+                        index={index}
+                        total={leaderSections.length}
+                    />
+                ))}
+            </div>
+
+            {/* Spacer for the last sticky item to scroll through */}
+            {/* <div className="h-[20vh] bg-[#FBFBF9]" /> */}
+        </section>
+    );
+};
+
+export default Ceo;

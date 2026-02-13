@@ -26,15 +26,8 @@ const Footer = () => {
 
 
         {/* RIGHT – FORM */}
-        <form className="
-    w-full 
-    lg:w-1/2 
-    max-w-md 
-    flex 
-    flex-col 
-    justify-center 
-    space-y-8
-  ">
+        <form className=" w-full lg:w-1/2 max-w-md flex flex-col justify-center space-y-8 ">
+        <div className='text-sm sm:text-xl'>Enquiry </div>
           {["FULL NAME", "PHONE NUMBER", "EMAIL", "MESSAGE"].map((label, i) => (
             <div key={i}>
               <label className="block text-[10px] tracking-[0.3em]  text-luxury-dark/60">
@@ -81,14 +74,14 @@ const Footer = () => {
       </div>
 
       {/* MIDDLE NAV */}
-      <div className="max-w-[1280px] mx-auto px-6 lg:px-0 py-16 grid grid-cols-1 lg:grid-cols-4 gap-12">
+      <div className="max-w-[1280px] mx-auto px-6 lg:px-0 py-8 grid grid-cols-1 lg:grid-cols-4 gap-12">
 
         {/* CONTACT */}
         <div>
           <h4 className="text-sm mb-3">Contact</h4>
           <p className="text-sm text-luxury-dark/70">
             graceaestheticofficial@gmail.com<br />
-            +91-XXXXXXXXXX
+            +91-XXXXXX
           </p>
         </div>
 
@@ -107,7 +100,7 @@ const Footer = () => {
             { name: "About", path: "/about" },
             { name: "Projects", path: "/projects" },
             { name: "Contact Us", path: "#" },
-            { name: "Blogs", path: "#" }
+            { name: "Blogs", path: "/blog" }
           ].map((item) => (
             <Link
               key={item.name}
