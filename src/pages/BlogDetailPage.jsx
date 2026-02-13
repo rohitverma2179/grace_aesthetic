@@ -63,14 +63,14 @@ const BlogDetailPage = () => {
                     {/* Left Column - Fixed-like Sticky Images */}
                     <div className="w-full md:w-[35%]">
                         <div className="md:sticky md:top-16 space-y-6">
-                            <div className="aspect-[4/3] overflow-hidden bg-gray-100">
+                            <div className="aspect-4/3 overflow-hidden bg-gray-100">
                                 <img src={blog.images[0]} alt="Featured" className="w-full h-full object-cover" />
                             </div>
                             <div className="grid grid-cols-2 gap-6">
-                                <div className="aspect-[3/2] overflow-hidden bg-gray-100">
+                                <div className="aspect-3/2 overflow-hidden bg-gray-100">
                                     <img src={blog.images[1]} alt="Detail 1" className="w-full h-full object-cover" />
                                 </div>
-                                <div className="aspect-[3/2] overflow-hidden bg-gray-100">
+                                <div className="aspect-3/2 overflow-hidden bg-gray-100">
                                     <img src={blog.images[2]} alt="Detail 2" className="w-full h-full object-cover" />
                                 </div>
                             </div>
@@ -79,7 +79,7 @@ const BlogDetailPage = () => {
 
                     {/* Right Column - Scrollable Content */}
                     <div className="w-full md:w-[65%]">
-                        <div className="max-w-[750px] mx-auto">
+                        <div className="max-w-187.5 mx-auto">
                             <h2 className="text-xl md:text-2xl font-serif text-black leading-relaxed mb-12 tracking-tight italic border-l-4 border-primary pl-8 py-2">
                                 {blog.description}
                             </h2>
@@ -129,7 +129,7 @@ const BlogDetailPage = () => {
                                     <img
                                         src={post.images[0]}
                                         alt={post.title}
-                                        className="w-full h-[250px] object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110"
+                                        className="w-full h-62.5 object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110"
                                     />
                                 </div>
                                 <div className="space-y-4">

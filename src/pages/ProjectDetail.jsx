@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Section, Container, Grid, Button } from "../component/ui";
-import video2 from '../assets/video2.mp4'
+import video2 from '../assets/ISHAADRIIvideo.mp4'
 import img from '../assets/3dImg.jpg'
 import img1 from '../assets/gsapScrolling/3d-inter-one.jpg'
 import img2 from '../assets/gsapScrolling/3d-inter-two.jpg'

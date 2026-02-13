@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
-import video from "../assets/grace_video.mp4";
+import video from "../assets/graceHerovideo.mp4";
 
 const Hero = () => {
   return (
