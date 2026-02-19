@@ -134,7 +134,7 @@ const BlogDetailPage = () => {
                                 </div>
                                 <div className="space-y-4">
                                     {/* <p className="text-primary text-[9px] uppercase tracking-[0.4em] font-bold">{post.date}</p> */}
-                                    <h4 className="text-lg md:text-xl font-serif text-black uppercase tracking-tight leading-tight group-hover:text-primary transition-colors">
+                                    <h4 className="text-lg md:text-xl font-serif text-black  tracking-tight leading-tight group-hover:text-primary transition-colors">
                                         {post.title}
                                     </h4>
                                     <h4 className="text-base md:text-[15px] text-black/70 font-light leading-[1.9] tracking-wide">

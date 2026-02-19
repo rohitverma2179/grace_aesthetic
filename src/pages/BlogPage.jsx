@@ -119,7 +119,7 @@ const BlogPage = () => {
                                             {post.date}
                                         </span> */}
                                         <Link to={`/blog/${post.slug}`}>
-                                            <h3 className="text-xl md:text-[18px] font-serif text-black leading-[1.2] tracking-tight hover:text-primary transition-colors uppercase">
+                                            <h3 className="text-xl md:text-[18px] font-serif text-black leading-[1.2] tracking-tight hover:text-primary transition-colors ">
                                                 {post.title}
                                             </h3>
                                         </Link>

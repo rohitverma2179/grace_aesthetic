@@ -3,8 +3,9 @@ import { Menu, X } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import ContactPopup from './ContactPopup';
-import logograce from "../assets/Grace_Aesthetic_logo.webp"
-import logoisd from '../assets/ishaadri_second.webp'
+import logograce from "../assets/graceheader.png"
+import logoisd from '../assets/Ishaadriiheader.png'
+
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -68,15 +69,15 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed w-full z-50 transition-all duration-500 ${showNav ? 'translate-y-0' : '-translate-y-full'
+        className={`fixed w-full z-50 transition-all backdrop-blur-lg duration-500 ${showNav ? 'translate-y-0' : '-translate-y-full'
           } ${isScrolled
-            ? 'bg-black/90 backdrop-blur-lg py-4 shadow-2xl'
-            : 'bg-black/60 py-6'
+            ? ' backdrop-blur-lg  text-black  '
+            : ' backdrop-blur-lg text-black'
           }`}
       >
-        <div className="container-custom flex justify-between items-center mx-auto px-4">
+        <div className="container-custom flex justify-between items-center  mx-auto px-4">
           <Link to="/" className="text-2xl font-serif font-bold tracking-tighter">
-            <img src={currentLogo} className="w-28 h-full object-contain transition-all duration-500" alt="Logo" />
+            <img src={currentLogo} className="w-32 object-contain transition-all duration-500" alt="Logo" />
           </Link>
 
           {/* Desktop Menu */}
@@ -91,7 +92,7 @@ const Navbar = () => {
                 >
                   <Link
                     to={link.path}
-                    className={`text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 hover:text-primary flex items-center gap-1 ${location.pathname === link.path ? 'text-primary' : 'text-white/80'
+                    className={`text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 hover:text-primary flex items-center gap-1 ${location.pathname === link.path ? 'text-primary' : 'text-primary'
                       }`}
                   >
                     {link.name}
@@ -128,7 +129,7 @@ const Navbar = () => {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className={`text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 hover:text-primary ${location.pathname === link.path ? 'text-primary' : 'text-white/80'
+                  className={`text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 hover:text-primary ${location.pathname === link.path ? 'text-primary' : 'text-primary'
                     }`}
                 >
                   {link.name}
@@ -137,7 +138,7 @@ const Navbar = () => {
                 <button
                   key={link.name}
                   onClick={() => setContactOpen(true)}
-                  className="text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 hover:text-primary text-white/80"
+                  className="text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 hover:text-primary text-primary"
                 >
                   {link.name}
                 </button>
@@ -164,7 +165,7 @@ const Navbar = () => {
                     <div key={link.name} className="flex flex-col space-y-4">
                       <Link
                         to={link.path}
-                        className="text-white/80 text-lg font-serif tracking-widest hover:text-primary transition-colors"
+                        className="text-primary text-lg font-serif tracking-widest hover:text-primary transition-colors"
                       >
                         {link.name}
                       </Link>
@@ -184,7 +185,7 @@ const Navbar = () => {
                     <Link
                       key={link.name}
                       to={link.path}
-                      className="text-white/80 text-lg font-serif tracking-widest hover:text-primary transition-colors"
+                      className="text-primary text-lg font-serif tracking-widest hover:text-primary transition-colors"
                     >
                       {link.name}
                     </Link>
@@ -195,7 +196,7 @@ const Navbar = () => {
                         setMobileMenuOpen(false);
                         setContactOpen(true);
                       }}
-                      className="text-white/80 text-lg font-serif tracking-widest text-left hover:text-primary transition-colors"
+                      className="text-primary text-lg font-serif tracking-widest text-left hover:text-primary transition-colors"
                     >
                       {link.name}
                     </button>

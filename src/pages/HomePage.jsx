@@ -44,7 +44,7 @@ const HomePage = () => {
               relationships guide our work, ensuring clients feel confident and
               supported at every step. Above all, we are committed to helping
               people choose homes that offer peace, balance, and enduring value,
-              closely connected .
+              closely connected.
             </p>
           </motion.div>
         </div>

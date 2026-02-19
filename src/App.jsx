@@ -13,29 +13,29 @@ import ScrollToTop from './common/ScrollToTop.jsx';
 function App() {
 
 
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => 1 - Math.pow(1 - t, 3),
-      smoothWheel: true,
-      smoothTouch: false,
-    });
+  // useEffect(() => {
+  //   const lenis = new Lenis({
+  //     duration: 1.2,
+  //     easing: (t) => 1 - Math.pow(1 - t, 3),
+  //     smoothWheel: true,
+  //     smoothTouch: false,
+  //   });
 
 
-    let rafId;
+  //   let rafId;
 
-    const raf = (time) => {
-      lenis.raf(time);
-      rafId = requestAnimationFrame(raf);
-    };
+  //   const raf = (time) => {
+  //     lenis.raf(time);
+  //     rafId = requestAnimationFrame(raf);
+  //   };
 
-    rafId = requestAnimationFrame(raf);
+  //   rafId = requestAnimationFrame(raf);
 
-    return () => {
-      cancelAnimationFrame(rafId);
-      lenis.destroy();
-    };
-  }, []);
+  //   return () => {
+  //     cancelAnimationFrame(rafId);
+  //     lenis.destroy();
+  //   };
+  // }, []);
 
 
   return (

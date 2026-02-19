@@ -4,10 +4,10 @@ import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
 
-import img1 from "../assets/natureCoursal/img1.png";
-import img2 from "../assets/natureCoursal/img2.png";
-import img3 from "../assets/natureCoursal/img3.png";
-import img4 from "../assets/natureCoursal/img4.png";
+import img1 from "../assets/natureCoursal/image4.jpg";
+import img2 from "../assets/natureCoursal/image3.jpg";
+import img3 from "../assets/natureCoursal/image2.jpg";
+import img4 from "../assets/natureCoursal/image5.jpg";
 
 const NatureCarousel = () => {
   const images = [img1, img2, img3, img4];

@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
-import logograce from "../assets/grace_A.webp"
-import logoisd from '../assets/ISHAADRII_A.webp'
+import logograce from "../assets/gracefooter.png"
+import logoisd from '../assets/Ishaadriifooter.png'
 
 const Footer = () => {
   const location = useLocation();
@@ -19,7 +19,7 @@ const Footer = () => {
           <img
             src={currentLogo}
             alt="Logo"
-            className="max-w-[280px] md:max-w-[360px] transition-all duration-500"
+            className="max-w-[280px] md:max-w-[700px] transition-all duration-500"
           />
           {/* <p>Homes designed for balance, comfort, and calm.</p> */}
         </div>
@@ -27,7 +27,7 @@ const Footer = () => {
 
         {/* RIGHT – FORM */}
         <form className=" w-full lg:w-1/2 max-w-md flex flex-col justify-center space-y-8 ">
-        <div className='text-sm sm:text-xl'>Enquiry </div>
+          <div className='text-sm sm:text-xl'>Enquiry </div>
           {["FULL NAME", "PHONE NUMBER", "EMAIL", "MESSAGE"].map((label, i) => (
             <div key={i}>
               <label className="block text-[10px] tracking-[0.3em]  text-luxury-dark/60">
@@ -78,23 +78,50 @@ const Footer = () => {
 
         {/* CONTACT */}
         <div>
-          <h4 className="text-sm mb-3">Contact</h4>
-          <p className="text-sm text-luxury-dark/70">
-            graceaestheticofficial@gmail.com<br />
-            +91-XXXXXX
-          </p>
+          <h4 className="text-sm mb-3 font-semibold">Contact</h4>
+
+          <div className="text-sm text-luxury-dark/70 space-y-1">
+
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=graceaestheticofficial@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block hover:text-black transition duration-200 cursor-pointer"
+            >
+              graceaestheticofficial@gmail.com
+            </a>
+
+            <a
+              href="tel:+919910346123"
+              className="block hover:text-black transition duration-200 cursor-pointer"
+            >
+              Call: +91 99103 46123
+            </a>
+
+
+          </div>
         </div>
+
 
         {/* ADDRESS */}
         <div>
-          <h4 className="text-sm mb-3">Grace address</h4>
+          <h4 className="text-sm mb-3">Marketing Office</h4>
           <p className="text-sm text-luxury-dark/70">
             Office No 111, 112 Spaze Platinum Tower, <br /> Sohna Road, Sector 47, <br /> Gurugram, Haryana 122018
           </p>
+
+        </div>
+        <div>
+          <h4 className="text-sm mb-3">Registered Office</h4>
+          <p className="text-sm text-luxury-dark/70">
+            Village Bandran, Tehsil Sult, Post <br /> Sanker, Sankar, Almora, Bhikia Sain,<br />  Uttarakhand, India, 244715</p>
+
+
+
         </div>
 
         {/* LINKS */}
-        <div className="lg:col-span-2 flex flex-wrap gap-x-12 gap-y-6 text-sm">
+        <div className="lg:col-span-2 flex flex-wrap gap-x-20 gap-y-6 text-sm">
           {[
             { name: "Home", path: "/" },
             { name: "About", path: "/about" },

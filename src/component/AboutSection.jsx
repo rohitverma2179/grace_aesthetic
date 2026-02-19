@@ -23,8 +23,8 @@ const AboutSection = () => {
           </h3>
 
           <p className="text-gray-500 leading-relaxed text-sm  md:text-base mb-10">
-            At Grace Aesthetic, we believe real estate is about people before properties.
-            We value honesty, transparency, and long-term trust in every interaction.
+            Created for those seeking space, silence, and a slower rhythm away from the city, ISHAADRII brings contemporary living into harmony with Uttarakhand’s serene landscape. The project is shaped by openness, natural light, and a deep connection to its surroundings.
+            From site orientation to interior planning, every element is considered with care. The result is a place that feels balanced and unhurried, offering comfort, clarity, and a beautiful way to live closer to nature.
             Rooted in Uttrakhand, we respect nature, local surroundings, and thoughtful
             development that shapes calm and well-planned living environments.
             Our work is guided by a belief in creating homes that offer peace, balance,
@@ -53,7 +53,7 @@ const AboutSection = () => {
           <img
             src={swastixaLogo}
             alt="Brand Symbol"
-            className="w-64 md:w-80 lg:w-96 object-contain"
+            className="w-64 md:w-80 lg:w-72 object-contain"
           />
         </div>
       </div>

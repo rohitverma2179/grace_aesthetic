@@ -1,10 +1,10 @@
 import { useEffect, useRef } from 'react';
-import HarmonyOne from "../assets/images/Harmony_one.JPG";
+import HarmonyOne from "../assets/images/image30.jpeg";
 import HarmonyTwo from "../assets/images/Harmony_second.jpg";
 import Wellbeing from "../assets/images/Wellbeing.jpg";
 import rooted from "../assets/images/rooted.jpg";
 import Enduring from "../assets/images/Enduring.jpg";
-import Thoughtful from "../assets/images/Thoughtful.jpeg";
+import Thoughtful from "../assets/images/images50.jpg";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AOS from 'aos';
