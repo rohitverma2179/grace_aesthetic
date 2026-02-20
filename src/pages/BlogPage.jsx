@@ -16,8 +16,7 @@ const BlogPage = () => {
 
     // Scroll to top when page changes
     useEffect(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        
+        window.scrollTo(0, 0);
     }, [currentPage]);
 
     const handlePageChange = (pageNumber) => {
@@ -156,8 +155,8 @@ const BlogPage = () => {
                                         key={num}
                                         onClick={() => handlePageChange(num)}
                                         className={`text-xs font-bold tracking-widest transition-all duration-400 relative ${num === currentPage
-                                                ? 'text-primary'
-                                                : 'text-black/30 hover:text-black font-medium'
+                                            ? 'text-primary'
+                                            : 'text-black/30 hover:text-black font-medium'
                                             }`}
                                     >
                                         {num === currentPage && (

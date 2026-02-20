@@ -7,11 +7,9 @@ import { useState } from 'react';
 const BlogDetailPage = () => {
     const { slug } = useParams();
     const blog = blogPosts.find(p => p.slug === slug);
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [slug]);
-
+// useEffect(() => {
+//         window.scrollTo(0, 0);
+//     }, [slug]);
     if (!blog) {
         return (
             <div className="min-h-screen flex items-center justify-center bg-white pt-20">
