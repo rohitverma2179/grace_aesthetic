@@ -120,11 +120,11 @@ Every development reflects our commitment to harmony between nature, architectur
                         {...fadeIn}
                         className="max-w-6xl font-light text-[#3D3D3D] text-justify md:text-left leading-normal tracking-[8%] text-base md:text-xl"
                     >
-                        We design and develop well-planned homes in healthier, greener environments — blending aesthetic refinement with everyday functionality.
+                        We design and develop well-planned homes in healthier, greener environments  blending aesthetic refinement with everyday functionality.
 
 From mindful site selection to responsible construction practices, each project is guided by clarity, integrity, and long-term value. We focus on creating communities that offer comfort, connection, and seamless access to contemporary living.
 
-At Grace Aesthetic, we go beyond building structures — we shape meaningful spaces designed to support well-being and elevate everyday life.
+At Grace Aesthetic, we go beyond building structures  we shape meaningful spaces designed to support well-being and elevate everyday life.
                     </motion.p>
                 </div>
             </section>

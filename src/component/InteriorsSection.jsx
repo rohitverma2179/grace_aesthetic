@@ -1,9 +1,15 @@
 
 import { motion } from 'framer-motion';
-import Harmonyestatenature from "../assets/images/beautiful-volcano-landscape.jpeg";
-import Ease from "../assets/images/rural-area-with-wooden-houses-surrounded-by-forests-with-hills-covered-fog.jpeg";
-import Grounded from "../assets/images/closeup-shot-sparrow-tree-log.jpeg";
-import Warmth from "../assets/images/wild-deer-nature.jpeg";
+// import Harmonyestatenature from "../assets/images/beautiful-volcano-landscape.jpeg";
+// import Ease from "../assets/images/rural-area-with-wooden-houses-surrounded-by-forests-with-hills-covered-fog.jpeg";
+// import Grounded from "../assets/images/closeup-shot-sparrow-tree-log.jpeg";
+// import Warmth from "../assets/images/wild-deer-nature.jpeg";
+
+
+import Harmonyestatenature from "../assets/images/image10.jpg";
+import Ease from "../assets/images/image7.jpg";
+import Grounded from "../assets/images/image1.jpg";
+import Warmth from "../assets/images/image40.jpg";
 const InteriorsSection = () => {
   const interiors = [
     {

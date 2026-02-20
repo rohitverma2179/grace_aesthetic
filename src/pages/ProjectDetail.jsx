@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Section, Container, Grid, Button } from "../component/ui";
-import video2 from '../assets/ISHAADRIIvideo.mp4'
+import video2 from '../assets/ishaadriilight.mp4'
 import img from '../assets/3dImg.jpg'
 import img1 from '../assets/gsapScrolling/3d-inter-one.jpg'
 import img2 from '../assets/gsapScrolling/3d-inter-two.jpg'
@@ -101,24 +101,36 @@ const ProjectDetail = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 1 }}
                     >
+                        <h2 className="sm:tracking-[1rem] 
+                            md:tracking-[1.6rem] 
+                            lg:tracking-[2.25rem] 
+                            text-xl 
+                            sm:text-2xl 
+                            md:text-3xl 
+                            lg:text-[40px] 
+                            text-gray-500 uppercase text-center xl:mb-12">ISHAADRII</h2>
                         <p className="tracking-[0.6em] 
-    sm:tracking-[1rem] 
-    md:tracking-[1.6rem] 
-    lg:tracking-[2.25rem] 
-    text-xl 
-    sm:text-2xl 
-    md:text-3xl 
-    lg:text-[37px] 
-    text-gray-500 uppercase text-center xl:mb-12">
-                            Our Core Values
+                            sm:tracking-[1rem] 
+                            md:tracking-[1.6rem] 
+                            lg:tracking-[1.75rem] 
+                            text-xl 
+                            sm:text-2xl 
+                            md:text-3xl 
+                            lg:text-[22px] 
+                            text-gray-500 uppercase text-center xl:mb-12">
+                            A Beautiful Second Home
                         </p>
 
-                        <p className="text-base md:text-2xl lg:text-[18px] font-serif text-luxury-dark/80 ">
-                            Created for those who appreciate openness, nature, and thoughtful living, ISHAADRI brings contemporary homes into harmony with Uttrakhand’s serene landscape. Carefully planned spaces, natural light, and an open setting come together to shape a lifestyle that feels calm, balanced, and grounded.
+                        <p className=" text-justify text-base md:text-2xl lg:text-[18px] font-serif text-luxury-dark/80 ">
+                            Crafted for those who crave space, silence, and a slower pace, ISHAADRII brings modern living into perfect harmony with Uttarakhand’s serene beauty. Open spaces, natural light, and thoughtful design come together to create a balanced, elegant lifestyle where comfort meets nature every day.
                         </p>
-                        <p className="text-base md:text-2xl   lg:text-[18px] font-serif text-luxury-dark/80  leading-relaxed">
-                            From site selection and orientation to layout and long-term comfort, every element is considered with purpose. More than just a residence, ISHAADRI offers a way of life that is peaceful, connected, and enduring—rooted in simplicity and closeness ..
-                        </p>
+                        {/* <p className=" text-justify text-base md:text-2xl lg:text-[18px] font-serif text-luxury-dark/80 ">
+                            Created for those seeking space, silence, and a slower rhythm away from the city, ISHAADRII brings contemporary living into harmony with Uttarakhand’s serene landscape. The project is shaped by openness, natural light, and a deep connection to its surroundings.
+                            From site orientation to interior planning, every element is considered with care. The result is a place that feels balanced and unhurried, offering comfort, clarity, and a beautiful way to live closer to nature.
+                        </p> */}
+                        {/* <p className="text-base md:text-2xl   lg:text-[18px] font-serif text-luxury-dark/80  leading-relaxed">
+                            From site selection and orientation to layout and long-term comfort, every element is considered with purpose. More than just a residence, ISHAADRI offers a way of life that is peaceful, connected, and enduring rooted in simplicity and closeness ..
+                        </p> */}
                     </motion.div>
                 </div>
             </section>
@@ -136,8 +148,8 @@ const ProjectDetail = () => {
                       sm:text-2xl 
                       md:text-3xl 
                       lg:text-[37px] 
-                    text-gray-500 uppercase text-center xl:mb-12">
-                        Visual Journey
+                    text-gray-500 uppercase text-center ">
+                        {/* Use Inside ISHAADRII */}
                     </h2>
                     <div ref={horizontalRef} className="flex items-end gap-4 md:gap-8 px-[5vw] md:px-[10vw] relative w-max">
                         {[
@@ -170,14 +182,14 @@ const ProjectDetail = () => {
                 <Container>
                     <div className="text-center mb-20">
                         <h2 className="tracking-[0.6em] 
-    sm:tracking-[1rem] 
-    md:tracking-[1.6rem] 
-    lg:tracking-[2.25rem] 
-    text-xl 
-    sm:text-2xl 
-    md:text-3xl 
-    lg:text-[37px] 
-    text-gray-500 uppercase text-center xl:mb-12">
+                            sm:tracking-[1rem] 
+                            md:tracking-[1.6rem] 
+                            lg:tracking-[2.25rem] 
+                            text-xl 
+                            sm:text-2xl 
+                            md:text-3xl 
+                            lg:text-[37px] 
+                            text-gray-500 uppercase text-center xl:mb-12">
                             Project Amenities
                         </h2>
                     </div>

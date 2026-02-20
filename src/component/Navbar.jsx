@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
-import { AnimatePresence, motion } from 'framer-motion';
-import { Link, useLocation } from 'react-router-dom';
-import ContactPopup from './ContactPopup';
-import logograce from "../assets/Grace_Aesthetic_logo.webp"
-import logoisd from '../assets/ishaadri_second.webp'
+import React, { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Link, useLocation } from "react-router-dom";
+import ContactPopup from "./ContactPopup";
+import logograce from "../assets/graceheader.png";
+import logoisd from "../assets/Ishaadriiheader.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -12,12 +12,10 @@ const Navbar = () => {
   const [contactOpen, setContactOpen] = useState(false);
   const [showNav, setShowNav] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [scrollUpAmount, setScrollUpAmount] = useState(0);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+
   const location = useLocation();
 
-  // Determine which logo to show
-  const isIshaadriPage = location.pathname === '/projects';
+  const isIshaadriPage = location.pathname === "/projects";
   const currentLogo = isIshaadriPage ? logoisd : logograce;
 
   useEffect(() => {
@@ -27,187 +25,198 @@ const Navbar = () => {
 
       if (currentScrollY > lastScrollY) {
         setShowNav(false);
-        setScrollUpAmount(0);
       } else {
-        const diff = lastScrollY - currentScrollY;
-        setScrollUpAmount(prev => prev + diff);
-        if (scrollUpAmount + diff > 120) {
-          setShowNav(true);
-          setScrollUpAmount(0);
-        }
+        setShowNav(true);
       }
+
       setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY, scrollUpAmount]);
-
-  useEffect(() => {
-    setMobileMenuOpen(false);
-    setDropdownOpen(false);
-  }, [location]);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About us', path: '/about' },
-    {
-      name: 'Projects',
-      path: '/projects',
-      dropdown: [
-        { name: ' Ishaadrii', path: '/projects' },
-        { name: 'Project 2', path: '#' },
-        { name: 'Project 3', path: '#' },
-        { name: 'Project 4', path: '#' }
-      ]
-    },
-    { name: 'Blog', path: '/blog' },
-    { name: 'Contact', action: 'popup' },
+    { name: "Home", path: "/" },
+    { name: "About us", path: "/about" },
+    { name: "Blog", path: "/blog" },
   ];
 
   return (
     <>
       <nav
-        className={`fixed w-full z-50 transition-all duration-500 ${showNav ? 'translate-y-0' : '-translate-y-full'
-          } ${isScrolled
-            ? 'bg-black/90 backdrop-blur-lg py-4 shadow-2xl'
-            : 'bg-black/60 py-6'
-          }`}
+        className={`fixed w-full z-50 transition-all text-primary duration-500 backdrop-blur-lg ${showNav ? "translate-y-0" : "-translate-y-full"
+          } ${isScrolled ? "bg-black/20" : "bg-transparent"}`}
       >
         <div className="container-custom flex justify-between items-center mx-auto px-4">
-          <Link to="/" className="text-2xl font-serif font-bold tracking-tighter">
-            <img src={currentLogo} className="w-28 h-full object-contain transition-all duration-500" alt="Logo" />
+          <Link to="/">
+            <img
+              src={currentLogo}
+              className="w-32 object-contain"
+              alt="Logo"
+            />
           </Link>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8 items-center">
-            {navLinks.map((link) => (
-              link.dropdown ? (
-                <div
-                  key={link.name}
-                  className="relative group"
-                  onMouseEnter={() => setDropdownOpen(true)}
-                  onMouseLeave={() => setDropdownOpen(false)}
-                >
-                  <Link
-                    to={link.path}
-                    className={`text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 hover:text-primary flex items-center gap-1 ${location.pathname === link.path ? 'text-primary' : 'text-white/80'
-                      }`}
-                  >
-                    {link.name}
-                    <motion.span
-                      animate={{ rotate: dropdownOpen ? 180 : 0 }}
-                      className="text-[10px]"
-                    >
-                      ▼
-                    </motion.span>
-                  </Link>
+          {/* DESKTOP MENU */}
+          <div className="hidden md:flex space-x-10 items-center">
 
-                  <AnimatePresence>
-                    {dropdownOpen && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 10 }}
-                        className="absolute top-full left-0 mt-2 w-48 bg-luxury-dark/95 backdrop-blur-md border border-white/10 shadow-xl overflow-hidden"
-                      >
-                        {link.dropdown.map((subItem) => (
-                          <Link
-                            key={subItem.name}
-                            to={subItem.path}
-                            className="block px-4 py-3 text-[10px] uppercase tracking-[0.2em] text-white/70 hover:text-primary hover:bg-white/5 transition-all duration-300"
-                          >
-                            {subItem.name}
-                          </Link>
-                        ))}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              ) : link.path ? (
-                <Link
-                  key={link.name}
-                  to={link.path}
-                  className={`text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 hover:text-primary ${location.pathname === link.path ? 'text-primary' : 'text-white/80'
-                    }`}
-                >
-                  {link.name}
-                </Link>
-              ) : (
-                <button
-                  key={link.name}
-                  onClick={() => setContactOpen(true)}
-                  className="text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 hover:text-primary text-white/80"
-                >
-                  {link.name}
-                </button>
-              )
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                to={link.path}
+                className="text-xs uppercase tracking-[0.2em] font-medium hover:text-primary transition"
+              >
+                {link.name}
+              </Link>
             ))}
+
+            {/* PROJECTS MEGA DROPDOWN */}
+            <div className="relative group ">
+              <div className="text-xs uppercase tracking-[0.2em] font-medium hover:text-primary cursor-pointer transition flex items-center gap-1">
+                Projects
+              </div>
+
+              {/* FIRST LEVEL */}
+              <div className="absolute top-full left-0 mt-7 w-56 backdrop-blur-lg bg-black/20 text-primary rounded-xs shadow-xl opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-300">
+
+                {/* Delivered */}
+                <div className="relative group/delivered">
+                  <div className="px-4 py-3  text-xs uppercase tracking-widest hover:bg-white/10 cursor-pointer flex justify-between items-center group-hover/delivered:text-white">
+                    Delivered
+                  </div>
+
+                  {/* SECOND LEVEL */}
+                  <div className="max-h-0 overflow-hidden group-hover/delivered:max-h-40 transition-all duration-500 ease-in-out bg-black/20 backdrop-blur-lg">
+                    <Link
+                      to="#"
+                      className="block px-8 py-2 text-xs uppercase tracking-widest text-primary/80 hover:text-primary hover:bg-white/10 transition"
+                    >
+                      Billora
+                    </Link>
+                  </div>
+                </div>
+
+                {/* Upcoming */}
+                <div className="relative group/upcoming border-t border-white/10">
+                  <div className="px-4 py-3 text-xs uppercase tracking-widest hover:bg-white/10 cursor-pointer flex justify-between items-center group-hover/upcoming:text-white">
+                    Upcoming
+                  </div>
+
+                  {/* SECOND LEVEL */}
+                  <div className="max-h-0 rounded-xs overflow-hidden group-hover/upcoming:max-h-60 transition-all duration-500 ease-in-out bg-black/20 backdrop-blur-lg">
+                    <Link
+                      to="/projects"
+                      className="block px-8 py-2 text-xs uppercase tracking-widest text-primary/80 hover:text-primary hover:bg-white/10 transition"
+                    >
+                      Ishaadrii
+                    </Link>
+                    <Link
+                      to="#"
+                      className="block px-8 py-2 text-xs uppercase tracking-widest text-primary/80 hover:text-primary hover:bg-white/10 transition"
+                    >
+                      Project2
+                    </Link>
+                    <Link
+                      to="#"
+                      className="block px-8 py-2 text-xs uppercase tracking-widest text-primary/80 hover:text-primary hover:bg-white/10 transition"
+                    >
+                      Project3
+                    </Link>
+                    <Link
+                      to="#"
+                      className="block px-8 py-2 text-xs uppercase tracking-widest text-primary/80 hover:text-primary hover:bg-white/10 transition"
+                    >
+                      Project4
+                    </Link>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <button
+              onClick={() => setContactOpen(true)}
+              className="text-xs uppercase tracking-[0.2em] font-medium hover:text-primary transition"
+            >
+              Contact
+            </button>
           </div>
 
-          <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-            {mobileMenuOpen ? <X className="text-white" /> : <Menu className="text-white" />}
+          {/* MOBILE BUTTON */}
+          <button
+            className="md:hidden"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X /> : <Menu />}
           </button>
         </div>
 
+        {/* MOBILE MENU */}
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div
-              initial={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="absolute top-full left-0 w-full bg-luxury-dark border-t border-white/10 md:hidden"
+              exit={{ opacity: 0, y: -10 }}
+              className="absolute top-full right-0 w-full backdrop-blur-lg bg-black/40 text-primary md:hidden border-t border-white/10"
             >
-              <div className="flex flex-col p-6 space-y-4">
-                {navLinks.map((link) => (
-                  link.dropdown ? (
-                    <div key={link.name} className="flex flex-col space-y-4">
-                      <Link
-                        to={link.path}
-                        className="text-white/80 text-lg font-serif tracking-widest hover:text-primary transition-colors"
-                      >
-                        {link.name}
-                      </Link>
-                      <div className="pl-4 flex flex-col space-y-3 border-l border-white/10">
-                        {link.dropdown.map((subItem) => (
-                          <Link
-                            key={subItem.name}
-                            to={subItem.path}
-                            className="text-white/60 text-base font-serif tracking-widest hover:text-primary transition-colors"
-                          >
-                            {subItem.name}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  ) : link.path ? (
+              <div className="flex flex-col p-6 space-y-6">
+                <div className="flex flex-col space-y-4">
+                  {navLinks.map((link) => (
                     <Link
                       key={link.name}
                       to={link.path}
-                      className="text-white/80 text-lg font-serif tracking-widest hover:text-primary transition-colors"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="text-xs uppercase tracking-[0.2em]"
                     >
                       {link.name}
                     </Link>
-                  ) : (
-                    <button
-                      key={link.name}
-                      onClick={() => {
-                        setMobileMenuOpen(false);
-                        setContactOpen(true);
-                      }}
-                      className="text-white/80 text-lg font-serif tracking-widest text-left hover:text-primary transition-colors"
-                    >
-                      {link.name}
-                    </button>
-                  )
-                ))}
+                  ))}
+                </div>
+
+                <div className="space-y-4">
+                  <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-white/30">Projects</p>
+
+                  {/* Delivered Mobile Accordion */}
+                  <details className="group/mobile-delivered">
+                    <summary className="list-none text-xs uppercase tracking-[0.2em] flex justify-between items-center cursor-pointer">
+                      Delivered <span className="text-[8px] group-open/mobile-delivered:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <div className="pl-4 mt-3 space-y-3 border-l border-white/10 ml-1">
+                      <Link to="#" onClick={() => setMobileMenuOpen(false)} className="block text-xs uppercase tracking-widest text-primary/70">Billora</Link>
+                    </div>
+                  </details>
+
+                  {/* Upcoming Mobile Accordion */}
+                  <details className="group/mobile-upcoming">
+                    <summary className="list-none text-xs uppercase tracking-[0.2em] flex justify-between items-center cursor-pointer">
+                      Upcoming <span className="text-[8px] group-open/mobile-upcoming:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <div className="pl-4 mt-3 space-y-3 border-l border-white/10 ml-1">
+                      <Link to="/projects" onClick={() => setMobileMenuOpen(false)} className="block text-xs uppercase tracking-widest text-primary/70">Ishaadrii</Link>
+                      <Link to="#" onClick={() => setMobileMenuOpen(false)} className="block text-xs uppercase tracking-widest text-primary/70">Project2</Link>
+                      <Link to="#" onClick={() => setMobileMenuOpen(false)} className="block text-xs uppercase tracking-widest text-primary/70">Project3</Link>
+                      <Link to="#" onClick={() => setMobileMenuOpen(false)} className="block text-xs uppercase tracking-widest text-primary/70">Project4</Link>
+                    </div>
+                  </details>
+                </div>
+
+                <button
+                  onClick={() => { setContactOpen(true); setMobileMenuOpen(false); }}
+                  className="w-full py-3 border border-primary/30 text-primary text-[10px] uppercase tracking-[0.2em] hover:bg-primary hover:text-white transition-all"
+                >
+                  Contact
+                </button>
               </div>
             </motion.div>
           )}
         </AnimatePresence>
       </nav>
 
-      <ContactPopup isOpen={contactOpen} onClose={() => setContactOpen(false)} />
+      <ContactPopup
+        isOpen={contactOpen}
+        onClose={() => setContactOpen(false)}
+      />
     </>
   );
 };

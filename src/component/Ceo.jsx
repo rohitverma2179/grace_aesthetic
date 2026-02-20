@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import ceoHead from "../assets/ownerimg/1.jpg"
 import ceoHead2 from "../assets/ownerimg/2.png"
-import ceoHead3 from "../assets/ownerimg/3.0.png"
+import ceoHead3 from "../assets/ownerimg/3.0.jpg"
 
 const leaderSections = [
     {
