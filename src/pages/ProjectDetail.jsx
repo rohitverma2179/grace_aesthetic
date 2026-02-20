@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Section, Container, Grid, Button } from "../component/ui";
-import video2 from '../assets/ISHAADRIInew.mp4'
+import video2 from '../assets/ishaadriilight.mp4'
 import img from '../assets/3dImg.jpg'
 import img1 from '../assets/gsapScrolling/3d-inter-one.jpg'
 import img2 from '../assets/gsapScrolling/3d-inter-two.jpg'
@@ -101,21 +101,29 @@ const ProjectDetail = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 1 }}
                     >
-                        <p className="tracking-[0.6em] 
-    sm:tracking-[1rem] 
-    md:tracking-[1.6rem] 
-    lg:tracking-[2.25rem] 
-    text-xl 
-    sm:text-2xl 
-    md:text-3xl 
-    lg:text-[37px] 
-    text-gray-500 uppercase text-center xl:mb-12">
-                           ISHAADRII·A Beautiful Second Home
+                        <h2 className="sm:tracking-[1rem] 
+                            md:tracking-[1.6rem] 
+                            lg:tracking-[2.25rem] 
+                            text-xl 
+                            sm:text-2xl 
+                            md:text-3xl 
+                            lg:text-[40px] 
+                            text-gray-500 uppercase text-center xl:mb-12">ISHAADRII</h2>
+                                                <p className="tracking-[0.6em] 
+                            sm:tracking-[1rem] 
+                            md:tracking-[1.6rem] 
+                            lg:tracking-[1.75rem] 
+                            text-xl 
+                            sm:text-2xl 
+                            md:text-3xl 
+                            lg:text-[22px] 
+                            text-gray-500 uppercase text-center xl:mb-12">
+                                                    A Beautiful Second Home
                         </p>
 
-                        <p className="text-base md:text-2xl lg:text-[18px] font-serif text-luxury-dark/80 ">
+                        <p className=" justify-around text-base md:text-2xl lg:text-[18px] font-serif text-luxury-dark/80 ">
                             Created for those seeking space, silence, and a slower rhythm away from the city, ISHAADRII brings contemporary living into harmony with Uttarakhand’s serene landscape. The project is shaped by openness, natural light, and a deep connection to its surroundings.
-From site orientation to interior planning, every element is considered with care. The result is a place that feels balanced and unhurried, offering comfort, clarity, and a beautiful way to live closer to nature.
+                            From site orientation to interior planning, every element is considered with care. The result is a place that feels balanced and unhurried, offering comfort, clarity, and a beautiful way to live closer to nature.
                         </p>
                         {/* <p className="text-base md:text-2xl   lg:text-[18px] font-serif text-luxury-dark/80  leading-relaxed">
                             From site selection and orientation to layout and long-term comfort, every element is considered with purpose. More than just a residence, ISHAADRI offers a way of life that is peaceful, connected, and enduring—rooted in simplicity and closeness ..
@@ -138,7 +146,7 @@ From site orientation to interior planning, every element is considered with car
                       md:text-3xl 
                       lg:text-[37px] 
                     text-gray-500 uppercase text-center xl:mb-12">
-                       Use Inside ISHAADRII
+                        {/* Use Inside ISHAADRII */}
                     </h2>
                     <div ref={horizontalRef} className="flex items-end gap-4 md:gap-8 px-[5vw] md:px-[10vw] relative w-max">
                         {[
@@ -171,14 +179,14 @@ From site orientation to interior planning, every element is considered with car
                 <Container>
                     <div className="text-center mb-20">
                         <h2 className="tracking-[0.6em] 
-    sm:tracking-[1rem] 
-    md:tracking-[1.6rem] 
-    lg:tracking-[2.25rem] 
-    text-xl 
-    sm:text-2xl 
-    md:text-3xl 
-    lg:text-[37px] 
-    text-gray-500 uppercase text-center xl:mb-12">
+                            sm:tracking-[1rem] 
+                            md:tracking-[1.6rem] 
+                            lg:tracking-[2.25rem] 
+                            text-xl 
+                            sm:text-2xl 
+                            md:text-3xl 
+                            lg:text-[37px] 
+                            text-gray-500 uppercase text-center xl:mb-12">
                             Project Amenities
                         </h2>
                     </div>

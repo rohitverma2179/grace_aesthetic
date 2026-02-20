@@ -11,7 +11,7 @@ const Footer = () => {
     <footer className="bg-[#f3f1eb] text-luxury-dark">
 
       {/* TOP SECTION */}
-      <div className="max-w-[1280px] mx-auto px-6 lg:px-0 flex pb-14 pt-14  flex-col lg:flex-row items-center  justify-between
+      <div className="max-w-[1280px] mx-auto px-6 lg:px-0 flex pb-4 pt-10 flex-col lg:flex-row items-center  justify-between
 ">
 
         {/* LEFT – LOGO */}
@@ -19,14 +19,14 @@ const Footer = () => {
           <img
             src={currentLogo}
             alt="Logo"
-            className="max-w-[280px] md:max-w-[700px] transition-all duration-500"
+            className="max-w-full md:max-w-[260px] transition-all duration-500"
           />
           {/* <p>Homes designed for balance, comfort, and calm.</p> */}
         </div>
 
 
         {/* RIGHT – FORM */}
-        <form className=" w-full lg:w-1/2 max-w-md flex flex-col justify-center space-y-8 ">
+        <form className=" w-full lg:w-1/2 max-w-md flex flex-col justify-center space-y-4 ">
           <div className='text-sm sm:text-xl'>Enquiry </div>
           {["FULL NAME", "PHONE NUMBER", "EMAIL", "MESSAGE"].map((label, i) => (
             <div key={i}>

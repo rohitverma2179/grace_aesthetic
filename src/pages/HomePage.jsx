@@ -37,14 +37,8 @@ const HomePage = () => {
             </p>
 
             <p className="text-base md:text-2xl lg:text-[18px] font-serif text-luxury-dark/80 text-base/8">
-              At Grace Aesthetic, we believe real estate should be built on
-              trust, clarity, and genuine care. Rooted in Uttrakhand, we respect
-              nature, local surroundings, and responsible development in every
-              decision we make. Honesty, transparency, and long term
-              relationships guide our work, ensuring clients feel confident and
-              supported at every step. Above all, we are committed to helping
-              people choose homes that offer peace, balance, and enduring value,
-              closely connected.
+              A beautiful way to live is guided by how spaces are planned and experienced over time. Thoughtful proportions, simplicity in design, and an emphasis on everyday comfort shape the homes we create.
+              Each living environment is approached with sensitivity to context, materials, and human needs. The intention is to create spaces that feel intuitive, balanced, and enduring, allowing people to slow down, feel grounded, and enjoy a more meaningful way of living.
             </p>
           </motion.div>
         </div>

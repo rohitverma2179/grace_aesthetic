@@ -23,13 +23,8 @@ const AboutSection = () => {
           </h3>
 
           <p className="text-gray-500 leading-relaxed text-sm  md:text-base mb-10">
-            Created for those seeking space, silence, and a slower rhythm away from the city, ISHAADRII brings contemporary living into harmony with Uttarakhand’s serene landscape. The project is shaped by openness, natural light, and a deep connection to its surroundings.
-            From site orientation to interior planning, every element is considered with care. The result is a place that feels balanced and unhurried, offering comfort, clarity, and a beautiful way to live closer to nature.
-            Rooted in Uttrakhand, we respect nature, local surroundings, and thoughtful
-            development that shapes calm and well-planned living environments.
-            Our work is guided by a belief in creating homes that offer peace, balance,
-            and lasting value. Every decision we make reflects care, clarity, and a
-            genuine commitment to helping people begin a better life closer to nature.
+            Life feels different when space, silence, and nature take the lead. Grace Aesthetic designs second homes that offer a beautiful way to live, away from the noise of the city.
+            Set within the calm landscapes of Uttarakhand, our homes are shaped by their surroundings — with careful attention to light, openness, and proportion. Each development is planned to feel natural and unhurried, creating spaces that support peace, balance, and everyday comfort while staying connected to modern living.
           </p>
 
           {/* <button
