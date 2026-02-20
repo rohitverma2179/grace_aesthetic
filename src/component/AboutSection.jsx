@@ -24,7 +24,7 @@ const AboutSection = () => {
 
           <p className="text-gray-500 leading-relaxed text-sm  md:text-base mb-10">
             Life feels different when space, silence, and nature take the lead. Grace Aesthetic designs second homes that offer a beautiful way to live, away from the noise of the city.
-            Set within the calm landscapes of Uttarakhand, our homes are shaped by their surroundings — with careful attention to light, openness, and proportion. Each development is planned to feel natural and unhurried, creating spaces that support peace, balance, and everyday comfort while staying connected to modern living.
+            Set within the calm landscapes of Uttarakhand, our homes are shaped by their surroundings  with careful attention to light, openness, and proportion. Each development is planned to feel natural and unhurried, creating spaces that support peace, balance, and everyday comfort while staying connected to modern living.
           </p>
 
           {/* <button
