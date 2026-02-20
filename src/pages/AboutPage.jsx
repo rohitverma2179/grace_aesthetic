@@ -4,9 +4,6 @@ import Testimonials from './Testimonials';
 import Ceo from '../component/Ceo';
 
 const AboutPage = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
 
     const fadeIn = {
         initial: { opacity: 0, y: 30 },
@@ -59,9 +56,9 @@ const AboutPage = () => {
                 >
                     Grace Aesthetic was founded on a simple belief  a home should enhance the way we live every day.
 
-We create beautifully balanced living environments where refined design meets practical comfort. Our spaces are calm, proportioned with care, and thoughtfully connected to their natural surroundings. Rather than loud luxury, we believe in quiet sophistication  homes that feel timeless, grounded, and enduring.
+                    We create beautifully balanced living environments where refined design meets practical comfort. Our spaces are calm, proportioned with care, and thoughtfully connected to their natural surroundings. Rather than loud luxury, we believe in quiet sophistication  homes that feel timeless, grounded, and enduring.
 
-Every development reflects our commitment to harmony between nature, architecture, and modern life.
+                    Every development reflects our commitment to harmony between nature, architecture, and modern life.
                 </motion.p>
             </section>
 
@@ -122,9 +119,9 @@ Every development reflects our commitment to harmony between nature, architectur
                     >
                         We design and develop well-planned homes in healthier, greener environments  blending aesthetic refinement with everyday functionality.
 
-From mindful site selection to responsible construction practices, each project is guided by clarity, integrity, and long-term value. We focus on creating communities that offer comfort, connection, and seamless access to contemporary living.
+                        From mindful site selection to responsible construction practices, each project is guided by clarity, integrity, and long-term value. We focus on creating communities that offer comfort, connection, and seamless access to contemporary living.
 
-At Grace Aesthetic, we go beyond building structures  we shape meaningful spaces designed to support well-being and elevate everyday life.
+                        At Grace Aesthetic, we go beyond building structures  we shape meaningful spaces designed to support well-being and elevate everyday life.
                     </motion.p>
                 </div>
             </section>
