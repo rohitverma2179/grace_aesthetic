@@ -64,12 +64,11 @@ const Footer = () => {
             Submit
           </button>
         </form>
-
       </div>
 
 
       {/* DIVIDER */}
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center mt-4">
         <div className="w-full max-w-[1280px] border-t border-[#2f5d50]/40" />
       </div>
 
@@ -77,7 +76,7 @@ const Footer = () => {
       <div className="max-w-[1280px] mx-auto px-6 lg:px-0 py-8 grid grid-cols-1 lg:grid-cols-4 gap-12">
 
         {/* CONTACT */}
-        <div>
+        <div className="flex flex-col items-start text-strat">
           <h4 className="text-sm mb-3 font-semibold">Contact</h4>
 
           <div className="text-sm text-luxury-dark/70 space-y-1">
@@ -100,39 +99,48 @@ const Footer = () => {
 
 
           </div>
+          {/* SOCIAL ICONS */}
+          <div className="flex gap-4 mt-5">
+            {["in", "f", "ig", "yt"].map((icon) => (
+              <div
+                key={icon}
+                className="w-8 h-8 border border-luxury-dark/40 rounded-full flex items-center justify-center text-xs"
+              >
+                {icon}
+              </div>
+            ))}
+          </div>
         </div>
 
 
         {/* ADDRESS */}
-        <div>
+        <div className="flex flex-col items-start text-start">
           <h4 className="text-sm mb-3">Marketing Office</h4>
           <p className="text-sm text-luxury-dark/70">
-            Office No 111, 112 Spaze Platinum Tower, <br /> Sohna Road, Sector 47, <br /> Gurugram, Haryana 122018
+            Office No 111, 112 Spaze Platinum  <br /> Tower, Sohna Road,  Sector 47 ,<br />  Gurugram, Haryana 122018
           </p>
 
         </div>
-        <div>
+        <div className="flex flex-col items-start text-start">
           <h4 className="text-sm mb-3">Registered Office</h4>
           <p className="text-sm text-luxury-dark/70">
-            Village Bandran, Tehsil Sult, Post <br /> Sanker, Sankar, Almora, Bhikia Sain,<br />  Uttarakhand, India, 244715</p>
-
-
-
+            Village Bandran, Tehsil Sult, Post  <br />Sanker, Sankar,  Almora, Bhikia <br /> Sain, Uttarakhand, India, 244715  </p>
         </div>
 
         {/* LINKS */}
-        <div className="lg:col-span-2 flex flex-wrap gap-x-20 gap-y-6 text-sm">
+        <div className="lg:col-span-1 flex flex-col items-center lg:items-start lg:ml-48 text-start gap-y-2 text-sm">
+          {/* <h4 className="text-sm mb-1 font-semibold">Quick Links</h4> */}
           {[
             { name: "Home", path: "/" },
             { name: "About", path: "/about" },
             { name: "Projects", path: "/projects" },
-            { name: "Contact Us", path: "#" },
+            // { name: "Contact Us", path: "#" },
             { name: "Blogs", path: "/blog" }
           ].map((item) => (
             <Link
               key={item.name}
               to={item.path}
-              className="hover:text-luxury-dark"
+              className="hover:text-luxury-dark text-luxury-dark/70 transition-colors"
             >
               {item.name}
             </Link>
@@ -141,7 +149,7 @@ const Footer = () => {
       </div>
 
       {/* BOTTOM BAR */}
-      <div className="max-w-[1280px] mx-auto px-6 lg:px-0 pb-8 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-luxury-dark/60">
+      <div className="max-w-[1280px] mx-auto px-6 lg:px-0 pb-4 mt-6 flex flex-col md:flex-row  items-center gap-6 text-xs text-luxury-dark/60">
 
         <p>© 2026 Grace Aesthetic</p>
 
@@ -150,17 +158,7 @@ const Footer = () => {
           <a href="#">Terms and Conditions</a>
         </div>
 
-        {/* SOCIAL ICONS */}
-        <div className="flex gap-4">
-          {["in", "f", "ig", "yt"].map((icon) => (
-            <div
-              key={icon}
-              className="w-8 h-8 border border-luxury-dark/40 rounded-full flex items-center justify-center text-xs"
-            >
-              {icon}
-            </div>
-          ))}
-        </div>
+
 
       </div>
     </footer>

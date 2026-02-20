@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import swastixaLogo from "../assets/grace_A.webp";
+import swastixaLogo from "../assets/gracefooter.png";
 
 const AboutSection = () => {
   return (
@@ -11,14 +11,14 @@ const AboutSection = () => {
         {/* LEFT CONTENT */}
         <div className="flex flex-col max-w-xl">
           <h3 className="tracking-[0.6em] 
-    sm:tracking-[1rem] 
-    md:tracking-[1.6rem] 
-    lg:tracking-[2.25rem] 
-    text-xl 
-    sm:text-2xl 
-    md:text-3xl 
-    lg:text-[37px] 
-    text-gray-500 pb-6">
+              sm:tracking-[1rem] 
+              md:tracking-[1.6rem] 
+              lg:tracking-[2.25rem] 
+              text-xl 
+              sm:text-2xl 
+              md:text-3xl 
+              lg:text-[37px] 
+              text-gray-500 pb-6">
             OUR STORY
           </h3>
 

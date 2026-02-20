@@ -9,7 +9,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
-// ..
 AOS.init();
 
 gsap.registerPlugin(ScrollTrigger);
@@ -37,9 +36,6 @@ const GallerySection = () => {
       rightItems.current.push(el);
     }
   };
-
-
-
   // useEffect(() => {
   //   wrappersRef.current.forEach((wrapper) => {
   //     const img = wrapper.querySelector("img");
@@ -156,7 +152,6 @@ const GallerySection = () => {
             <div data-aos="fade-left" data-aos-duration="2000" className='w-full aspect-square md:h-full'>
               <img
                 src={Thoughtful}
-                alt=""
                 className='w-full h-full object-cover'
               />
             </div>

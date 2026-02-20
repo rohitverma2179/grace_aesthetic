@@ -71,17 +71,17 @@ const Navbar = () => {
             ))}
 
             {/* PROJECTS MEGA DROPDOWN */}
-            <div className="relative group">
+            <div className="relative group ">
               <div className="text-xs uppercase tracking-[0.2em] font-medium hover:text-primary cursor-pointer transition flex items-center gap-1">
                 Projects
               </div>
 
               {/* FIRST LEVEL */}
-              <div className="absolute top-full left-0 mt-4 w-56 backdrop-blur-lg bg-black/20 text-primary rounded-md shadow-xl opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-300">
+              <div className="absolute top-full left-0 mt-7 w-56 backdrop-blur-lg bg-black/20 text-primary rounded-xs shadow-xl opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-300">
 
                 {/* Delivered */}
                 <div className="relative group/delivered">
-                  <div className="px-4 py-3 text-xs uppercase tracking-widest hover:bg-white/10 cursor-pointer flex justify-between items-center group-hover/delivered:text-white">
+                  <div className="px-4 py-3  text-xs uppercase tracking-widest hover:bg-white/10 cursor-pointer flex justify-between items-center group-hover/delivered:text-white">
                     Delivered
                   </div>
 
@@ -103,7 +103,7 @@ const Navbar = () => {
                   </div>
 
                   {/* SECOND LEVEL */}
-                  <div className="max-h-0 overflow-hidden group-hover/upcoming:max-h-60 transition-all duration-500 ease-in-out bg-black/20 backdrop-blur-lg">
+                  <div className="max-h-0 rounded-xs overflow-hidden group-hover/upcoming:max-h-60 transition-all duration-500 ease-in-out bg-black/20 backdrop-blur-lg">
                     <Link
                       to="/projects"
                       className="block px-8 py-2 text-xs uppercase tracking-widest text-primary/80 hover:text-primary hover:bg-white/10 transition"

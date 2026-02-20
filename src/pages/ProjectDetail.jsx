@@ -121,10 +121,13 @@ const ProjectDetail = () => {
                                                     A Beautiful Second Home
                         </p>
 
-                        <p className=" justify-around text-base md:text-2xl lg:text-[18px] font-serif text-luxury-dark/80 ">
+                        <p className=" text-justify text-base md:text-2xl lg:text-[18px] font-serif text-luxury-dark/80 ">
+                        Crafted for those who crave space, silence, and a slower pace, *ISHAADRII* brings modern living into perfect harmony with Uttarakhand’s serene beauty. Open spaces, natural light, and thoughtful design come together to create a balanced, elegant lifestyle—where comfort meets nature every day.
+                        </p>
+                        {/* <p className=" text-justify text-base md:text-2xl lg:text-[18px] font-serif text-luxury-dark/80 ">
                             Created for those seeking space, silence, and a slower rhythm away from the city, ISHAADRII brings contemporary living into harmony with Uttarakhand’s serene landscape. The project is shaped by openness, natural light, and a deep connection to its surroundings.
                             From site orientation to interior planning, every element is considered with care. The result is a place that feels balanced and unhurried, offering comfort, clarity, and a beautiful way to live closer to nature.
-                        </p>
+                        </p> */}
                         {/* <p className="text-base md:text-2xl   lg:text-[18px] font-serif text-luxury-dark/80  leading-relaxed">
                             From site selection and orientation to layout and long-term comfort, every element is considered with purpose. More than just a residence, ISHAADRI offers a way of life that is peaceful, connected, and enduring—rooted in simplicity and closeness ..
                         </p> */}
@@ -145,7 +148,7 @@ const ProjectDetail = () => {
                       sm:text-2xl 
                       md:text-3xl 
                       lg:text-[37px] 
-                    text-gray-500 uppercase text-center xl:mb-12">
+                    text-gray-500 uppercase text-center ">
                         {/* Use Inside ISHAADRII */}
                     </h2>
                     <div ref={horizontalRef} className="flex items-end gap-4 md:gap-8 px-[5vw] md:px-[10vw] relative w-max">

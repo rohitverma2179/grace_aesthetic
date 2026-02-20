@@ -16,7 +16,7 @@ const BlogPage = () => {
 
     // Scroll to top when page changes
     useEffect(() => {
-        window.scrollTo({ top: 900, behavior: 'smooth' });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
         
     }, [currentPage]);
 
