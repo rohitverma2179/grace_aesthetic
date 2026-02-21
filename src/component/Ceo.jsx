@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import ceoHead from "../assets/ownerimg/1.jpg"
-import ceoHead2 from "../assets/ownerimg/2.png"
+import ceoHead2 from "../assets/ownerimg/2.jpeg"
 import ceoHead3 from "../assets/ownerimg/3.0.jpg"
 
 const leaderSections = [
@@ -13,7 +13,7 @@ const leaderSections = [
         ],
         image: ceoHead,
         reverse: false
-    },
+    }, 
     {
         tag: "Co-Founder & CFO, Team RKI",
         title: "Ms. Neeru Tomar",
@@ -29,7 +29,7 @@ const leaderSections = [
         description: [
             "With over 13 years of diversified experience across Sales, Marketing, SaaS, and Logistics, Mr. Saurabh Siddhartha Jha brings a wealth of knowledge and expertise to the real estate industry. Having worked with leading organizations such as Zomato, Loconav, Signature Global, and Bata, he has successfully built a career defined by strategic growth, client-centric solutions, and operational excellence. ",
         ],
-        image: ceoHead3,
+        image: "https://img.freepik.com/free-photo/ambitious-businessman-standing-street_1262-3451.jpg?semt=ais_user_personalization&w=740&q=80",
         reverse: false
     },
     {
@@ -49,14 +49,14 @@ const Section = ({ section, index, total }) => {
 
     const { scrollYProgress } = useScroll({
         target: sectionRef,
-        offset: ["start start", "end end"]
+        offset: ["start 0.9", "end 0.1"]
     });
 
-    // Create a smooth version of scrollYProgress
+    // 🔥 Much smoother spring
     const smoothProgress = useSpring(scrollYProgress, {
-        stiffness: 100,
-        damping: 30,
-        restDelta: 0.001
+        stiffness: 40,
+        damping: 25,
+        mass: 1.2
     });
 
     useEffect(() => {
@@ -65,20 +65,17 @@ const Section = ({ section, index, total }) => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    // Animation ranges for different effects
-    const textWidth = useTransform(smoothProgress, [0, 0.4], ["100%", isDesktop ? "60%" : "100%"]);
-    const imageWidth = useTransform(smoothProgress, [0, 0.4], ["0%", isDesktop ? "40%" : "0%"]);
-    const imageOpacity = useTransform(smoothProgress, [0, 0.4], [0, 1]); // Image starts invisible
-    const imageScale = useTransform(smoothProgress, [0, 0.4], [1.2, 1]);
-    const columnGap = useTransform(smoothProgress, [0.1, 0.4], ["0px", isDesktop ? "96px" : "0px"]);
-    const textOpacity = useTransform(smoothProgress, [1, 1, 1], [1, 1, 1]); // Text visible from start
-    const sectionScale = useTransform(smoothProgress, [0.8, 1], [1, 0.95]);
-    const sectionOpacity = useTransform(smoothProgress, [0.8, 0], [1, 0]);
+    const textWidth = useTransform(smoothProgress, [0, 0.5], ["100%", isDesktop ? "60%" : "100%"]);
+    const imageWidth = useTransform(smoothProgress, [0, 0.5], ["0%", isDesktop ? "40%" : "0%"]);
+    const imageOpacity = useTransform(smoothProgress, [0.1, 0.5], [0, 1]);
+    const imageScale = useTransform(smoothProgress, [0, 0.5], [1.15, 1]);
+    const columnGap = useTransform(smoothProgress, [0.1, 0.5], ["0px", isDesktop ? "96px" : "0px"]);
 
-    // Floating number in background
-    const numOpacity = useTransform(smoothProgress, [1, 1, 1], [1, 1, 1]);
-    const numY = useTransform(smoothProgress, [0, 1], [50, -50]);
-    const textPadding = useTransform(smoothProgress, [0, 0.4], ["0px", "48px"]);
+    const sectionScale = useTransform(smoothProgress, [0.8, 1], [1, 0.96]);
+    const sectionOpacity = useTransform(smoothProgress, [0.85, 1], [1, 0]);
+
+    const numY = useTransform(smoothProgress, [0, 1], [40, -40]);
+    const textPadding = useTransform(smoothProgress, [0, 0.5], ["0px", "48px"]);
 
     return (
         <div
@@ -91,22 +88,19 @@ const Section = ({ section, index, total }) => {
                     style={{
                         scale: sectionScale,
                         opacity: sectionOpacity,
+                        willChange: "transform, opacity"
                     }}
                     className="w-full h-full relative flex items-center"
                 >
-                    {/* Background Number */}
                     <motion.div
-                        style={{ opacity: numOpacity, y: numY }}
+                        style={{ y: numY, willChange: "transform" }}
                         className={`absolute ${section.reverse ? 'left-20' : 'right-20'} top-1/2 -translate-y-1/2 text-[20vw] font-serif text-primary/20 select-none leading-none z-0 pointer-events-none`}
                     >
-                        {/* 0{index + 1} */}
                     </motion.div>
 
                     <div className="container-custom relative z-10 w-full px-6 md:px-12">
                         <motion.div
-                            style={{
-                                columnGap: columnGap
-                            }}
+                            style={{ columnGap }}
                             className={`flex flex-col ${section.reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-0`}
                         >
 
@@ -115,19 +109,20 @@ const Section = ({ section, index, total }) => {
                                 style={{
                                     width: imageWidth,
                                     opacity: imageOpacity,
+                                    willChange: "transform, opacity"
                                 }}
                                 className="hidden lg:block relative overflow-hidden h-[70vh] rounded-sm luxury-shadow"
                             >
                                 <motion.img
-                                    style={{ scale: imageScale }}
+                                    style={{ scale: imageScale, willChange: "transform" }}
                                     src={section.image}
                                     alt={section.title}
-                                    className="w-full h-full object-cover transition-all duration-1000"
+                                    className="w-full h-full object-cover"
                                 />
                                 <div className={`absolute bottom-6 ${section.reverse ? 'left-6' : 'right-6'} w-12 h-12 border-b-2 border-primary/30 z-30`} />
                             </motion.div>
 
-                            {/* MOBILE IMAGE (Static/Simple Fade) */}
+                            {/* MOBILE IMAGE */}
                             <div className="lg:hidden w-full mb-8 relative overflow-hidden rounded-sm aspect-4/5 luxury-shadow">
                                 <img
                                     src={section.image}
@@ -136,11 +131,11 @@ const Section = ({ section, index, total }) => {
                                 />
                             </div>
 
-                            {/* TEXT CONTENT */}
+                            {/* TEXT */}
                             <motion.div
                                 style={{
                                     width: textWidth,
-                                    opacity: textOpacity
+                                    willChange: "transform"
                                 }}
                                 className="space-y-8 flex flex-col justify-center"
                             >
@@ -155,6 +150,7 @@ const Section = ({ section, index, total }) => {
                                         <motion.span
                                             initial={{ opacity: 0, x: -20 }}
                                             whileInView={{ opacity: 1, x: 0 }}
+                                            transition={{ duration: 0.6, ease: "easeOut" }}
                                             className="text-primary tracking-[8px] text-[10px] sm:text-xs font-bold uppercase block"
                                         >
                                             {section.tag}
@@ -191,7 +187,7 @@ const Section = ({ section, index, total }) => {
 const Ceo = () => {
     return (
         <section className="relative overflow-visible">
-            {/* Background Zigzag remains throughout the scroll */}
+
             <div className="fixed inset-0 opacity-[0.02] pointer-events-none z-0"
                 style={{
                     backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10 L10 0 L30 20 L50 0 L70 20 L90 0 L100 10' fill='none' stroke='%23C5A059' stroke-width='2'/%3E%3C/svg%3E")`,
@@ -209,9 +205,6 @@ const Ceo = () => {
                     />
                 ))}
             </div>
-
-            {/* Spacer for the last sticky item to scroll through */}
-            {/* <div className="h-[20vh] bg-[#FBFBF9]" /> */}
         </section>
     );
 };
