@@ -206,6 +206,7 @@ const Ceo = () => {
                 ))}
             </div>
         </section>
+
     );
 };
 
