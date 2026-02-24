@@ -33,17 +33,17 @@ const BilloraPage = () => {
           </div>
 
           {/* Image Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 overflow-hidden">
             <div data-aos="fade-right" data-aos-duration="1500" className="w-full h-[320px] md:h-[500px] lg:h-[600px] overflow-hidden">
               <img src={heroImg2} className="w-full h-full object-cover" />
             </div>
 
             <div className="flex flex-col gap-5">
-              <div data-aos="fade-left" data-aos-duration="1500" className="w-full h-[200px] md:h-[240px] lg:h-[290px] overflow-hidden">
+              <div data-aos="fade-left" data-aos-duration="1500" className="w-full h-[320px] md:h-[340px] lg:h-[290px] overflow-hidden">
                 <img src={heroImg1} className="w-full h-full object-cover" />
               </div>
 
-              <div data-aos="fade-left" data-aos-duration="1500" className="w-full h-[200px] md:h-[240px] lg:h-[290px] overflow-hidden">
+              <div data-aos="fade-left" data-aos-duration="1500" className="w-full h-[320px] md:h-[340px] lg:h-[290px] overflow-hidden">
                 <img src={heroImg3} className="w-full h-full object-cover" />
               </div>
             </div>
@@ -108,7 +108,7 @@ const BilloraPage = () => {
 
       {/* BEYOND WORDS */}
       {/* BEYOND WORDS */}
-<section className="bg-[#e9e6e2] py-16 md:py-20 px-4 md:px-10 mb-28 md:mb-32">
+<section className="bg-[#e9e6e2] py-16 md:py-20 px-4 md:px-10 mb-28 md:mb-32 overflow-hidden">
   <div className="max-w-[1500px] mx-auto">
 
     {/* Heading */}
