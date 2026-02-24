@@ -35,12 +35,12 @@ const BilloraPage = () => {
 
   return (
     <>
-    <section className="relative bg-[#e9e6e2] py-20 px-4 md:px-0 overflow-hidden">
+    <section className="relative bg-[#e9e6e2] py-20 px-4 md:px-0 overflow-hidden ">
       
       {/* Decorative Circle */}
-      <div className="absolute -top-40 -right-40 w-[500px] h-[500px] border border-yellow-500 rounded-full"></div>
+      <div className="absolute hidden top-20 -right-70 w-[900px] h-[900px] lg:flex md:*: border border-yellow-500  rounded-full"></div>
 
-      <div className=" mx-auto">
+      <div className=" relative z-10 mx-auto overflow-hidden">
   
         {/* Heading */}
         <div className="text-center mb-12">
@@ -92,12 +92,12 @@ const BilloraPage = () => {
 
    {/* what we offer section */}
 
-   <section className="relative bg-[#e9e6e2] py-20 px-6 md:px-16 overflow-hidden">
+   <section className="relative bg-[#e9e6e2] py-20  px-6 md:px-16 overflow-hidden">
       
       {/* Top Right Decorative Curve */}
       {/* <div className="absolute -top-40 -right-40 w-[500px] h-[500px] border border-yellow-500 rounded-full"></div> */}
 
-      <div className=" mx-auto">
+      <div className=" max-w-8xl ">
 
         {/* Heading */}
         <h2 className="text-left text-2xl md:text-3xl tracking-[12px] text-black mb-20">
@@ -235,17 +235,19 @@ const BilloraPage = () => {
 
 {/* AboutArea    */}
 
-   <section className="bg-[#e9e6e2] py-20 px-6 md:px-16">
+   <section className="bg-[#e9e6e2] py-20 px-6 md:px-8">
       <div className="max-w-8xl mx-auto">
 
         {/* Top Section */}
-        <div className="flex flex-col lg:flex-row items-center justify-around gap-24">
-
+        <div className="flex flex-col lg:flex-row items-center  gap-36">
+          <div className="w-1/2 h-full h-full ">
           {/* Left Map */}
          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4353.744398929771!2d79.09750683833299!3d29.60645347011841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390a1987c49e37a5%3A0xe32484b88696a4a!2sTerratrek%20Billora!5e0!3m2!1sen!2sin!4v1771914821975!5m2!1sen!2sin" width="600" height="450"  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
 
           {/* Right Content */}
-          <div className="lg:w-1/2 w-full">
+          <div className="lg:w-1/2 w-full h-full">
             
             <h2 className="text-3xl md:text-4xl font-light mb-4">
               About the area
