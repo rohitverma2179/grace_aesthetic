@@ -9,6 +9,7 @@ import BlogPage from './pages/BlogPage.jsx';
 import BlogDetailPage from './pages/BlogDetailPage.jsx';
 import Lenis from "lenis";
 import ScrollToTop from './common/ScrollToTop.jsx';
+import Billora from './pages/BilloraPage.jsx';
 
 function App() {
 
@@ -50,6 +51,8 @@ function App() {
             <Route path="/projects" element={<ProjectDetail />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:slug" element={<BlogDetailPage />} />
+            <Route path="/billora" element={<Billora />} />
+
           </Routes>
         </main>
         <Footer />
