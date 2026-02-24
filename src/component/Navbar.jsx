@@ -88,7 +88,7 @@ const Navbar = () => {
                   {/* SECOND LEVEL */}
                   <div className="max-h-0 overflow-hidden group-hover/delivered:max-h-40 transition-all duration-500 ease-in-out bg-black/20 backdrop-blur-lg">
                     <Link
-                      to="#"
+                      to="/billora"
                       className="block px-8 py-2 text-xs uppercase tracking-widest text-primary/80 hover:text-primary hover:bg-white/10 transition"
                     >
                       Billora

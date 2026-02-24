@@ -94,7 +94,7 @@ const ProjectDetail = () => {
 
             {/* 2. Project Overview */}
             <section className="py-24 bg-white text-center">
-                <div className="w-full max-w-[1280px] mx-auto px-4 md:px-8 lg:px-0">
+                <div className="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-0">
                     <motion.div
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
