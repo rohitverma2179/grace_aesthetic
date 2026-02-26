@@ -3,10 +3,11 @@ import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import ceoHead from "../assets/ownerimg/1.jpg"
 import ceoHead2 from "../assets/ownerimg/2.jpeg"
 import ceoHead3 from "../assets/ownerimg/3.0.jpg"
+import ceoHead4 from "../assets/ownerimg/thankan.jpg"
 
 const leaderSections = [
     {
-        tag: "Founder & CEO, Team RKI",
+        tag: "JMD and CEO",
         title: "Mr. Devender Tomar",
         description: [
             "With 22+ years of experience across leading organizations like MRG, Signature Global, Unicon, Airtel, and Godrej Securities, Mr. Devender Tomar brings strategic expertise to real estate consulting. At Team RKI, he delivers transparent, client-focused guidance, driven by his core philosophy  “Service Above All.”"
@@ -15,7 +16,7 @@ const leaderSections = [
         reverse: false
     }, 
     {
-        tag: "Co-Founder & CFO, Team RKI",
+        tag: " Co Founder and Co chairman",
         title: "Ms. Neeru Tomar",
         description: [
             "With 19 years of experience in Sales, E-Commerce, and Operations, Mrs. Neeru Tomar has worked with global brands like American Express, Citi Group, Aon Hewitt, and Koziva UK. She drives operational efficiency, revenue growth, and customer excellence by combining strategic insight with proven best practices to build sustainable, high-performing businesses."
@@ -24,17 +25,17 @@ const leaderSections = [
         reverse: true
     },
     {
-        tag: "Executive Director (Sales), Team RKI",
-        title: "Mr. Saurabh Siddhartha Jha",
+        tag: "Founder and Chairman",
+        title: "Ms. Pratibha Thakran",
         description: [
-            "With over 13 years of diversified experience across Sales, Marketing, SaaS, and Logistics, Mr. Saurabh Siddhartha Jha brings a wealth of knowledge and expertise to the real estate industry. Having worked with leading organizations such as Zomato, Loconav, Signature Global, and Bata, he has successfully built a career defined by strategic growth, client-centric solutions, and operational excellence. ",
+            "With over 13 years of diversified experience across Sales, Marketing, SaaS, and Logistics, Ms. Pratibha Thakran brings a wealth of knowledge and expertise to the real estate industry. Having worked with leading organizations such as Zomato, Loconav, Signature Global, and Bata, he has successfully built a career defined by strategic growth, client-centric solutions, and operational excellence. ",
         ],
-        image: "https://img.freepik.com/free-photo/ambitious-businessman-standing-street_1262-3451.jpg?semt=ais_user_personalization&w=740&q=80",
+        image: ceoHead4,
         reverse: false
     },
     {
-        tag: "DESIGN INTEGRITY",
-        title: "THOUGHTFUL LIVING BY DESIGN",
+        tag: "MD and COO",
+        title: "Mr. Pradeep Kumar",
         description: [
             "Placing environmental respect and human comfort at the center of every project. We create spaces that are as functional as they are beautiful.",
         ],
