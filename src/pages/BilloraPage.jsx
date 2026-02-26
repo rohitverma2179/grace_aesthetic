@@ -1,9 +1,20 @@
 import React from "react";
-import AOS from 'aos';
+import AOS from "aos";
 import heroImg1 from "../assets/billoraImgs/heroImg1.png";
 import heroImg2 from "../assets/billoraImgs/heroImg2.png";
 import heroImg3 from "../assets/billoraImgs/heroImg3.png";
-import { Waves, PawPrint, Utensils, Bed, MapPin, Car } from "lucide-react";
+import {
+  Waves,
+  PawPrint,
+  Utensils,
+  Bed,
+  MapPin,
+  Car,
+  Trees,
+  Dumbbell,
+  Wifi,
+  Mountain,
+} from "lucide-react";
 
 import beyond1 from "../assets/billoraImgs/beyondWordsImgs/beyond1.png";
 import beyond2 from "../assets/billoraImgs/beyondWordsImgs/beyond2.png";
@@ -23,7 +34,11 @@ const BilloraPage = () => {
       <section className="relative bg-[#EFEFEE] py-24 md:py-32 lg:py-36 px-4 md:px-6 overflow-hidden">
         <div className="relative z-10 max-w-[1600px] mx-auto">
           {/* Heading */}
-          <div data-aos="fade-up" data-aos-duration="1000" className="text-center mb-16 md:mb-20">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            className="text-center mb-16 md:mb-20"
+          >
             <h1 className="text-3xl md:text-5xl font-medium tracking-widest text-[#4A4A4A]">
               BILLORA
             </h1>
@@ -34,17 +49,133 @@ const BilloraPage = () => {
 
           {/* Image Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 overflow-hidden">
-            <div data-aos="fade-right" data-aos-duration="1500" className="w-full h-[320px] md:h-[500px] lg:h-[600px] overflow-hidden">
+            <div
+              data-aos="fade-right"
+              data-aos-duration="1500"
+              className="w-full h-[320px] md:h-[500px] lg:h-[600px] overflow-hidden"
+            >
               <img src={heroImg2} className="w-full h-full object-cover" />
             </div>
 
             <div className="flex flex-col gap-5">
-              <div data-aos="fade-left" data-aos-duration="1500" className="w-full h-[320px] md:h-[340px] lg:h-[290px] overflow-hidden">
+              <div
+                data-aos="fade-left"
+                data-aos-duration="1500"
+                className="w-full h-[320px] md:h-[340px] lg:h-[290px] overflow-hidden"
+              >
                 <img src={heroImg1} className="w-full h-full object-cover" />
               </div>
 
-              <div data-aos="fade-left" data-aos-duration="1500" className="w-full h-[320px] md:h-[340px] lg:h-[290px] overflow-hidden">
+              <div
+                data-aos="fade-left"
+                data-aos-duration="1500"
+                className="w-full h-[320px] md:h-[340px] lg:h-[290px] overflow-hidden"
+              >
                 <img src={heroImg3} className="w-full h-full object-cover" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* BEYOND WORDS */}
+      {/* BEYOND WORDS */}
+      <section className="bg-[#e9e6e2] py-16 md:py-20 px-4 md:px-10 mb-28 md:mb-32 overflow-hidden">
+        <div className="max-w-[1500px] mx-auto">
+          {/* Heading */}
+          <h2
+            data-aos="fade-up"
+            className="text-2xl md:text-3xl tracking-[12px] text-black mb-12"
+          >
+            BEYOND WORDS.
+          </h2>
+
+          <div className="flex flex-col gap-6">
+            {/* Row 1 */}
+            <div className="flex flex-col md:flex-row gap-6">
+              <div
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                className="md:w-2/3 h-[300px] md:h-[455px]"
+              >
+                <img src={beyond1} className="w-full h-full object-cover" />
+              </div>
+              <div
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                className="md:w-1/3 h-[300px] md:h-[455px]"
+              >
+                <img src={beyond2} className="w-full h-full object-cover" />
+              </div>
+            </div>
+
+            {/* Row 2 */}
+            <div className="flex flex-col md:flex-row gap-6">
+              <div
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                className="md:w-1/3 h-[300px] md:h-[455px]"
+              >
+                <img src={beyond3} className="w-full h-full object-cover" />
+              </div>
+              <div
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                className="md:w-2/3 h-[300px] md:h-[455px]"
+              >
+                <img src={beyond4} className="w-full h-full object-cover" />
+              </div>
+            </div>
+
+            {/* Row 3 */}
+            <div className="flex flex-col md:flex-row gap-6">
+              <div
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                className="md:w-2/3 h-[300px] md:h-[455px]"
+              >
+                <img src={beyond5} className="w-full h-full object-cover" />
+              </div>
+              <div
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                className="md:w-1/3 h-[300px] md:h-[455px]"
+              >
+                <img src={beyond6} className="w-full h-full object-cover" />
+              </div>
+            </div>
+
+            {/* Row 4 */}
+            <div className="flex flex-col md:flex-row gap-6">
+              <div
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                className="md:w-1/3 h-[300px] md:h-[455px]"
+              >
+                <img src={beyond7} className="w-full h-full object-cover" />
+              </div>
+              <div
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                className="md:w-2/3 h-[300px] md:h-[455px]"
+              >
+                <img src={beyond8} className="w-full h-full object-cover" />
+              </div>
+            </div>
+
+            {/* Row 5 */}
+            <div className="flex flex-col md:flex-row gap-6">
+              <div
+                data-aos="fade-right"
+                className="md:w-2/3 h-[300px] md:h-[455px]"
+              >
+                <img src={beyond9} className="w-full h-full object-cover" />
+              </div>
+              <div
+                data-aos="fade-left"
+                className="md:w-1/3 h-[300px] md:h-[455px]"
+              >
+                <img src={beyond10} className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
@@ -54,124 +185,143 @@ const BilloraPage = () => {
       {/* WHAT WE OFFER */}
       <section className="bg-[#EFEFEE] py-16 md:py-20 px-6 md:px-16">
         <div className="max-w-[1400px] mx-auto mb-28 md:mb-32">
-          <h2 data-aos="fade-up" className="text-2xl md:text-3xl tracking-[12px] text-[#4A4A4A] mb-16 md:mb-20">
-            WHAT WE OFFER
+          <h2
+            data-aos="fade-up"
+            className="text-2xl md:text-3xl tracking-[12px] text-[#4A4A4A] mb-16 md:mb-20"
+          >
+            Amenities
           </h2>
 
-          <div  className="grid grid-cols-1 md:grid-cols-2 gap-y-16 md:gap-y-20 gap-x-16 md:gap-x-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-16 md:gap-y-20 gap-x-16 md:gap-x-20">
             <div data-aos="zoom-in">
-              <Waves size={60} className="text-teal-600 mb-10 md:mb-12" strokeWidth={1.5} />
+              <Waves
+                size={60}
+                className="text-teal-600 mb-10 md:mb-12"
+                strokeWidth={1.5}
+              />
               <h3 className="tracking-[4px] font-medium mb-4">POOL</h3>
               <p className="text-[#3D3D3D] text-sm leading-relaxed font-light max-w-md">
-                A serene swimming pool designed for relaxation and leisure.
-                An ideal space to unwind while surrounded by nature.
+                A serene swimming pool designed for relaxation and leisure. An
+                ideal space to unwind while surrounded by nature.
               </p>
             </div>
 
             <div data-aos="zoom-in" data-aos-delay="100">
-              <PawPrint size={60} className="text-teal-600 mb-10 md:mb-12" strokeWidth={1.5} />
+              <PawPrint
+                size={60}
+                className="text-teal-600 mb-10 md:mb-12"
+                strokeWidth={1.5}
+              />
               <h3 className="tracking-[6px] font-medium mb-4">PET-FRIENDLY</h3>
               <p className="text-[#3D3D3D] text-sm leading-relaxed font-light max-w-md">
                 Welcoming spaces thoughtfully planned for you and your pets.
-                Because home should feel complete for every member of the family.
+                Because home should feel complete for every member of the
+                family.
               </p>
             </div>
           </div>
 
           <div className="border-t border-[#0b5e4c35] my-14 md:my-16"></div>
 
-          <div  className="grid grid-cols-1 md:grid-cols-2 gap-y-16 md:gap-y-20 gap-x-16 md:gap-x-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-16 md:gap-y-20 gap-x-16 md:gap-x-20">
             <div data-aos="zoom-in">
-              <Utensils size={60} className="text-teal-600 mb-10 md:mb-12" strokeWidth={1.5} />
+              <Utensils
+                size={60}
+                className="text-teal-600 mb-10 md:mb-12"
+                strokeWidth={1.5}
+              />
               <h3 className="tracking-[6px] font-medium mb-4">RESTAURANT</h3>
               <p className="text-[#3D3D3D] text-sm leading-relaxed font-light max-w-md">
-                An on-site dining space offering comfort and convenience.
-                Enjoy curated meals without stepping away from home.
+                An on-site dining space offering comfort and convenience. Enjoy
+                curated meals without stepping away from home.
               </p>
             </div>
 
             <div data-aos="zoom-in" data-aos-delay="200">
-              <Bed size={60} className="text-teal-600 mb-10 md:mb-12" strokeWidth={1.5} />
+              <Bed
+                size={60}
+                className="text-teal-600 mb-10 md:mb-12"
+                strokeWidth={1.5}
+              />
               <h3 className="tracking-[6px] font-medium mb-4">
                 CONNECTING ROOMS AVAILABLE
               </h3>
               <p className="text-[#3D3D3D] text-sm leading-relaxed font-light max-w-md">
-                Flexible living spaces designed for families and guests.
-                Perfect for comfort, privacy, and togetherness.
+                Flexible living spaces designed for families and guests. Perfect
+                for comfort, privacy, and togetherness.
               </p>
             </div>
           </div>
 
-          <div className="border-t border-[#0b5e4c35] mt-14 md:mt-16"></div>
+          <div className="border-t border-[#0b5e4c35] my-14 md:my-16"></div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-16 md:gap-y-20 gap-x-16 md:gap-x-20">
+            {/* 24x7 WI-FI */}
+            <div data-aos="zoom-in">
+              <Wifi
+                size={60}
+                className="text-teal-600 mb-10 md:mb-12"
+                strokeWidth={1.5}
+              />
+              <h3 className="tracking-[6px] font-medium mb-4">24x7 WI-FI</h3>
+              <p className="text-[#3D3D3D] text-sm leading-relaxed font-light max-w-md">
+                Enjoy uninterrupted high-speed internet connectivity throughout
+                the property for seamless work and entertainment.
+              </p>
+            </div>
+
+            {/* PRIVATE BALCONIES */}
+            <div data-aos="zoom-in" data-aos-delay="200">
+              <Mountain
+                size={60}
+                className="text-teal-600 mb-10 md:mb-12"
+                strokeWidth={1.5}
+              />
+              <h3 className="tracking-[6px] font-medium mb-4">
+                PRIVATE BALCONIES WITH MOUNTAIN VIEWS
+              </h3>
+              <p className="text-[#3D3D3D] text-sm leading-relaxed font-light max-w-md">
+                Spacious private balconies offering breathtaking mountain views,
+                creating the perfect setting to relax and unwind.
+              </p>
+            </div>
+          </div>
+
+          <div className="border-t border-[#0b5e4c35] my-14 md:my-16"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-16 md:gap-y-20 gap-x-16 md:gap-x-20">
+            {/* LANDSCAPED GARDENS */}
+
+            <div data-aos="zoom-in">
+              <Trees
+                size={60}
+                className="text-teal-600 mb-10 md:mb-12"
+                strokeWidth={1.5}
+              />
+              <h3 className="tracking-[6px] font-medium mb-4">
+                LANDSCAPED GARDENS
+              </h3>
+              <p className="text-[#3D3D3D] text-sm leading-relaxed font-light max-w-md">
+                Beautifully designed landscaped gardens offering peaceful green
+                spaces, walking paths, and a refreshing natural environment.
+              </p>
+            </div>
+
+            {/* GYM */}
+            <div data-aos="zoom-in" data-aos-delay="200">
+              <Dumbbell
+                size={60}
+                className="text-teal-600 mb-10 md:mb-12"
+                strokeWidth={1.5}
+              />
+              <h3 className="tracking-[6px] font-medium mb-4">GYM</h3>
+              <p className="text-[#3D3D3D] text-sm leading-relaxed font-light max-w-md">
+                A fully equipped modern gym with advanced fitness equipment to
+                support a healthy and active lifestyle.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
-
-      {/* BEYOND WORDS */}
-      {/* BEYOND WORDS */}
-<section className="bg-[#e9e6e2] py-16 md:py-20 px-4 md:px-10 mb-28 md:mb-32 overflow-hidden">
-  <div className="max-w-[1500px] mx-auto">
-
-    {/* Heading */}
-    <h2 data-aos="fade-up" className="text-2xl md:text-3xl tracking-[12px] text-black mb-12">
-      BEYOND WORDS.
-    </h2>
-
-    <div className="flex flex-col gap-6">
-
-      {/* Row 1 */}
-      <div className="flex flex-col md:flex-row gap-6">
-        <div data-aos="fade-right" data-aos-duration="1000" className="md:w-2/3 h-[300px] md:h-[455px]">
-          <img src={beyond1} className="w-full h-full object-cover" />
-        </div>
-        <div data-aos="fade-left" data-aos-duration="1000" className="md:w-1/3 h-[300px] md:h-[455px]">
-          <img src={beyond2} className="w-full h-full object-cover" />
-        </div>
-      </div>
-
-      {/* Row 2 */}
-      <div className="flex flex-col md:flex-row gap-6">
-        <div data-aos="fade-right" data-aos-duration="1000" className="md:w-1/3 h-[300px] md:h-[455px]">
-          <img src={beyond3} className="w-full h-full object-cover" />
-        </div>
-        <div data-aos="fade-left" data-aos-duration="1000" className="md:w-2/3 h-[300px] md:h-[455px]">
-          <img src={beyond4} className="w-full h-full object-cover" />
-        </div>
-      </div>
-
-      {/* Row 3 */}
-      <div className="flex flex-col md:flex-row gap-6">
-        <div data-aos="fade-right" data-aos-duration="1000" className="md:w-2/3 h-[300px] md:h-[455px]">
-          <img src={beyond5} className="w-full h-full object-cover" />
-        </div>
-        <div data-aos="fade-left" data-aos-duration="1000" className="md:w-1/3 h-[300px] md:h-[455px]">
-          <img src={beyond6} className="w-full h-full object-cover" />
-        </div>
-      </div>
-
-      {/* Row 4 */}
-      <div className="flex flex-col md:flex-row gap-6">
-        <div data-aos="fade-right" data-aos-duration="1000" className="md:w-1/3 h-[300px] md:h-[455px]">
-          <img src={beyond7} className="w-full h-full object-cover" />
-        </div>
-        <div data-aos="fade-left" data-aos-duration="1000" className="md:w-2/3 h-[300px] md:h-[455px]">
-          <img src={beyond8} className="w-full h-full object-cover" />
-        </div>
-      </div>
-
-      {/* Row 5 */}
-      <div className="flex flex-col md:flex-row gap-6">
-        <div data-aos="fade-right" className="md:w-2/3 h-[300px] md:h-[455px]">
-          <img src={beyond9} className="w-full h-full object-cover" />
-        </div>
-        <div data-aos="fade-left" className="md:w-1/3 h-[300px] md:h-[455px]">
-          <img src={beyond10} className="w-full h-full object-cover" />
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
       {/* ABOUT AREA */}
       <section className="bg-[#EFEFEE] py-16 md:py-20 px-6 md:px-8">
         <div className="max-w-[1400px] mx-auto">
@@ -224,7 +374,11 @@ const BilloraPage = () => {
             </div>
           </div>
 
-          <div data-aos="fade-up" data-aos-duration="1500" className="mt-20 md:mt-28 text-center">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            className="mt-20 md:mt-28 text-center"
+          >
             <h2 className="text-lg md:text-2xl lg:text-3xl tracking-[4px] md:tracking-[8px] uppercase">
               Built on Vision.
               <br className="hidden md:block" />
