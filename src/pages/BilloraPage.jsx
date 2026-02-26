@@ -16,16 +16,19 @@ import {
   Mountain,
 } from "lucide-react";
 
-import beyond1 from "../assets/billoraImgs/beyondWordsImgs/beyond1.png";
-import beyond2 from "../assets/billoraImgs/beyondWordsImgs/beyond2.png";
-import beyond3 from "../assets/billoraImgs/beyondWordsImgs/beyond3.png";
-import beyond4 from "../assets/billoraImgs/beyondWordsImgs/beyond4.png";
-import beyond5 from "../assets/billoraImgs/beyondWordsImgs/beyond5.png";
-import beyond6 from "../assets/billoraImgs/beyondWordsImgs/beyond6.png";
+
+import beyond1 from "../assets/billoraImgs/beyondWordsImgs/beyond2.png";
+import beyond2 from "../assets/billoraImgs1/bird1.png";
+import beyond3 from "../assets/billoraImgs1/envato-labs-image-edit (26).png";
+import beyond4 from "../assets/billoraImgs1/autumn-landscape-with-birch-forest-and-mountain-ra-2026-01-08-07-23-59-utc.jpg";
+import beyond5 from "../assets/billoraImgs/beyondWordsImgs/beyond3.png";
+import beyond6 from "../assets/billoraImgs1/garden with chair.jpg";
 import beyond7 from "../assets/billoraImgs/beyondWordsImgs/beyond7.png";
-import beyond8 from "../assets/billoraImgs/beyondWordsImgs/beyond8.png";
-import beyond9 from "../assets/billoraImgs/beyondWordsImgs/beyond9.png";
-import beyond10 from "../assets/billoraImgs/beyondWordsImgs/beyond10.png";
+import beyond8 from "../assets/billoraImgs1/summer-landscape-with-fir-forest-in-mountains-2026-01-08-07-13-55-utc.jpg";
+import beyond9 from "../assets/billoraImgs1/elephant-family-in-wild-nature-walking-near-the-fo-2026-01-06-10-37-25-utc.jpg";
+import beyond10 from "../assets/billoraImgs1/yellow-rumped-warbler-setophaga-coronata.jpg (1).jpeg";
+
+
 
 const BilloraPage = () => {
   return (
@@ -98,14 +101,14 @@ const BilloraPage = () => {
                 data-aos-duration="1000"
                 className="md:w-2/3 h-[300px] md:h-[455px]"
               >
-                <img src={beyond1} className="w-full h-full object-cover" />
+                <img src={beyond2} className="w-full h-full object-cover" />
               </div>
               <div
                 data-aos="fade-left"
                 data-aos-duration="1000"
                 className="md:w-1/3 h-[300px] md:h-[455px]"
               >
-                <img src={beyond2} className="w-full h-full object-cover" />
+                <img src={beyond1} className="w-full h-full object-cover" />
               </div>
             </div>
 
@@ -253,41 +256,9 @@ const BilloraPage = () => {
             </div>
           </div>
 
-          <div className="border-t border-[#0b5e4c35] my-14 md:my-16"></div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-16 md:gap-y-20 gap-x-16 md:gap-x-20">
-            {/* 24x7 WI-FI */}
-            <div data-aos="zoom-in">
-              <Wifi
-                size={60}
-                className="text-teal-600 mb-10 md:mb-12"
-                strokeWidth={1.5}
-              />
-              <h3 className="tracking-[6px] font-medium mb-4">24x7 WI-FI</h3>
-              <p className="text-[#3D3D3D] text-sm leading-relaxed font-light max-w-md">
-                Enjoy uninterrupted high-speed internet connectivity throughout
-                the property for seamless work and entertainment.
-              </p>
-            </div>
 
-            {/* PRIVATE BALCONIES */}
-            <div data-aos="zoom-in" data-aos-delay="200">
-              <Mountain
-                size={60}
-                className="text-teal-600 mb-10 md:mb-12"
-                strokeWidth={1.5}
-              />
-              <h3 className="tracking-[6px] font-medium mb-4">
-                PRIVATE BALCONIES WITH MOUNTAIN VIEWS
-              </h3>
-              <p className="text-[#3D3D3D] text-sm leading-relaxed font-light max-w-md">
-                Spacious private balconies offering breathtaking mountain views,
-                creating the perfect setting to relax and unwind.
-              </p>
-            </div>
-          </div>
-
-          <div className="border-t border-[#0b5e4c35] my-14 md:my-16"></div>
+           <div className="border-t border-[#0b5e4c35] my-14 md:my-16"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-16 md:gap-y-20 gap-x-16 md:gap-x-20">
             {/* LANDSCAPED GARDENS */}
 
@@ -320,6 +291,44 @@ const BilloraPage = () => {
               </p>
             </div>
           </div>
+
+          <div className="border-t border-[#0b5e4c35] my-14 md:my-16"></div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-16 md:gap-y-20 gap-x-16 md:gap-x-20">
+
+            {/* PRIVATE BALCONIES */}
+            <div data-aos="zoom-in" data-aos-delay="200">
+              <Mountain
+                size={60}
+                className="text-teal-600 mb-10 md:mb-12"
+                strokeWidth={1.5}
+              />
+              <h3 className="tracking-[6px] font-medium mb-4">
+                PRIVATE BALCONIES WITH MOUNTAIN VIEWS
+              </h3>
+              <p className="text-[#3D3D3D] text-sm leading-relaxed font-light max-w-md">
+                Spacious private balconies offering breathtaking mountain views,
+                creating the perfect setting to relax and unwind.
+              </p>
+            </div>
+            {/* 24x7 WI-FI */}
+            <div data-aos="zoom-in">
+              <Wifi
+                size={60}
+                className="text-teal-600 mb-10 md:mb-12"
+                strokeWidth={1.5}
+              />
+              <h3 className="tracking-[6px] font-medium mb-4">24x7 WI-FI</h3>
+              <p className="text-[#3D3D3D] text-sm leading-relaxed font-light max-w-md">
+                Enjoy uninterrupted high-speed internet connectivity throughout
+                the property for seamless work and entertainment.
+              </p>
+            </div>
+
+            
+          </div>
+
+         
         </div>
       </section>
       {/* ABOUT AREA */}
