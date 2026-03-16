@@ -1,7 +1,7 @@
 import React from "react";
 import AOS from "aos";
 import heroImg1 from "../assets/billoraImgs/heroImg1.png";
-import heroImg2 from "../assets/billoraImgs/heroImg2.png";
+import heroImg2 from "../assets/billoraImgs1/tiger_New.jpeg";
 import heroImg3 from "../assets/billoraImgs/heroImg3.png";
 import {
   Waves,
@@ -21,12 +21,19 @@ import beyond1 from "../assets/billoraImgs/beyondWordsImgs/beyond2.png";
 import beyond2 from "../assets/billoraImgs1/bird1.png";
 import beyond3 from "../assets/billoraImgs1/envato-labs-image-edit (26).png";
 import beyond4 from "../assets/billoraImgs1/autumn-landscape-with-birch-forest-and-mountain-ra-2026-01-08-07-23-59-utc.jpg";
-import beyond5 from "../assets/billoraImgs/beyondWordsImgs/beyond3.png";
+import beyond5 from "../assets/billoraImgs1/hut_New.png";
 import beyond6 from "../assets/billoraImgs1/garden with chair.jpg";
-import beyond7 from "../assets/billoraImgs/beyondWordsImgs/beyond7.png";
+import beyond7 from "../assets/billoraImgs1/beyond7 1.png";
 import beyond8 from "../assets/billoraImgs1/summer-landscape-with-fir-forest-in-mountains-2026-01-08-07-13-55-utc.jpg";
-import beyond9 from "../assets/billoraImgs1/elephant-family-in-wild-nature-walking-near-the-fo-2026-01-06-10-37-25-utc.jpg";
-import beyond10 from "../assets/billoraImgs1/yellow-rumped-warbler-setophaga-coronata.jpg (1).jpeg";
+import beyond9 from "../assets/billoraImgs1/balkani.png";
+import beyond10 from "../assets/billoraImgs1/red_Panda.jpeg";
+import beyond01 from "../assets/billoraImgs1/beyond_1.png";
+import beyond02 from "../assets/billoraImgs1/beyond_02.png";
+import beyond03 from "../assets/billoraImgs1/beyond_03.png";
+import beyond04 from "../assets/billoraImgs1/beyond_04.png";
+import beyond05 from "../assets/billoraImgs1/beyond_05.png";
+import interior from "../assets/billoraImgs1/interior.png";
+
 
 
 
@@ -57,7 +64,7 @@ const BilloraPage = () => {
               data-aos-duration="1500"
               className="w-full h-[320px] md:h-[500px] lg:h-[600px] overflow-hidden"
             >
-              <img src={heroImg2} className="w-full h-full object-cover" />
+              <img src={"https://www.triponhimalaya.com/wp-content/uploads/2024/07/harkidun.jpg"} className="w-full h-full object-cover" />
             </div>
 
             <div className="flex flex-col gap-5">
@@ -66,7 +73,7 @@ const BilloraPage = () => {
                 data-aos-duration="1500"
                 className="w-full h-[320px] md:h-[340px] lg:h-[290px] overflow-hidden"
               >
-                <img src={heroImg1} className="w-full h-full object-cover" />
+                <img src={heroImg2} className="w-full h-full object-cover" />
               </div>
 
               <div
@@ -74,7 +81,7 @@ const BilloraPage = () => {
                 data-aos-duration="1500"
                 className="w-full h-[320px] md:h-[340px] lg:h-[290px] overflow-hidden"
               >
-                <img src={heroImg3} className="w-full h-full object-cover" />
+                <img src={"https://www.bizarexpedition.com/api/uploads/package/details/files-1770727380173-100239010.webp"} className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
@@ -101,14 +108,14 @@ const BilloraPage = () => {
                 data-aos-duration="1000"
                 className="md:w-2/3 h-[300px] md:h-[455px]"
               >
-                <img src={beyond2} className="w-full h-full object-cover" />
+                <img src={"https://bigcatsindia.com/wp-content/uploads/2025/04/oriental-dwarf-kingfisher.webp"} className="w-full h-full object-cover" />
               </div>
               <div
                 data-aos="fade-left"
                 data-aos-duration="1000"
                 className="md:w-1/3 h-[300px] md:h-[455px]"
               >
-                <img src={beyond1} className="w-full h-full object-cover" />
+                <img src={"https://images.unsplash.com/photo-1677924519638-7add87a25cb0?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDM0fHx8ZW58MHx8fHx8"} className="w-full h-full object-cover" />
               </div>
             </div>
 
@@ -126,7 +133,8 @@ const BilloraPage = () => {
                 data-aos-duration="1000"
                 className="md:w-2/3 h-[300px] md:h-[455px]"
               >
-                <img src={beyond4} className="w-full h-full object-cover" />
+                <img src={"https://femina.wwmindia.com/content/2020/jul/dehradun1594906809.jpg"} className="w-full h-full object-cover
+                 " />
               </div>
             </div>
 
@@ -144,7 +152,7 @@ const BilloraPage = () => {
                 data-aos-duration="1000"
                 className="md:w-1/3 h-[300px] md:h-[455px]"
               >
-                <img src={beyond6} className="w-full h-full object-cover" />
+                <img src={beyond02} className="w-full h-full object-cover" />
               </div>
             </div>
 
@@ -155,14 +163,14 @@ const BilloraPage = () => {
                 data-aos-duration="1000"
                 className="md:w-1/3 h-[300px] md:h-[455px]"
               >
-                <img src={beyond7} className="w-full h-full object-cover" />
+                <img src={beyond03} className="w-full h-full object-cover object-[right_2%]" />
               </div>
               <div
                 data-aos="fade-left"
                 data-aos-duration="1000"
                 className="md:w-2/3 h-[300px] md:h-[455px]"
               >
-                <img src={beyond8} className="w-full h-full object-cover" />
+                <img src={beyond04} className="w-full h-full object-cover" />
               </div>
             </div>
 
@@ -178,7 +186,7 @@ const BilloraPage = () => {
                 data-aos="fade-left"
                 className="md:w-1/3 h-[300px] md:h-[455px]"
               >
-                <img src={beyond10} className="w-full h-full object-cover" />
+                <img src={beyond05} className="w-full h-full object-cover " />
               </div>
             </div>
           </div>

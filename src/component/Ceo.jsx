@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import ceoHead from "../assets/ownerimg/1.jpg"
 import ceoHead2 from "../assets/ownerimg/2.jpeg"
 import ceoHead3 from "../assets/ownerimg/3.0.jpg"
-import ceoHead4 from "../assets/ownerimg/thankan.jpg"
+import ceoHead4 from "../assets/ownerimg/thankan.jpeg"
 
 const leaderSections = [
     {
@@ -67,9 +67,9 @@ const Section = ({ section, index, total }) => {
     }, []);
 
     const textWidth = useTransform(smoothProgress, [0, 0.5], ["100%", isDesktop ? "60%" : "100%"]);
-    const imageWidth = useTransform(smoothProgress, [0, 0.5], ["0%", isDesktop ? "40%" : "0%"]);
+    const imageWidth = useTransform(smoothProgress, [0, 0.5], ["0%", isDesktop ? "30%" : "0%"]);
     const imageOpacity = useTransform(smoothProgress, [0.1, 0.5], [0, 1]);
-    const imageScale = useTransform(smoothProgress, [0, 0.5], [1.15, 1]);
+    const imageScale = useTransform(smoothProgress, [0, 0.2], [1, 1]);
     const columnGap = useTransform(smoothProgress, [0.1, 0.5], ["0px", isDesktop ? "96px" : "0px"]);
 
     const sectionScale = useTransform(smoothProgress, [0.8, 1], [1, 0.96]);
@@ -161,13 +161,24 @@ const Section = ({ section, index, total }) => {
                                         </h3>
                                     </div>
 
-                                    <div className="space-y-6 text-luxury-dark/80 font-light leading-relaxed text-base md:text-lg border-l-2 border-primary/20 pl-8">
+                                    {/* <div className="space-y-6 text-luxury-dark/80 font-light leading-relaxed text-base md:text-lg border-l-2 border-primary/20 pl-8">
                                         {section.description.map((para, pIndex) => (
                                             <p key={pIndex} className="text-justify lg:text-left max-w-2xl">
                                                 {para}
                                             </p>
                                         ))}
-                                    </div>
+                                    </div> */}
+
+                                    <div className="space-y-6 text-luxury-dark/80 font-light leading-relaxed text-base md:text-lg border-l-2 border-primary/20 pl-8">
+  {section.description.map((para, pIndex) => (
+    <p 
+      key={pIndex} 
+      className="text-justify lg:text-left w-[600px]"
+    >
+      {para}
+    </p>
+  ))}
+</div>
 
                                     <div className="pt-4 flex gap-6 items-center">
                                         <div className="h-px w-12 bg-primary/40" />

@@ -183,7 +183,7 @@ const Navbar = () => {
                       Delivered <span className="text-[8px] group-open/mobile-delivered:rotate-180 transition-transform">▼</span>
                     </summary>
                     <div className="pl-4 mt-3 space-y-3 border-l border-white/10 ml-1">
-                      <Link to="#" onClick={() => setMobileMenuOpen(false)} className="block text-xs uppercase tracking-widest text-primary/70">Billora</Link>
+                      <Link to="/billora" onClick={() => setMobileMenuOpen(false)} className="block text-xs uppercase tracking-widest text-primary/70">Billora</Link>
                     </div>
                   </details>
 
